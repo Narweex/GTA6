@@ -2,14 +2,14 @@ extends Control
 
 func on_start_button_pressed():
 	#execute the game scene
-	get_tree().change_scene_to_file("res://Game.tscn")
+	get_tree().change_scene_to_file("res://! self made/scenes/menu/game.tscn")
 	
 func on_quit_button_pressed():
 	get_tree().quit(0)
 	
 
-var target_alpha = 1.0
-var target_alpha2 = 0.8
+@export var target_alpha = 1.0
+@export var target_alpha2 = 0.8
 func _process(delta):	
 	if randf() < 0.5:
 		target_alpha2 = randf_range(0.3, 0.9)
