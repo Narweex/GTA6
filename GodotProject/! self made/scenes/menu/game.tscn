@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cwh6v8hq8u2th"]
+
+[ext_resource type="PackedScene" uid="uid://dtit6vinyri0n" path="res://! self made/assets/geometry/Kaunas_test.glb" id="2_46665"]
+[ext_resource type="PackedScene" uid="uid://dh3kqcfi5h3e4" path="res://addons/gremlins_first_person/gremlins_fpc.tscn" id="2_bpvav"]
+
+[node name="game" type="Node3D" unique_id=1579534666]
+
+[node name="FirstPersonCharacter" parent="." unique_id=758639874 instance=ExtResource("2_bpvav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3974645, 1.1437325, 9.012669)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=151730909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.540234, 8.047962, 10.404054)
+
+[node name="Kaunas_test" parent="." unique_id=1036747216 instance=ExtResource("2_46665")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9656181, -0.9530096, -11.187775)
+
+[editable path="Kaunas_test"]

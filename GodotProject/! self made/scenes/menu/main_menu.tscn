@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://dnu7vowac113e"]
+
+[ext_resource type="Script" uid="uid://cig7mvgsnl1hw" path="res://! self made/scripts/menu/main_menu.gd" id="1_thjku"]
+[ext_resource type="Texture2D" uid="uid://c5jhi0rpw4pbm" path="res://! self made/assets/2d assets/Menu_screen.png" id="2_ffh5e"]
+[ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://! self made/assets/fonts/Bungee-Regular.ttf" id="3_umyxr"]
+[ext_resource type="Shader" uid="uid://dkmync60pgbwb" path="res://! self made/shader/menu/main_menu.gdshader" id="4_efejm"]
+
+[sub_resource type="Theme" id="Theme_7vrkn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 0.4117647)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_glbon"]
+shader = ExtResource("4_efejm")
+shader_parameter/pixel_size = 10.0
+
+[sub_resource type="Animation" id="Animation_jix8l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PostProcessFilter:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_glbon"]
+resource_name = "flicker"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PostProcessFilter:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3.4333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nlkkf"]
+_data = {
+&"RESET": SubResource("Animation_jix8l"),
+&"flicker": SubResource("Animation_glbon")
+}
+
+[node name="MainMenu" type="Control" unique_id=572978509]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7vrkn")
+script = ExtResource("1_thjku")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=662690159]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -314.0
+offset_top = -269.0
+offset_right = 463.0
+offset_bottom = 259.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ffh5e")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=622560506]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = 86.0
+offset_bottom = 236.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=114760474]
+modulate = Color(0.98039216, 0.98039216, 0.98039216, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98039216, 0.98039216, 0.98039216, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.6392157)
+theme_override_colors/font_outline_color = Color(1.0327972, 1.0327972, 1.0327972, 1)
+theme_override_fonts/font = ExtResource("3_umyxr")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+text = "START GAME"
+autowrap_mode = 2
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=2008261319]
+modulate = Color(0.98039216, 0.98039216, 0.98039216, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98039216, 0.98039216, 0.98039216, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 0.6392157)
+theme_override_colors/font_outline_color = Color(1.0327972, 1.0327972, 1.0327972, 1)
+theme_override_fonts/font = ExtResource("3_umyxr")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_glbon")
+text = "Quit"
+autowrap_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="." unique_id=1547664856]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 73.0
+offset_top = 80.0
+offset_right = -283.0
+offset_bottom = 292.0
+grow_horizontal = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer2" unique_id=647380051]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_fonts/normal_font = ExtResource("3_umyxr")
+theme_override_font_sizes/normal_font_size = 80
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlkkf")
+text = "A VERY SCARY GAME"
+fit_content = true
+
+[node name="PostProcessFilter" type="ColorRect" parent="." unique_id=645090938]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_glbon")
+layout_mode = 0
+offset_left = 73.0
+offset_top = 296.0
+offset_right = 869.0
+offset_bottom = 296.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="flicker" type="AnimationPlayer" parent="." unique_id=120427153]
+libraries/ = SubResource("AnimationLibrary_nlkkf")
+autoplay = &"flicker"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="on_quit_button_pressed"]

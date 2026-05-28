@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://j1pcxjiqk4nf"]
+
+[ext_resource type="Texture2D" uid="uid://blp1qkhg6ns6m" path="res://! self made/assets/textures/Office/Computer_Base_color.png" id="1_4y472"]
+[ext_resource type="Texture2D" uid="uid://cebf3qsieqx63" path="res://! self made/assets/textures/Office/Computer_Metallic.png" id="2_dsmam"]
+[ext_resource type="Texture2D" uid="uid://bv1rc102fql0s" path="res://! self made/assets/textures/Office/Computer_Normal.png" id="3_tw0db"]
+[ext_resource type="Texture2D" uid="uid://ch6rh5drmreea" path="res://! self made/assets/textures/Office/Computer_Roughness.png" id="4_3spgb"]
+
+[resource]
+albedo_texture = ExtResource("1_4y472")
+metallic = 1.0
+metallic_texture = ExtResource("2_dsmam")
+roughness_texture = ExtResource("4_3spgb")
+normal_enabled = true
+normal_texture = ExtResource("3_tw0db")

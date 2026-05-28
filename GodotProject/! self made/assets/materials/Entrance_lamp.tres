@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cqdg8v5nlxaae"]
+
+[ext_resource type="Texture2D" uid="uid://dlcmn45gv7hfb" path="res://! self made/assets/textures/Entrance/Entrance_lamp_Base_color.png" id="1_u1uih"]
+[ext_resource type="Texture2D" uid="uid://dx5uqhanmxn7p" path="res://! self made/assets/textures/Entrance/Entrance_lamp_Metallic.png" id="2_yof78"]
+[ext_resource type="Texture2D" uid="uid://cmae74k2dkt26" path="res://! self made/assets/textures/Entrance/Entrance_lamp_Normal.png" id="3_1ppel"]
+[ext_resource type="Texture2D" uid="uid://dc0od657nk458" path="res://! self made/assets/textures/Entrance/Entrance_lamp_Roughness.png" id="4_6ejlr"]
+
+[resource]
+albedo_texture = ExtResource("1_u1uih")
+metallic = 1.0
+metallic_texture = ExtResource("2_yof78")
+roughness_texture = ExtResource("4_6ejlr")
+normal_enabled = true
+normal_scale = 5.22
+normal_texture = ExtResource("3_1ppel")

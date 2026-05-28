@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://hehtk3w0028e"]
+
+[ext_resource type="Script" uid="uid://ckly1y14a2yds" path="res://! self made/scripts/player/fps_controller.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" unique_id=2061108605]
+script = ExtResource("1_4flbx")
+
+[node name="Head" type="Node3D" parent="." unique_id=411113928]
+
+[node name="Camera" type="Camera3D" parent="Head" unique_id=1743651650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+fov = 80.0
+
+[node name="RayCast" type="RayCast3D" parent="Head/Camera" unique_id=1644416140]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2063656693]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=238157117]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_onrkg")

@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bvj20ky01048p"]
+
+[ext_resource type="Texture2D" uid="uid://cswlayue5llts" path="res://! self made/assets/textures/Entrance/Bag_Base_color.png" id="1_2jscu"]
+[ext_resource type="Texture2D" uid="uid://qwo0cc4qcvj" path="res://! self made/assets/textures/Entrance/Bag_Normal.png" id="2_dww4l"]
+[ext_resource type="Texture2D" uid="uid://qd0ln8hyex5r" path="res://! self made/assets/textures/Entrance/Bag_Roughness.png" id="3_kdjll"]
+
+[resource]
+albedo_texture = ExtResource("1_2jscu")
+roughness_texture = ExtResource("3_kdjll")
+normal_enabled = true
+normal_scale = 1.7
+normal_texture = ExtResource("2_dww4l")
