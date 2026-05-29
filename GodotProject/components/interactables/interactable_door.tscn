@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://byk0hu5lybhoc" path="res://! self made/assets/textures/Hallway/Interactive_door_Metallic.png" id="4_wdycl"]
 [ext_resource type="Texture2D" uid="uid://bc8l5wolc1le7" path="res://! self made/assets/textures/Hallway/Interactive_door_Normal_OpenGL.png" id="5_aemxq"]
 [ext_resource type="Texture2D" uid="uid://cbo3b34l8lccv" path="res://! self made/assets/textures/Hallway/Interactive_door_Roughness.png" id="6_pbv8a"]
+[ext_resource type="AudioStream" uid="uid://b2oma7ghpwtm8" path="res://common/audio/door_opening.mp3" id="8_jmshv"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cmhc4"]
 albedo_texture = ExtResource("3_cmhc4")
@@ -21,7 +22,6 @@ size = Vector3(0.3552246, 0.70214844, 0.04650879)
 
 [node name="interactable_door" type="StaticBody3D" unique_id=1430987452]
 script = ExtResource("1_ty8id")
-animation_time = 0.8
 swing_clockwise = false
 
 [node name="Interactive_door2" parent="." unique_id=1173339444 instance=ExtResource("1_2logd")]
@@ -34,5 +34,10 @@ transform = Transform3D(2.91, 0, 0, 0, 2.91, 0, 0, 0, 2.91, 0.5041088, -0.004262
 shape = SubResource("BoxShape3D_ty8id")
 
 [node name="InteractableComponent" parent="." unique_id=2066935556 instance=ExtResource("3_dcmak")]
+
+[node name="OpenCloseSound" type="AudioStreamPlayer3D" parent="." unique_id=1620909276]
+stream = ExtResource("8_jmshv")
+volume_db = -25.0
+max_db = 0.857
 
 [editable path="Interactive_door2"]
