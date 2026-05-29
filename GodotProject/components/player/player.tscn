@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bndcuijnby5xg"]
 
-[ext_resource type="Script" uid="uid://ckly1y14a2yds" path="res://! self made/scripts/player/fps_controller.gd" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://cnspcw1qt5a44" path="res://! self made/scripts/player/ray_cast.gd" id="2_onrkg"]
+[ext_resource type="Script" uid="uid://ckly1y14a2yds" path="res://components/player/fps_controller.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://gs8m6jg562ym" path="res://components/player/raycast.gd" id="2_kfe3d"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
@@ -16,7 +16,7 @@ fov = 80.0
 
 [node name="RayCast" type="RayCast3D" parent="Head/Camera" unique_id=1644416140]
 target_position = Vector3(0, 0, -2)
-script = ExtResource("2_onrkg")
+script = ExtResource("2_kfe3d")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2063656693]
 

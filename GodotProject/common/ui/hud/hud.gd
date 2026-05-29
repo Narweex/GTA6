@@ -4,6 +4,7 @@ extends Control
 @onready var clock_label: Label = $MarginContainer/TimeLabel
 @onready var tick_audio: AudioStreamPlayer = $TickAudio
 
+
 #seconds tracker
 var last_tracked_second: int = -1
 

@@ -186,6 +186,7 @@
 [ext_resource type="PackedScene" uid="uid://dn1bfm2jtjxkj" path="res://components/interactables/interactable_door.tscn" id="183_vyl4c"]
 [ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="185_vdifd"]
 [ext_resource type="AudioStream" uid="uid://dhvyjv0o3oeb" path="res://common/audio/clock_tick.mp3" id="186_vyl4c"]
+[ext_resource type="Script" uid="uid://bybn0skool8vo" path="res://components/player/interaction_label.gd" id="187_ufk2c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf7a7"]
 albedo_texture = ExtResource("5_o3erk")
@@ -1378,6 +1379,31 @@ stream = ExtResource("186_vyl4c")
 volume_db = -10.769
 autoplay = true
 parameters/looping = true
+
+[node name="InteractionText" type="Control" parent="HUDLayer" unique_id=1559098688 groups=["interaction_ui"]]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("187_ufk2c")
+
+[node name="InteractionLabel" type="Label" parent="HUDLayer/InteractionText" unique_id=59783825 groups=["interaction_ui"]]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.5
+offset_top = -11.5
+offset_right = 75.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="timeout" from="HUDLayer/HUD/GameTimer" to="HUDLayer/HUD" method="_on_game_timer_timeout"]
 

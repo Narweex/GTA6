@@ -37,7 +37,7 @@ shape = SubResource("BoxShape3D_ty8id")
 
 [node name="OpenCloseSound" type="AudioStreamPlayer3D" parent="." unique_id=1620909276]
 stream = ExtResource("8_jmshv")
-volume_db = -25.0
+volume_db = -40.0
 max_db = 0.857
 
 [editable path="Interactive_door2"]
