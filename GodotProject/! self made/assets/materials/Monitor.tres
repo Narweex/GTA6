@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://fhttkxx3o4dv"]
+
+[ext_resource type="Texture2D" uid="uid://ck7bmit3nil1n" path="res://! self made/assets/textures/Office/M_Monitor_Base_color.png" id="1_4s3a1"]
+[ext_resource type="Texture2D" uid="uid://dnj5qcs1y3r18" path="res://! self made/assets/textures/Office/M_Monitor_Metallic.png" id="2_ojhcv"]
+[ext_resource type="Texture2D" uid="uid://dfhudyols4afn" path="res://! self made/assets/textures/Office/M_Monitor_Normal_OpenGL.png" id="3_4y6ja"]
+[ext_resource type="Texture2D" uid="uid://dabpusvhk5fqs" path="res://! self made/assets/textures/Office/M_Monitor_Roughness.png" id="4_iuvul"]
+
+[resource]
+albedo_texture = ExtResource("1_4s3a1")
+metallic = 1.0
+metallic_texture = ExtResource("2_ojhcv")
+roughness_texture = ExtResource("4_iuvul")
+normal_enabled = true
+normal_texture = ExtResource("3_4y6ja")

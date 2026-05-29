@@ -1,0 +1,6 @@
+[gd_resource type="Theme" format=3 uid="uid://ju1w1p5fok1l"]
+
+[resource]
+default_font_size = 64
+Button/colors/font_color = Color(0.6907656, 0.62659216, 0.25762698, 1)
+Button/fonts/font = null

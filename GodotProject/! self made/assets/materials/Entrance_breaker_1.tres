@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ctum52dvnprc4"]
+
+[ext_resource type="Texture2D" uid="uid://d3u4gipq06ejm" path="res://! self made/assets/textures/Entrance/Breaker_Base_color.png" id="1_tro1t"]
+[ext_resource type="Texture2D" uid="uid://2rpufxkhs15r" path="res://! self made/assets/textures/Entrance/Breaker_Metallic.png" id="2_4uk4q"]
+[ext_resource type="Texture2D" uid="uid://c3pjffhdrm2k2" path="res://! self made/assets/textures/Entrance/Breaker_Normal.png" id="3_yk60n"]
+[ext_resource type="Texture2D" uid="uid://jtlnlxmrhysq" path="res://! self made/assets/textures/Entrance/Breaker_Roughness.png" id="4_qcslu"]
+
+[resource]
+albedo_texture = ExtResource("1_tro1t")
+metallic = 0.78
+metallic_texture = ExtResource("2_4uk4q")
+roughness = 0.52
+roughness_texture = ExtResource("4_qcslu")
+normal_enabled = true
+normal_scale = 3.11
+normal_texture = ExtResource("3_yk60n")

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://delqbug7vq3uk"]
+
+[ext_resource type="Texture2D" uid="uid://du4ek8o2ihiaw" path="res://! self made/assets/textures/Office/Grid_bc.001.png" id="1_40kln"]
+
+[resource]
+transparency = 1
+albedo_texture = ExtResource("1_40kln")
+metallic = 0.82

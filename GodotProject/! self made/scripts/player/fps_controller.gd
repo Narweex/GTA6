@@ -1,19 +1,15 @@
 extends CharacterBody3D
 
 @export_category("Movement Settings")
-## The base speed of the character
+## base speed of the character
 @export var speed : float = 5.0
-## The mouse sensitivity
-@export var sensitivity : float = 0.005
+## mouse sensitivity
+@export var sensitivity : float = 0.002
 
 @export_category("Inputs")
-## Name of the action for going left
 @export var left : String = "left"
-## Name of the action for going right
 @export var right : String = "right"
-## Name of the action for going forward
 @export var forward : String = "forward"
-## Name of the action for going backward
 @export var backward : String = "backward"
 
 @onready var head: Node3D = $Head
