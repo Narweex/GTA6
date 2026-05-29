@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://hehtk3w0028e"]
+[gd_scene format=3 uid="uid://bndcuijnby5xg"]
 
 [ext_resource type="Script" uid="uid://ckly1y14a2yds" path="res://! self made/scripts/player/fps_controller.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cnspcw1qt5a44" path="res://! self made/scripts/player/ray_cast.gd" id="2_onrkg"]
