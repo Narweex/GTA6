@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bpfdskjocedi3"
-path="res://.godot/imported/rusty-metal-chain-grid_2K_ff8c95fc-fb9f-42ae-a200-2a6bbc2932b1.blend-bfc9b29cae8d61eb0612ff12873d3904.scn"
+valid=false
 
 [deps]
 
 source_file="res://resources/assets/geometry/Blender/assets/materials/rusty-metal-chai_eeff7dca-5c62-4436-92ac-5a661e05dc9a/rusty-metal-chain-grid_2K_ff8c95fc-fb9f-42ae-a200-2a6bbc2932b1.blend"
-dest_files=["res://.godot/imported/rusty-metal-chain-grid_2K_ff8c95fc-fb9f-42ae-a200-2a6bbc2932b1.blend-bfc9b29cae8d61eb0612ff12873d3904.scn"]
 
 [params]
 
