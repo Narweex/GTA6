@@ -1,6 +1,6 @@
 extends Control
 
-signal minigame_completed
+signal cable_hex_completed
 
 @onready var left_vbox = $HBoxContainer/LeftWiresContainer
 @onready var right_vbox = $HBoxContainer/RightWiresContainer
@@ -105,5 +105,5 @@ func all_wires_connected():
 	await get_tree().create_timer(0.4).timeout
 	
 	# Vyemitujeme (vyhlásíme) signál do okolí
-	minigame_completed.emit()
+	cable_hex_completed.emit()
 	
