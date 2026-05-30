@@ -28,11 +28,9 @@ func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
 		
 	var minigame_instance = minigame_resource.instantiate()
 	
-	# 2. Tell Godot that this UI node keeps running even when the game is paused
 	minigame_instance.process_mode = Node.PROCESS_MODE_ALWAYS
 	
-	# 3. Connect signals using anonymous functions (Lambdas) to handle the return thread
-	minigame_instance.riddle_solved.connect(func():
+	minigame_instance.cable_hex_completed.connect(func():
 		complete_riddle(riddle_id)
 		_close_minigame(minigame_instance)
 	)
