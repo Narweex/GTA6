@@ -35,10 +35,6 @@ func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
 		_close_minigame(minigame_instance)
 	)
 	
-	minigame_instance.riddle_canceled.connect(func():
-		_close_minigame(minigame_instance)
-	)
-	
 	# 4. Add the overlay to the view screen
 	get_tree().root.add_child(minigame_instance)
 	
