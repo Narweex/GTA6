@@ -1,5 +1,5 @@
 extends Node
-
+#this will be registered as a singleton. 
 #track the progress of all riddles and base the walkthrough on it
 var riddles = {
 	"cable_hex": false,
