@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dr4c2fp4gobwm"]
+
+[ext_resource type="Script" uid="uid://dfyc5jjdb6tv3" path="res://levels/cable_hex/cable_hex_scene.gd" id="1_c3m62"]
+
+[node name="CableHexScene" type="Control" unique_id=1283024870]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c3m62")
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2032693206]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="LeftWiresContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1969355137]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Spacer" type="Control" parent="HBoxContainer" unique_id=1039091752]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RightWiresContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=625987710]
+layout_mode = 2
+
+[node name="CompletedLines" type="Node2D" parent="." unique_id=755349726]
+
+[node name="ActiveLine" type="Line2D" parent="." unique_id=1652100809]

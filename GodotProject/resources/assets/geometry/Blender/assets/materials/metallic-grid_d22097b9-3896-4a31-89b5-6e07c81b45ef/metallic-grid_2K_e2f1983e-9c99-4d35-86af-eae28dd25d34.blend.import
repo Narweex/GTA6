@@ -4,12 +4,11 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c144thcs1d3so"
-path="res://.godot/imported/metallic-grid_2K_e2f1983e-9c99-4d35-86af-eae28dd25d34.blend-ade2410eea0e368d23521af8d31a2321.scn"
+valid=false
 
 [deps]
 
 source_file="res://resources/assets/geometry/Blender/assets/materials/metallic-grid_d22097b9-3896-4a31-89b5-6e07c81b45ef/metallic-grid_2K_e2f1983e-9c99-4d35-86af-eae28dd25d34.blend"
-dest_files=["res://.godot/imported/metallic-grid_2K_e2f1983e-9c99-4d35-86af-eae28dd25d34.blend-ade2410eea0e368d23521af8d31a2321.scn"]
 
 [params]
 
