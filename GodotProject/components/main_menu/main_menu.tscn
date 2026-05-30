@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="1_7xoae"]
 [ext_resource type="Script" uid="uid://clh41ii0w1jo5" path="res://components/main_menu/main_menu.gd" id="1_c7jga"]
-[ext_resource type="Texture2D" uid="uid://cc2d6qf0hvqwk" path="res://assets/Menu_screen.png" id="2_c7jga"]
+[ext_resource type="Texture2D" uid="uid://c5jhi0rpw4pbm" path="res://resources/assets/2d assets/Menu_screen.png" id="2_c7jga"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7jga"]
 bg_color = Color(0.6030338, 0.54393774, 0.3154333, 0)
@@ -74,7 +74,6 @@ theme_override_colors/font_color = Color(0.24313726, 0.2901961, 0.24313726, 1)
 theme_override_fonts/font = ExtResource("1_7xoae")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_c7jga")
-button_mask = 0
 text = "Start"
 
 [node name="quit_button" type="Button" parent="VBoxContainer" unique_id=1711961579]
