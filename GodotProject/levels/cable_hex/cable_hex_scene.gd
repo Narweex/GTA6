@@ -1,5 +1,7 @@
 extends Control
 
+signal minigame_completed
+
 @onready var left_vbox = $HBoxContainer/LeftWiresContainer
 @onready var right_vbox = $HBoxContainer/RightWiresContainer
 @onready var active_line = $ActiveLine
@@ -12,6 +14,8 @@ var colors = [Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW, Color.PURPLE]
 var is_dragging = false
 var current_start_node = null
 var hovered_right_node = null
+
+var completed_connections = 0
 
 func _ready():
 	active_line.width = 12
@@ -89,3 +93,17 @@ func create_permanent_line(start_node: ColorRect, end_node: ColorRect):
 	new_line.add_point(end_node.global_position + (end_node.size / 2))
 	
 	completed_lines.add_child(new_line)
+	
+	completed_connections+= 1
+	
+	if completed_connections == colors.size():
+		all_wires_connected()
+
+
+func all_wires_connected():
+	# Volitelná krátká pauza (0.4 vteřiny), aby hráč viděl, že spojil poslední kabel
+	await get_tree().create_timer(0.4).timeout
+	
+	# Vyemitujeme (vyhlásíme) signál do okolí
+	minigame_completed.emit()
+	
