@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bw5wijjyyjxyy"]
+
+[ext_resource type="Texture2D" uid="uid://g6av5r2dyu3s" path="res://resources/assets/textures/Office/Folder_big_Base_color.png" id="1_isnnt"]
+[ext_resource type="Texture2D" uid="uid://8phugc6d6tdi" path="res://resources/assets/textures/Office/Folder_big_Metallic.png" id="2_8aknr"]
+[ext_resource type="Texture2D" uid="uid://bjbumgnaiwkii" path="res://resources/assets/textures/Office/Folder_big_Normal.png" id="3_qws6s"]
+[ext_resource type="Texture2D" uid="uid://c7anfjfd0sksw" path="res://resources/assets/textures/Office/Folder_big_Roughness.png" id="4_15j8u"]
+
+[resource]
+albedo_texture = ExtResource("1_isnnt")
+metallic = 1.0
+metallic_texture = ExtResource("2_8aknr")
+roughness_texture = ExtResource("4_15j8u")
+normal_enabled = true
+normal_scale = 2.41
+normal_texture = ExtResource("3_qws6s")

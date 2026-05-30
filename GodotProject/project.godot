@@ -22,10 +22,10 @@ window/size/mode=3
 [file_customization]
 
 folder_colors={
-"res://! self made/assets/": "red",
 "res://! self made/scenes/": "orange",
-"res://! self made/scripts/": "yellow",
-"res://! self made/shader/": "green"
+"res://resources/assets/": "red",
+"res://resources/scripts/": "yellow",
+"res://resources/shader/": "green"
 }
 
 [input]
