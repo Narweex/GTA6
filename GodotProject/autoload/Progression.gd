@@ -18,3 +18,40 @@ func complete_riddle(riddle_id: String):
 			riddles[riddle_id] = true
 			#for debugging
 			print(riddle_id, " solved!")
+			
+func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
+	# 1. Safely load and instance the UI scene
+	var minigame_resource = load(minigame_scene_path)
+	if not minigame_resource:
+		push_error("Failed to load minigame path: " + minigame_scene_path)
+		return
+		
+	var minigame_instance = minigame_resource.instantiate()
+	
+	# 2. Tell Godot that this UI node keeps running even when the game is paused
+	minigame_instance.process_mode = Node.PROCESS_MODE_ALWAYS
+	
+	# 3. Connect signals using anonymous functions (Lambdas) to handle the return thread
+	minigame_instance.riddle_solved.connect(func():
+		complete_riddle(riddle_id)
+		_close_minigame(minigame_instance)
+	)
+	
+	minigame_instance.riddle_canceled.connect(func():
+		_close_minigame(minigame_instance)
+	)
+	
+	# 4. Add the overlay to the view screen
+	get_tree().root.add_child(minigame_instance)
+	
+	# 5. Freeze the 3D World thread and release the cursor
+	get_tree().paused = true
+	#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func _close_minigame(instance: Node) -> void:
+	# 1. Erase the UI scene completely
+	instance.queue_free()
+	
+	# 2. Unfreeze the 3D world thread and recapture the mouse
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
