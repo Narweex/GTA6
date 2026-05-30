@@ -2,6 +2,23 @@
 
 [ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="1_7xoae"]
 [ext_resource type="Script" uid="uid://clh41ii0w1jo5" path="res://components/main_menu/main_menu.gd" id="1_c7jga"]
+[ext_resource type="Texture2D" uid="uid://cc2d6qf0hvqwk" path="res://assets/Menu_screen.png" id="2_c7jga"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7jga"]
+bg_color = Color(0.6030338, 0.54393774, 0.3154333, 0)
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_width_bottom = 5
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s50wb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_width_bottom = 5
+border_color = Color(0.8, 0.8, 0.8, 0)
 
 [node name="MainMenu" type="Control" unique_id=1864481565]
 layout_mode = 3
@@ -11,6 +28,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_c7jga")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1303626252]
+layout_mode = 0
+offset_top = -164.0
+offset_right = 1971.0
+offset_bottom = 1098.0
+texture = ExtResource("2_c7jga")
+expand_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=413691771]
 layout_mode = 1
@@ -22,19 +47,43 @@ grow_vertical = 2
 alignment = 1
 
 [node name="game_title" type="Label" parent="VBoxContainer" unique_id=2039936419]
+modulate = Color(0.6216626, 0.4200915, 0.21146363, 1)
+self_modulate = Color(0.933207, 0.933207, 0.9332069, 1)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.6117647, 0.05490196, 0.05490196, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_7xoae")
-text = "A very scary game"
+theme_override_font_sizes/font_size = 63
+text = "a very scary game
+"
 horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=330186641]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 1.91
+focus_neighbor_top = NodePath("../game_title")
+focus_neighbor_bottom = NodePath("../start_button")
 
 [node name="start_button" type="Button" parent="VBoxContainer" unique_id=999480069]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 1.59
+theme_override_colors/font_color = Color(0.24313726, 0.2901961, 0.24313726, 1)
 theme_override_fonts/font = ExtResource("1_7xoae")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_c7jga")
+button_mask = 0
 text = "Start"
 
 [node name="quit_button" type="Button" parent="VBoxContainer" unique_id=1711961579]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.24313726, 0.2901961, 0.24313726, 1)
 theme_override_fonts/font = ExtResource("1_7xoae")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_s50wb")
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
