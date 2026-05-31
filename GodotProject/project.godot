@@ -16,6 +16,10 @@ run/main_scene="uid://d07jrw2ofluyd"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://c3d6mg2hekifv"
+
 [autoload]
 
 Progression="*uid://cqbkfcxe5cpmx"
@@ -27,7 +31,6 @@ window/size/mode=3
 [file_customization]
 
 folder_colors={
-"res://! self made/scenes/": "orange",
 "res://resources/assets/": "red",
 "res://resources/scripts/": "yellow",
 "res://resources/shader/": "green"
@@ -74,6 +77,10 @@ Jump={
 "deadzone": 0.2,
 "events": []
 }
+
+[layer_names]
+
+3d_physics/layer_2="Interactables"
 
 [physics]
 

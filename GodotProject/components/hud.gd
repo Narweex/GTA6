@@ -3,9 +3,9 @@ extends CanvasLayer
 @onready var stage_label: Label = $MarginContainer/StageLabel
 
 func _ready() -> void:
-	GameProgress.stage_changed.connect(_on_game_stage_changed)
+	Progression.stage_changed.connect(_on_game_stage_changed)
 	
-	stage_label.text = GameProgress.get_current_stage_text()
+	stage_label.text = Progression.get_current_stage_text()
 
 #start every time complete_riddle() == TRUE
 func _on_game_stage_changed(new_stage_text: String) -> void:

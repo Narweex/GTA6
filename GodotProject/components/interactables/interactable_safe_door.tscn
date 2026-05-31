@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bkekgwm3pgh86"]
+
+[ext_resource type="Script" uid="uid://c6xvl3nsg87c5" path="res://resources/scripts/interaction/interactable_door.gd" id="1_53uy4"]
+[ext_resource type="PackedScene" uid="uid://b47cdju3n2f4d" path="res://resources/assets/geometry/glb/Safe_door.glb" id="1_ajsjk"]
+[ext_resource type="Texture2D" uid="uid://ca4ugl3tycpam" path="res://resources/assets/textures/Office/Save_door_Base_color.png" id="2_m5rjl"]
+[ext_resource type="Texture2D" uid="uid://be4dsropcj33k" path="res://resources/assets/textures/Office/Save_door_Metallic.png" id="3_53uy4"]
+[ext_resource type="Texture2D" uid="uid://sdfs2rd34u6s" path="res://resources/assets/textures/Office/Save_door_Normal_OpenGL.png" id="4_ydyi8"]
+[ext_resource type="Texture2D" uid="uid://b3n1rplw1edck" path="res://resources/assets/textures/Office/Save_door_Roughness.png" id="5_lhsg5"]
+[ext_resource type="PackedScene" uid="uid://bkknvsdujj2pe" path="res://components/interactables/interactable_component.tscn" id="6_m5rjl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kiosx"]
+albedo_texture = ExtResource("2_m5rjl")
+metallic = 1.0
+metallic_texture = ExtResource("3_53uy4")
+roughness_texture = ExtResource("5_lhsg5")
+normal_enabled = true
+normal_texture = ExtResource("4_ydyi8")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ajsjk"]
+size = Vector3(0.22653961, 0.43669128, 0.62384033)
+
+[node name="interactable_safe_door" type="StaticBody3D" unique_id=80944927]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_53uy4")
+rotation_amount = 160
+
+[node name="Safe_door" parent="." unique_id=1680508954 instance=ExtResource("1_ajsjk")]
+
+[node name="Save_door" parent="Safe_door" index="0" unique_id=1609738008]
+layers = 2
+surface_material_override/0 = SubResource("StandardMaterial3D_kiosx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=198639454]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.021126807, -0.0007906556, -0.22723377)
+shape = SubResource("BoxShape3D_ajsjk")
+
+[node name="InteractableComponent" parent="." unique_id=2066935556 instance=ExtResource("6_m5rjl")]
+
+[editable path="Safe_door"]
