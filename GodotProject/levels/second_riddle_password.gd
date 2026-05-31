@@ -1,4 +1,3 @@
-# FuseBox.gd (Attached to your 3D puzzle object in the room)
 extends StaticBody3D
 
 ## Path to your colleague's UI scene file (e.g. "res://scenes/cable_riddle.tscn")

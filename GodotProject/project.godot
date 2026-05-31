@@ -33,6 +33,10 @@ folder_colors={
 "res://resources/shader/": "green"
 }
 
+[global_group]
+
+facility_lights=""
+
 [input]
 
 forward={

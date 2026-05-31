@@ -1,29 +1,59 @@
 [gd_scene format=3 uid="uid://dr4c2fp4gobwm"]
 
 [ext_resource type="Script" uid="uid://dfyc5jjdb6tv3" path="res://levels/cable_hex/cable_hex_scene.gd" id="1_c3m62"]
+[ext_resource type="Texture2D" uid="uid://cs2ew5kuet2qy" path="res://common/ui/backgrounds/circuit_background.png" id="2_su4t5"]
 
 [node name="CableHexScene" type="Control" unique_id=1283024870]
+z_index = 50
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = 9.0
+offset_right = -25.0
+offset_bottom = 9.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 script = ExtResource("1_c3m62")
-metadata/_edit_use_anchors_ = true
+
+[node name="PanelBackground" type="TextureRect" parent="." unique_id=2036967997]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_su4t5")
+stretch_mode = 3
+
+[node name="HintLabel" type="Label" parent="." unique_id=1497712992]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 46.0
+offset_bottom = 69.0
+grow_horizontal = 2
+text = "REPAIR THE GENERATOR BY CORRECTLY CONNECTING THE WIRES. IF YOU ARE COLOURBLIND, IT'S GOING TO BE TUFF"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CompletedLines" type="Node2D" parent="." unique_id=755349726]
+
+[node name="ActiveLine" type="Line2D" parent="." unique_id=1652100809]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2032693206]
+z_index = 10
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 8.0
-offset_bottom = 8.0
+anchor_bottom = 0.5
+offset_left = 242.0
+offset_top = -98.0
+offset_right = -228.0
+offset_bottom = 212.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
+alignment = 1
 
 [node name="LeftWiresContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1969355137]
 layout_mode = 2
@@ -35,7 +65,3 @@ size_flags_horizontal = 3
 
 [node name="RightWiresContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=625987710]
 layout_mode = 2
-
-[node name="CompletedLines" type="Node2D" parent="." unique_id=755349726]
-
-[node name="ActiveLine" type="Line2D" parent="." unique_id=1652100809]

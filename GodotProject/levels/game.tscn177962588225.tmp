@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://d30ync1dvqofj"]
 
-[ext_resource type="Script" uid="uid://bdm2u3y3gx7ts" path="res://levels/environmentManager.gd" id="1_lyuia"]
 [ext_resource type="Script" uid="uid://x1bxe8hng8s2" path="res://common/ui/hud/hud.gd" id="1_m637p"]
 [ext_resource type="PackedScene" uid="uid://bndcuijnby5xg" path="res://components/player/player.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://d00d304d11tcx" path="res://resources/assets/geometry/Blender/Kaunas.blend" id="2_feb5d"]
@@ -638,6 +637,8 @@ normal_texture = ExtResource("177_kp8cn")
 transparency = 1
 albedo_color = Color(0.3019608, 1, 0.35686275, 0.8980392)
 
+[sub_resource type="GDScript" id="GDScript_u647y"]
+
 [sub_resource type="Environment" id="Environment_x5p1p"]
 background_color = Color(0.28485027, 0.28485027, 0.28485027, 1)
 background_energy_multiplier = 5.54
@@ -659,7 +660,6 @@ volumetric_fog_ambient_inject = 0.3
 volumetric_fog_sky_affect = 0.163
 
 [node name="World" type="Node3D" unique_id=1671539021]
-script = ExtResource("1_lyuia")
 
 [node name="CharacterBody3D" parent="." unique_id=2061108605 instance=ExtResource("2_e2o6t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.113211, 1.271434, 4.0317993)
@@ -1312,9 +1312,11 @@ transform = Transform3D(0.009895876, 0, -0.999951, 0, 1, 0, 0.999951, 0, 0.00989
 
 [node name="interactable_door6" parent="Kaunas" unique_id=1702719880 instance=ExtResource("183_vyl4c")]
 transform = Transform3D(-0.99980515, 0, -0.019738419, 0, 1, 0, 0.019738419, 0, -0.99980515, 29.759977, 3.248474, 18.146708)
+required_riddle_id = "chess_password"
 
 [node name="Point Grün2" type="OmniLight3D" parent="Kaunas" unique_id=829680001]
 transform = Transform3D(0.9659258, -0.25881916, 0, 0, 0, 1, -0.25881916, -0.9659258, 0, 55.88851, -0.7837614, 26.63538)
+visible = false
 light_color = Color(0.3348429, 1, 0.31123266, 1)
 light_energy = 0.1
 omni_range = 4096.0
@@ -1322,6 +1324,7 @@ omni_attenuation = 2.0
 
 [node name="Point Grün_003" type="OmniLight3D" parent="Kaunas" unique_id=1084710813]
 transform = Transform3D(0.9659258, -0.25881916, 0, 0, 0, 1, -0.25881916, -0.9659258, 0, 56.14461, -0.78654623, 26.632757)
+visible = false
 light_color = Color(1, 0.17851466, 0.22400875, 1)
 light_energy = 0.05
 omni_range = 4096.0
@@ -1329,12 +1332,14 @@ omni_attenuation = 2.0
 
 [node name="Point Grün_004" type="OmniLight3D" parent="Kaunas" unique_id=1203627197]
 transform = Transform3D(0.9659258, -0.25881916, 0, 0, 0, 1, -0.25881916, -0.9659258, 0, 55.97546, -0.7879386, 26.648668)
+visible = false
 light_color = Color(1, 0.9137341, 0.16714278, 1)
 light_energy = 0.05
 omni_range = 4096.0
 omni_attenuation = 2.0
 
 [node name="Lights" type="Node3D" parent="." unique_id=476661733]
+script = SubResource("GDScript_u647y")
 
 [node name="Office_Light" type="OmniLight3D" parent="Lights" unique_id=1330032139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.340454, 4.0317764, -2.9572206)
@@ -1342,17 +1347,6 @@ visible = false
 light_energy = 3.143
 light_indirect_energy = 12.259
 light_volumetric_fog_energy = 0.0
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights" unique_id=1674313606]
-transform = Transform3D(1, 0, 0, 0, -0.7614592, 0.6482129, 0, -0.6482129, -0.7614592, -9.025187, 10.465784, -18.169619)
-visible = false
-light_color = Color(0.9969793, 0.9208307, 0.7608952, 1)
-light_energy = 7.688
-light_indirect_energy = 3.938
-light_volumetric_fog_energy = 10.188
-light_specular = 3.218
-shadow_enabled = true
-sky_mode = 1
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights" unique_id=469909925]
 transform = Transform3D(1, 0, 0, 0, 0.7626683, 0.6467898, 0, -0.6467898, 0.7626683, -11.352858, 6.67974, 13.420752)
@@ -1364,29 +1358,30 @@ shadow_enabled = true
 sky_mode = 1
 
 [node name="Entrance_light" type="OmniLight3D" parent="Lights" unique_id=1993270872]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.371484, 1.9760287, 4.0139275)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.371484, 3.0664032, 4.0139275)
 visible = false
 
 [node name="Entrance_light2" type="OmniLight3D" parent="Lights" unique_id=1217159268]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4698608, 3.8320704, 0.7232597)
 visible = false
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=1086326903 groups=["facility_lights"]]
-transform = Transform3D(1, 0, 0, 0, 0.016632225, 0.9998617, 0, -0.9998617, 0.016632225, -10.427224, 2.7810075, 4.266346)
-light_energy = 3.14
-spot_attenuation = 2.48
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=7447981]
+transform = Transform3D(1, 0, 0, 0, 0.25200185, 0.96772677, 0, -0.96772677, 0.25200185, -10.385865, 2.7530208, 4.3049994)
+light_energy = 5.045
+light_indirect_energy = 5.944
+light_volumetric_fog_energy = 0.0
+light_size = 0.871
+light_specular = 0.051
+shadow_enabled = true
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=546314369 groups=["facility_lights"]]
-transform = Transform3D(1, 0, 0, 0, 0.016632225, 0.9998617, 0, -0.9998617, 0.016632225, -13.893331, 2.7524767, 4.3215218)
-spot_attenuation = 2.48
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="Lights" unique_id=2112021970 groups=["facility_lights"]]
-transform = Transform3D(1, 0, 0, 0, 0.016632225, 0.9998617, 0, -0.9998617, 0.016632225, -2.61935, 4.49271, 0.78372467)
-spot_attenuation = 2.48
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="Lights" unique_id=1934873542 groups=["facility_lights"]]
-transform = Transform3D(1, 0, 0, 0, 0.016632225, 0.9998617, 0, -0.9998617, 0.016632225, 4.402123, 4.418634, 0.78372467)
-spot_attenuation = 2.48
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=287734399]
+transform = Transform3D(1, 0, 0, 0, 0.25200185, 0.96772677, 0, -0.96772677, 0.25200185, -13.842764, 2.7530208, 4.3049994)
+light_energy = 5.045
+light_indirect_energy = 5.944
+light_volumetric_fog_energy = 0.0
+light_size = 0.871
+light_specular = 0.051
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=679256751]
 environment = SubResource("Environment_x5p1p")

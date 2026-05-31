@@ -1,6 +1,9 @@
 extends Node
 #this will be registered as a singleton. 
 #track the progress of all riddles and base the walkthrough on it
+signal riddle_completed(riddle_id: String)
+signal riddle_cancelled(riddle_id: String)
+
 var riddles = {
 	"cable_hex": false,
 	"button_order": false,
@@ -16,8 +19,8 @@ var riddles = {
 func complete_riddle(riddle_id: String):
 		if(riddles.has(riddle_id)):
 			riddles[riddle_id] = true
-			#for debugging
-			print(riddle_id, " solved!")
+			#emit the signal
+			riddle_completed.emit(riddle_id)
 			
 func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
 	# 1. Safely load and instance the UI scene
@@ -30,22 +33,23 @@ func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
 	
 	minigame_instance.process_mode = Node.PROCESS_MODE_ALWAYS
 	
-	minigame_instance.cable_hex_completed.connect(func():
+	minigame_instance.riddle_completed.connect(func():
 		complete_riddle(riddle_id)
 		_close_minigame(minigame_instance)
 	)
 	
+	minigame_instance.riddle_cancelled.connect(func():
+		_close_minigame(minigame_instance)
+		)
+	
 	# 4. Add the overlay to the view screen
 	get_tree().root.add_child(minigame_instance)
 	
-	# 5. Freeze the 3D World thread and release the cursor
-	get_tree().paused = true
+	#get_tree().paused = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _close_minigame(instance: Node) -> void:
-	# 1. Erase the UI scene completely
 	instance.queue_free()
 	
-	# 2. Unfreeze the 3D world thread and recapture the mouse
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

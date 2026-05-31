@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ckly1y14a2yds" path="res://components/player/fps_controller.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://gs8m6jg562ym" path="res://components/player/raycast.gd" id="2_kfe3d"]
+[ext_resource type="AudioStream" uid="uid://fygetxx014gw" path="res://common/audio/step.mp3" id="3_ph1f6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
@@ -23,3 +24,7 @@ script = ExtResource("2_kfe3d")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=238157117]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_onrkg")
+
+[node name="FootstepPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1411214354]
+stream = ExtResource("3_ph1f6")
+bus = &"FootstepsBus"
