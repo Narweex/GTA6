@@ -1,7 +1,7 @@
 extends Control
 
 @onready var game_timer: Timer = $GameTimer
-@onready var clock_label: Label = $MarginContainer/TimeLabel
+@onready var clock_label: Label = $MarginContainer/VBoxContainer/TimeLabel
 @onready var tick_audio: AudioStreamPlayer = $TickAudio
 
 
