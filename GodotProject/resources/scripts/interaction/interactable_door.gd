@@ -31,7 +31,6 @@ func _on_door_interacted() -> void:
 		_toggle_door()
 		return
 		
-	# Check if the door requires a riddle to be solved
 	if required_riddle_id != "":
 		# Safely access the global Autoload 'Progression'
 		if Progression.riddles.get(required_riddle_id, false) == true:
@@ -62,7 +61,6 @@ func _on_door_locked() -> void:
 
 # Add this inside your door script
 
-## This returns the text your RayCast will send to the UI
 func get_prompt_text() -> String:
 	if is_open:
 		return "Press [E] to Close Door"
