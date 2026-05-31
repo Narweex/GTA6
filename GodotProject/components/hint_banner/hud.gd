@@ -1,6 +1,6 @@
 extends Label
 
-@onready var stage_label: Label = $MarginContainer/StageLabel
+# @onready var stage_label: Label = $MarginContainer/StageLabel
 
 func _ready() -> void:
 	Progression.stage_changed.connect(_on_game_stage_changed)
@@ -13,5 +13,5 @@ func _on_game_stage_changed(new_stage_text: String) -> void:
 	
 	#efect of change
 	var tween = create_tween()
-	stage_label.modulate = Color.RED # Text zčervená
-	tween.tween_property(stage_label, "modulate", Color.WHITE, 0.5) # Během půl vteřiny se vrátí do normálu
+	modulate = Color.RED 
+	tween.tween_property(self, "modulate", Color.WHITE, 0.5)
