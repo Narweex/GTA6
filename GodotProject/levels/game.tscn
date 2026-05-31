@@ -99,6 +99,7 @@
 [ext_resource type="Texture2D" uid="uid://kpi2ma3ue3ox" path="res://resources/assets/textures/Office/Office_supportbeams_Metallic.png" id="60_vqo61"]
 [ext_resource type="Texture2D" uid="uid://dxuy4reu6ofva" path="res://resources/assets/textures/Office/Office_supportbeams_Normal.png" id="61_pwsyv"]
 [ext_resource type="Texture2D" uid="uid://chsuy66cnpvt2" path="res://resources/assets/textures/Office/Office_supportbeams_Roughness.png" id="62_lon8v"]
+[ext_resource type="Script" uid="uid://kybv0xsrp86o" path="res://levels/second_riddle_password.gd" id="69_u647y"]
 [ext_resource type="Material" uid="uid://bqxdh1suyuc61" path="res://resources/assets/materials/Picture_frame.tres" id="70_wj41c"]
 [ext_resource type="Texture2D" uid="uid://cx155paljenyf" path="res://resources/assets/textures/Office/Mausi.png" id="71_baljx"]
 [ext_resource type="Material" uid="uid://c2yev3lrurmnq" path="res://resources/assets/materials/Picture_frame_glass.tres" id="71_t2ssd"]
@@ -380,6 +381,9 @@ roughness_texture = ExtResource("30_87ddb")
 normal_enabled = true
 normal_scale = 4.16
 normal_texture = ExtResource("29_0de7l")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lyuia"]
+points = PackedVector3Array(2.8788843, 2.9615552, 12.3829565, 2.8633642, 2.2007394, 12.441385, 2.003969, 2.9615552, 12.867127, 2.8788843, 3.000814, 12.3829565, 4.2382746, 2.9615552, 12.773092, 2.0620937, 2.2007394, 12.885082, 4.2203197, 2.2007394, 12.831218, 1.6722618, 2.2007394, 14.242037, 1.6138327, 2.9615552, 14.226517, 2.003969, 3.000814, 12.867127, 2.8773627, 3.006096, 12.389651, 4.2382746, 3.000814, 12.773092, 4.7227497, 2.9615552, 13.648008, 4.6640162, 2.2007394, 13.632487, 2.1159582, 2.2007394, 15.043307, 2.0980034, 2.9615552, 15.101433, 1.6138327, 3.000814, 14.226517, 1.6205277, 3.006096, 14.228039, 2.010664, 3.006096, 12.869561, 4.23584, 3.006096, 12.779788, 4.7227497, 3.000814, 13.648008, 4.332309, 2.9615552, 15.007398, 4.274184, 2.2007394, 14.989443, 3.4729137, 2.2007394, 15.43314, 2.0980034, 3.000814, 15.101433, 3.4573936, 2.9615552, 15.491873, 2.1004379, 3.006096, 15.094737, 4.71575, 3.006096, 13.646486, 4.325614, 3.006096, 15.004963, 4.332309, 3.000814, 15.007398, 3.4573936, 3.000814, 15.491873, 3.4589152, 3.006096, 15.484874)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wj41c"]
 
@@ -755,6 +759,14 @@ surface_material_override/0 = SubResource("StandardMaterial3D_svdf4")
 [node name="Table" parent="Kaunas" index="33" unique_id=1738269130]
 surface_material_override/0 = SubResource("StandardMaterial3D_qpefm")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Table" index="0" unique_id=1819407652]
+script = ExtResource("69_u647y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Table/StaticBody3D" unique_id=283143404]
+shape = SubResource("ConvexPolygonShape3D_lyuia")
+
+[node name="InteractableComponent" parent="Kaunas/Table/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
+
 [node name="Pinboard_big" parent="Kaunas" index="34" unique_id=1911947776]
 surface_material_override/0 = SubResource("StandardMaterial3D_baljx")
 
@@ -960,7 +972,7 @@ script = ExtResource("140_gjclm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Generator_1/StaticBody3D" unique_id=1085007011]
 shape = SubResource("ConvexPolygonShape3D_gjclm")
 
-[node name="InteractableComponent" parent="Kaunas/Generator_1/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
+[node name="InteractableComponent" parent="Kaunas/Generator_1/StaticBody3D" unique_id=605302879 instance=ExtResource("169_riv5k")]
 
 [node name="Generator_2" parent="Kaunas" index="106" unique_id=206103982]
 surface_material_override/0 = SubResource("StandardMaterial3D_qw2kp")

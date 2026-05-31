@@ -40,7 +40,7 @@ func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
 	
 	# 5. Freeze the 3D World thread and release the cursor
 	get_tree().paused = true
-	#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _close_minigame(instance: Node) -> void:
 	# 1. Erase the UI scene completely
