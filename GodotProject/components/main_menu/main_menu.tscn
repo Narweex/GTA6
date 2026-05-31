@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="1_7xoae"]
 [ext_resource type="Script" uid="uid://clh41ii0w1jo5" path="res://components/main_menu/main_menu.gd" id="1_c7jga"]
 [ext_resource type="Texture2D" uid="uid://c5jhi0rpw4pbm" path="res://resources/assets/2d assets/Menu_screen.png" id="2_c7jga"]
+[ext_resource type="AudioStream" uid="uid://0jowctxv3an" path="res://common/audio/soundtrack.mp3" id="4_s50wb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7jga"]
 bg_color = Color(0.6030338, 0.54393774, 0.3154333, 0)
@@ -84,6 +85,9 @@ theme_override_fonts/font = ExtResource("1_7xoae")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_s50wb")
 text = "Quit"
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1117954555]
+stream = ExtResource("4_s50wb")
 
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]

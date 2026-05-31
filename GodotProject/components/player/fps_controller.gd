@@ -82,5 +82,5 @@ func _handle_head_bob(delta: float) -> void:
 func _play_footstep_sound() -> void:
 	if footstep_player and footstep_player.stream:
 		# Subtle pitch variation makes footsteps sound distinct and organic
-		footstep_player.pitch_scale = randf_range(0.90, 1.15)
+		footstep_player.pitch_scale = randf_range(0.85, 1.05)
 		footstep_player.play()
