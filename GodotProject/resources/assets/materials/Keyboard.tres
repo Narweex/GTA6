@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvmf6t6s82ka7"]
+
+[ext_resource type="Texture2D" uid="uid://birotss4fv23j" path="res://resources/assets/textures/Office/M_Keyboard_Base_color.png" id="1_5d01n"]
+[ext_resource type="Texture2D" uid="uid://u8uwdy1fnvps" path="res://resources/assets/textures/Office/M_Keyboard_Metallic.png" id="2_s27mk"]
+[ext_resource type="Texture2D" uid="uid://dv24oml6tqcus" path="res://resources/assets/textures/Office/M_Keyboard_Normal_OpenGL.png" id="3_ls7u4"]
+[ext_resource type="Texture2D" uid="uid://w6nhlkfk8k3o" path="res://resources/assets/textures/Office/M_Keyboard_Roughness.png" id="4_iwu4e"]
+
+[resource]
+albedo_texture = ExtResource("1_5d01n")
+metallic = 1.0
+metallic_texture = ExtResource("2_s27mk")
+roughness_texture = ExtResource("4_iwu4e")
+normal_enabled = true
+normal_scale = 3.81
+normal_texture = ExtResource("3_ls7u4")

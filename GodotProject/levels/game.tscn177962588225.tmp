@@ -1,0 +1,1455 @@
+[gd_scene format=4 uid="uid://d30ync1dvqofj"]
+
+[ext_resource type="Script" uid="uid://x1bxe8hng8s2" path="res://common/ui/hud/hud.gd" id="1_m637p"]
+[ext_resource type="PackedScene" uid="uid://bndcuijnby5xg" path="res://components/player/player.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://d00d304d11tcx" path="res://resources/assets/geometry/Blender/Kaunas.blend" id="2_feb5d"]
+[ext_resource type="Texture2D" uid="uid://bn23j7telynpv" path="res://resources/assets/textures/Office/Office_ceilling_Base_color.png" id="3_3gvs5"]
+[ext_resource type="Texture2D" uid="uid://bbfxg2g0wxhgj" path="res://resources/assets/textures/Office/Closet_Base_color.png" id="3_rvswv"]
+[ext_resource type="Texture2D" uid="uid://bu86x13amrfxa" path="res://resources/assets/textures/Office/Cabinet_big_Base_color.png" id="3_ryrav"]
+[ext_resource type="Texture2D" uid="uid://ciyrr70odgwp" path="res://resources/assets/textures/Office/Closet_Metallic.png" id="4_boyg6"]
+[ext_resource type="Texture2D" uid="uid://dka71ybjukdq7" path="res://resources/assets/textures/Office/Cabinet_big_Metallic.png" id="4_eow3j"]
+[ext_resource type="Material" uid="uid://ctum52dvnprc4" path="res://resources/assets/materials/Entrance_breaker_1.tres" id="4_hxd3m"]
+[ext_resource type="Texture2D" uid="uid://d1nkcgvevcjf7" path="res://resources/assets/textures/Office/Office_ceilling_Metallic.png" id="4_mc3al"]
+[ext_resource type="Material" uid="uid://cbfnslivelvw2" path="res://resources/assets/materials/Alarm.tres" id="4_y4uvs"]
+[ext_resource type="Texture2D" uid="uid://g4pggvd7ccye" path="res://resources/assets/textures/Office/Office_ceilling_Normal.png" id="5_bqa6y"]
+[ext_resource type="Texture2D" uid="uid://150end3inagr" path="res://resources/assets/textures/Office/Closet_Normal.png" id="5_e36ub"]
+[ext_resource type="Texture2D" uid="uid://wn742gq4l2m4" path="res://resources/assets/textures/Office/Cabinet_big_Normal.png" id="5_j5wjh"]
+[ext_resource type="Material" uid="uid://c1wtq37mxpjxs" path="res://resources/assets/materials/Entrance_breaker_2.tres" id="5_lmtqe"]
+[ext_resource type="Texture2D" uid="uid://v02ir37lwaks" path="res://resources/assets/textures/Hallway/Hallway_lamp_Base_color.png" id="5_o3erk"]
+[ext_resource type="Texture2D" uid="uid://cs2mrok4lj46c" path="res://resources/assets/textures/Hallway/Hallway_lamp_Metallic.png" id="6_8vmfi"]
+[ext_resource type="Texture2D" uid="uid://nbvw4lfxal8f" path="res://resources/assets/textures/Office/Office_ceilling_Roughness.png" id="6_du4n2"]
+[ext_resource type="Texture2D" uid="uid://dddlsdq3s6njg" path="res://resources/assets/textures/Office/Closet_Roughness.png" id="6_hb5m1"]
+[ext_resource type="Texture2D" uid="uid://dimeopvdq1pnh" path="res://resources/assets/textures/Office/Cabinet_big_Roughness.png" id="6_vef74"]
+[ext_resource type="Texture2D" uid="uid://bl2c1k7yi8oul" path="res://resources/assets/textures/Hallway/M_Hallway_floor_Base_color.png" id="7_jicni"]
+[ext_resource type="Texture2D" uid="uid://cesm8a546yofa" path="res://resources/assets/textures/Office/Office_floor_Base_color.png" id="7_ra4rb"]
+[ext_resource type="Texture2D" uid="uid://msde6oxtpnv4" path="res://resources/assets/textures/Hallway/Hallway_lamp_Normal_OpenGL.png" id="7_u8w2r"]
+[ext_resource type="Texture2D" uid="uid://bvjj6135qwldp" path="res://resources/assets/textures/Office/Cabinet_small_Base_color.png" id="7_x5p1p"]
+[ext_resource type="Texture2D" uid="uid://2ra4wte2kl06" path="res://resources/assets/textures/Hallway/Hallway_lamp_Roughness.png" id="8_1ov7p"]
+[ext_resource type="Texture2D" uid="uid://d38kcl6gc1ylv" path="res://resources/assets/textures/Hallway/M_Hallway_floor_Metallic.png" id="8_68ii4"]
+[ext_resource type="Texture2D" uid="uid://cbc46m5jmryxb" path="res://resources/assets/textures/Office/Office_floor_Metallic.png" id="8_ple6s"]
+[ext_resource type="Texture2D" uid="uid://l8dfumbp4njp" path="res://resources/assets/textures/Office/Cabinet_small_Metallic.png" id="8_qhcbd"]
+[ext_resource type="Texture2D" uid="uid://du0l03dusr25h" path="res://resources/assets/textures/Office/Cabinet_small_Normal.png" id="9_f1jbl"]
+[ext_resource type="Texture2D" uid="uid://xkpduwkhd6ed" path="res://resources/assets/textures/Office/Office_floor_Normal.png" id="9_jo4nb"]
+[ext_resource type="Texture2D" uid="uid://cxqk3dgyv7oe5" path="res://resources/assets/textures/Hallway/M_Hallway_floor_Normal_OpenGL.png" id="9_u54ki"]
+[ext_resource type="Texture2D" uid="uid://buq8sq0f77ohx" path="res://resources/assets/textures/Hallway/M_Hallway_floor_Roughness.png" id="10_6ayu4"]
+[ext_resource type="Texture2D" uid="uid://ca5ls5rut4ae4" path="res://resources/assets/textures/Office/Office_floor_Roughness.png" id="10_56gn1"]
+[ext_resource type="Texture2D" uid="uid://dos1ls7ayvbsx" path="res://resources/assets/textures/Office/Cabinet_small_Roughness.png" id="10_vaj68"]
+[ext_resource type="Texture2D" uid="uid://t4gihid54vtt" path="res://resources/assets/textures/Hallway/M_Hallway_wall_Base_color.png" id="11_2gjly"]
+[ext_resource type="Texture2D" uid="uid://etgqdgx3vlyt" path="res://resources/assets/textures/Office/Office_walls_Base_color.png" id="11_avmo2"]
+[ext_resource type="Texture2D" uid="uid://blsmv1tr5t1jq" path="res://resources/assets/textures/Office/Office_walls_Height.png" id="12_vyqle"]
+[ext_resource type="Texture2D" uid="uid://n3m6ci1fvdnj" path="res://resources/assets/textures/Hallway/M_Hallway_wall_Metallic.png" id="12_xsyha"]
+[ext_resource type="Texture2D" uid="uid://ddyoaphhl4niu" path="res://resources/assets/textures/Hallway/M_Hallway_wall_Normal_OpenGL.png" id="13_8seav"]
+[ext_resource type="Texture2D" uid="uid://fqgnhkm0nve7" path="res://resources/assets/textures/Office/Office_walls_Metallic.png" id="13_xoeau"]
+[ext_resource type="Texture2D" uid="uid://k3wyfslh4q4g" path="res://resources/assets/textures/Hallway/M_Hallway_wall_Roughness.png" id="14_0wxyg"]
+[ext_resource type="Texture2D" uid="uid://bc1dcjlvy2gx3" path="res://resources/assets/textures/Office/Office_walls_Normal.png" id="14_6qn5j"]
+[ext_resource type="Texture2D" uid="uid://dahy8q4jypsn" path="res://resources/assets/textures/Hallway/M_Hallway_pipes_Base_color.png" id="15_6ayu4"]
+[ext_resource type="Texture2D" uid="uid://dhlkgmln6ewho" path="res://resources/assets/textures/Office/Table_shelve_big_Base_color.png" id="15_eu6ph"]
+[ext_resource type="Texture2D" uid="uid://blks6tr7gt3d6" path="res://resources/assets/textures/Office/Office_walls_Roughness.png" id="15_wj41c"]
+[ext_resource type="Texture2D" uid="uid://dgno12q4d3pn1" path="res://resources/assets/textures/Hallway/M_Hallway_pipes_Metallic.png" id="16_2gjly"]
+[ext_resource type="Texture2D" uid="uid://dy0kymwxtgrjs" path="res://resources/assets/textures/Office/Table_shelve_big_Metallic.png" id="16_edr7y"]
+[ext_resource type="Texture2D" uid="uid://wnjekcgw0dpt" path="res://resources/assets/textures/Office/M_Office_window_frame_Base_color.png" id="16_vyqle"]
+[ext_resource type="Texture2D" uid="uid://c66k728p1a76f" path="res://resources/assets/textures/Office/Table_shelve_big_Normal.png" id="17_kq12w"]
+[ext_resource type="Texture2D" uid="uid://hnmb751v8sd2" path="res://resources/assets/textures/Office/M_Office_window_frame_Metallic.png" id="17_xoeau"]
+[ext_resource type="Texture2D" uid="uid://dphh0ynujno3o" path="res://resources/assets/textures/Hallway/M_Hallway_pipes_Normal_OpenGL.png" id="17_xsyha"]
+[ext_resource type="Texture2D" uid="uid://dfynip03rq0cn" path="res://resources/assets/textures/Office/M_Office_window_frame_Normal.png" id="18_6qn5j"]
+[ext_resource type="Texture2D" uid="uid://cj7sccos3lgw3" path="res://resources/assets/textures/Hallway/M_Hallway_pipes_Roughness.png" id="18_8seav"]
+[ext_resource type="Texture2D" uid="uid://igkkf0ao3g0y" path="res://resources/assets/textures/Office/Table_shelve_big_Roughness.png" id="18_t46w6"]
+[ext_resource type="Texture2D" uid="uid://cweb0t2yowxvf" path="res://resources/assets/textures/Hallway/M_Hallway_door_frame_Base_color.png" id="19_0wxyg"]
+[ext_resource type="Material" uid="uid://biykk6q7et7as" path="res://resources/assets/materials/Door.tres" id="19_lnyny"]
+[ext_resource type="Texture2D" uid="uid://damoxstx2un6i" path="res://resources/assets/textures/Office/M_Office_window_frame_Roughness.png" id="19_wj41c"]
+[ext_resource type="Texture2D" uid="uid://cvy6aiv4qvx2h" path="res://resources/assets/textures/Hallway/M_Hallway_door_frame_Metallic.png" id="20_bva1w"]
+[ext_resource type="Texture2D" uid="uid://bljlj6er8pltj" path="res://resources/assets/textures/Hallway/M_Hallway_door_frame_Normal_OpenGL.png" id="21_lnyny"]
+[ext_resource type="Texture2D" uid="uid://c38qkgbdscrnw" path="res://resources/assets/textures/Hallway/M_Hallway_door_frame_Roughness.png" id="22_px3hy"]
+[ext_resource type="Texture2D" uid="uid://g6av5r2dyu3s" path="res://resources/assets/textures/Office/Folder_big_Base_color.png" id="23_36jdj"]
+[ext_resource type="Material" uid="uid://da8rejy6mroje" path="res://resources/assets/materials/Door_locked.tres" id="24_px3hy"]
+[ext_resource type="Texture2D" uid="uid://8phugc6d6tdi" path="res://resources/assets/textures/Office/Folder_big_Metallic.png" id="24_xfvwf"]
+[ext_resource type="Texture2D" uid="uid://bjbumgnaiwkii" path="res://resources/assets/textures/Office/Folder_big_Normal.png" id="25_dhpj7"]
+[ext_resource type="Texture2D" uid="uid://c7anfjfd0sksw" path="res://resources/assets/textures/Office/Folder_big_Roughness.png" id="26_7knny"]
+[ext_resource type="Texture2D" uid="uid://db01rfypwb33h" path="res://resources/assets/textures/Office/Folder_small_Base_color.png" id="27_082n1"]
+[ext_resource type="Texture2D" uid="uid://5u6jg1e5kcsy" path="res://resources/assets/textures/Office/Table_Base_color.png" id="27_m28ev"]
+[ext_resource type="Texture2D" uid="uid://6ocke1xqyuxq" path="res://resources/assets/textures/Office/Table_Metallic.png" id="28_lwlx3"]
+[ext_resource type="Texture2D" uid="uid://db4rwxlok5exj" path="res://resources/assets/textures/Office/Folder_small_Metallic.png" id="28_xex6t"]
+[ext_resource type="Texture2D" uid="uid://bfu8i3iux8rob" path="res://resources/assets/textures/Office/Table_Normal.png" id="29_0de7l"]
+[ext_resource type="Texture2D" uid="uid://e4hj4337qdnt" path="res://resources/assets/textures/Office/Folder_small_Normal.png" id="29_aa0lp"]
+[ext_resource type="Texture2D" uid="uid://bb7mllltuu5ig" path="res://resources/assets/textures/Office/Table_Roughness.png" id="30_87ddb"]
+[ext_resource type="Texture2D" uid="uid://dftfyorcg0xvj" path="res://resources/assets/textures/Office/Folder_small_Roughness.png" id="30_iu0sx"]
+[ext_resource type="Texture2D" uid="uid://rw8gf6xyi8qe" path="res://resources/assets/textures/Office/Table_shelve_small_Base_color.png" id="32_baljx"]
+[ext_resource type="Texture2D" uid="uid://0hhqbs8akw5q" path="res://resources/assets/textures/Office/Table_shelve_small_Metallic.png" id="33_t2ssd"]
+[ext_resource type="Texture2D" uid="uid://ds53p7d0ia7pe" path="res://resources/assets/textures/Office/Table_shelve_small_Normal.png" id="34_7noa1"]
+[ext_resource type="Texture2D" uid="uid://cans8obshr1c6" path="res://resources/assets/textures/Office/Table_shelve_small_Roughness.png" id="35_3xib3"]
+[ext_resource type="Material" uid="uid://ba817hsmya3wl" path="res://resources/assets/materials/Chair.tres" id="36_vuohh"]
+[ext_resource type="Material" uid="uid://b1ut06ifln2a3" path="res://resources/assets/materials/Pillow.tres" id="37_3gvs5"]
+[ext_resource type="Texture2D" uid="uid://boovyb6w7per1" path="res://resources/assets/textures/Office/Pinboard_big_Base_color.png" id="48_ra4rb"]
+[ext_resource type="Texture2D" uid="uid://b7nsmas2k6003" path="res://resources/assets/textures/Office/Pinboard_big_Metallic.png" id="49_ple6s"]
+[ext_resource type="Texture2D" uid="uid://lymibx88cq00" path="res://resources/assets/textures/Office/Pinboard_big_Normal.png" id="50_jo4nb"]
+[ext_resource type="Texture2D" uid="uid://b1imogl7ql8gw" path="res://resources/assets/textures/Office/Office_lamp_Base_color.png" id="50_ple6s"]
+[ext_resource type="Texture2D" uid="uid://bmvotv2y4c470" path="res://resources/assets/textures/Office/Pinboard_big_Roughness.png" id="51_56gn1"]
+[ext_resource type="Texture2D" uid="uid://caggedwnxhlhm" path="res://resources/assets/textures/Office/Office_lamp_Metallic.png" id="51_jo4nb"]
+[ext_resource type="Texture2D" uid="uid://bc35cy64ajvs0" path="res://resources/assets/textures/Office/Office_lamp_Normal.png" id="52_56gn1"]
+[ext_resource type="Texture2D" uid="uid://bdeqovbott5bk" path="res://resources/assets/textures/Office/Pinboard_small_Base_color.png" id="52_avmo2"]
+[ext_resource type="Texture2D" uid="uid://dmyqdwwkg71gf" path="res://resources/assets/textures/Office/Office_lamp_Roughness.png" id="53_avmo2"]
+[ext_resource type="Texture2D" uid="uid://dmirylkh1s5m5" path="res://resources/assets/textures/Office/Pinboard_small_Metallic.png" id="53_vyqle"]
+[ext_resource type="Texture2D" uid="uid://c0wwwhv0mn16q" path="res://resources/assets/textures/Office/Pinboard_small_Normal.png" id="54_xoeau"]
+[ext_resource type="Texture2D" uid="uid://cti1dxfy7ptr1" path="res://resources/assets/textures/Office/Pinboard_small_Roughness.png" id="55_6qn5j"]
+[ext_resource type="Material" uid="uid://dq5jikmpuicbn" path="res://resources/assets/materials/Chair_net.tres" id="57_xoeau"]
+[ext_resource type="Material" uid="uid://j1pcxjiqk4nf" path="res://resources/assets/materials/Computer.tres" id="58_mc3al"]
+[ext_resource type="Material" uid="uid://bw5wijjyyjxyy" path="res://resources/assets/materials/Folder_big.tres" id="59_mc3al"]
+[ext_resource type="Texture2D" uid="uid://cb2c4lno5hcbk" path="res://resources/assets/textures/Office/Office_supportbeams_Base_color.png" id="59_o46vb"]
+[ext_resource type="Material" uid="uid://cvqy8gondkog0" path="res://resources/assets/materials/Folder_small.tres" id="60_bqa6y"]
+[ext_resource type="Texture2D" uid="uid://kpi2ma3ue3ox" path="res://resources/assets/textures/Office/Office_supportbeams_Metallic.png" id="60_vqo61"]
+[ext_resource type="Texture2D" uid="uid://dxuy4reu6ofva" path="res://resources/assets/textures/Office/Office_supportbeams_Normal.png" id="61_pwsyv"]
+[ext_resource type="Texture2D" uid="uid://chsuy66cnpvt2" path="res://resources/assets/textures/Office/Office_supportbeams_Roughness.png" id="62_lon8v"]
+[ext_resource type="Script" uid="uid://kybv0xsrp86o" path="res://levels/second_riddle_password.gd" id="69_u647y"]
+[ext_resource type="Material" uid="uid://bqxdh1suyuc61" path="res://resources/assets/materials/Picture_frame.tres" id="70_wj41c"]
+[ext_resource type="Texture2D" uid="uid://cx155paljenyf" path="res://resources/assets/textures/Office/Mausi.png" id="71_baljx"]
+[ext_resource type="Material" uid="uid://c2yev3lrurmnq" path="res://resources/assets/materials/Picture_frame_glass.tres" id="71_t2ssd"]
+[ext_resource type="Texture2D" uid="uid://cvn50qc8ymcyk" path="res://resources/assets/textures/Office/Sammy.png" id="73_7noa1"]
+[ext_resource type="Texture2D" uid="uid://g3wntvvd4py5" path="res://resources/assets/textures/Entrance/Generator_1_Base_color.png" id="74_4mai8"]
+[ext_resource type="Texture2D" uid="uid://w723r38346sj" path="res://resources/assets/textures/Entrance/Generator_1_Height.png" id="75_w37fy"]
+[ext_resource type="Texture2D" uid="uid://blqotbypsnvb5" path="res://resources/assets/textures/Entrance/Generator_1_Metallic.png" id="76_7x3ck"]
+[ext_resource type="Texture2D" uid="uid://b74u6lolloss6" path="res://resources/assets/textures/Entrance/Generator_1_Normal.png" id="77_vvpk2"]
+[ext_resource type="Texture2D" uid="uid://by5ieorhq22pt" path="res://resources/assets/textures/Entrance/Generator_1_Roughness.png" id="78_o46vb"]
+[ext_resource type="Texture2D" uid="uid://c5438mawdj36r" path="res://resources/assets/textures/Entrance/M_Entrance_floor_Base_color.png" id="78_qw2kp"]
+[ext_resource type="Material" uid="uid://ca8231ns4xtdr" path="res://resources/assets/materials/Pallet.tres" id="78_vqo61"]
+[ext_resource type="Texture2D" uid="uid://dy1j3jinds37d" path="res://resources/assets/textures/Entrance/M_Entrance_floor_Normal.png" id="79_ftkif"]
+[ext_resource type="Texture2D" uid="uid://b5mrblhdje1ku" path="res://resources/assets/textures/Entrance/Generator_2_Base_color.png" id="79_vqo61"]
+[ext_resource type="Texture2D" uid="uid://b4iqxu1jtqb82" path="res://resources/assets/textures/Entrance/M_Entrance_floor_Roughness.png" id="80_71bxy"]
+[ext_resource type="Texture2D" uid="uid://cv0aquku7g3j4" path="res://resources/assets/textures/Entrance/Generator_2_Height.png" id="80_pwsyv"]
+[ext_resource type="Texture2D" uid="uid://cpnb8t72wjd0l" path="res://resources/assets/textures/Entrance/M_Entrance_walls_Base_color.png" id="81_8jd3k"]
+[ext_resource type="Texture2D" uid="uid://b00kvdpvo5nnb" path="res://resources/assets/textures/Entrance/Generator_2_Metallic.png" id="81_lon8v"]
+[ext_resource type="Texture2D" uid="uid://b15gon27nfeap" path="res://resources/assets/textures/Entrance/M_Entrance_ceiling_Base_color.png" id="81_tssr6"]
+[ext_resource type="Texture2D" uid="uid://ig5vrre3uhak" path="res://resources/assets/textures/Entrance/M_Entrance_ceiling_Normal.png" id="82_i3uta"]
+[ext_resource type="Texture2D" uid="uid://da28c2p2jmklr" path="res://resources/assets/textures/Entrance/Generator_2_Normal.png" id="82_r3ggl"]
+[ext_resource type="Texture2D" uid="uid://g8au4cth1mcl" path="res://resources/assets/textures/Entrance/M_Entrance_walls_Normal.png" id="82_tssr6"]
+[ext_resource type="Texture2D" uid="uid://rvlmsts7fq1k" path="res://resources/assets/textures/Entrance/M_Entrance_ceiling_Roughness.png" id="83_hl454"]
+[ext_resource type="Texture2D" uid="uid://pk7dsbdno47o" path="res://resources/assets/textures/Entrance/M_Entrance_walls_Roughness.png" id="83_i3uta"]
+[ext_resource type="Texture2D" uid="uid://clhmvsae63y0t" path="res://resources/assets/textures/Entrance/Generator_2_Roughness.png" id="83_sueei"]
+[ext_resource type="Texture2D" uid="uid://ph2c76g28cgh" path="res://resources/assets/textures/Entrance/M_Entrance_window_frame_Base_color.png" id="87_qqhb5"]
+[ext_resource type="Material" uid="uid://dabu3klyhcepj" path="res://resources/assets/materials/RadioactiveWaste.tres" id="88_i3uta"]
+[ext_resource type="Texture2D" uid="uid://b0t4whxjatsi5" path="res://resources/assets/textures/Entrance/M_Entrance_window_frame_Metallic.png" id="88_s2n2m"]
+[ext_resource type="Texture2D" uid="uid://cdk2anyevyuv" path="res://resources/assets/textures/Entrance/M_Entrance_window_frame_Normal.png" id="89_wys8s"]
+[ext_resource type="Texture2D" uid="uid://biwgqj6m4fx8d" path="res://resources/assets/textures/Entrance/M_Entrance_window_frame_Roughness.png" id="90_qw5ky"]
+[ext_resource type="Texture2D" uid="uid://dykcpk78yckyi" path="res://resources/assets/textures/Entrance/Entrance_stairs_Base_color.png" id="91_d3lbn"]
+[ext_resource type="Texture2D" uid="uid://cfh8tgvoidqcy" path="res://resources/assets/textures/Entrance/Entrance_stairs_Metallic.png" id="92_0cg25"]
+[ext_resource type="Texture2D" uid="uid://cnrw5h1j13fpa" path="res://resources/assets/textures/Entrance/Entrance_stairs_Normal.png" id="93_wtodx"]
+[ext_resource type="Texture2D" uid="uid://153865d5s6qg" path="res://resources/assets/textures/Entrance/Entrance_stairs_Roughness.png" id="94_nimm0"]
+[ext_resource type="Texture2D" uid="uid://bm22p5nqmqtx0" path="res://resources/assets/textures/Entrance/Entrance_supportbeams_Base_color.png" id="95_5gs0r"]
+[ext_resource type="Texture2D" uid="uid://ble5lcxcw6mrf" path="res://resources/assets/textures/Entrance/Entrance_supportbeams_Metallic.png" id="96_5i2ov"]
+[ext_resource type="Texture2D" uid="uid://cf4uhyhihc0yw" path="res://resources/assets/textures/Entrance/Entrance_supportbeams_Normal.png" id="97_vhk74"]
+[ext_resource type="Texture2D" uid="uid://dn1ff0iwd0j2k" path="res://resources/assets/textures/Entrance/Entrance_supportbeams_Roughness.png" id="98_cvwsf"]
+[ext_resource type="Material" uid="uid://dvmf6t6s82ka7" path="res://resources/assets/materials/Keyboard.tres" id="98_de524"]
+[ext_resource type="Material" uid="uid://ccqxiywkydv07" path="res://resources/assets/materials/Document_storage.tres" id="98_nc06o"]
+[ext_resource type="Material" uid="uid://bvj20ky01048p" path="res://resources/assets/materials/Bag.tres" id="98_tssr6"]
+[ext_resource type="Texture2D" uid="uid://den2noa6gy6fl" path="res://resources/assets/textures/Entrance/Entrance_door_Base_color.png" id="99_74iwm"]
+[ext_resource type="Material" uid="uid://delqbug7vq3uk" path="res://resources/assets/materials/Grid.tres" id="99_qnd83"]
+[ext_resource type="Texture2D" uid="uid://bltjuldwapeut" path="res://resources/assets/textures/Entrance/Entrance_Pipe_1_Base_color.png" id="100_hsv4y"]
+[ext_resource type="Texture2D" uid="uid://di4ggf7a72v0h" path="res://resources/assets/textures/Entrance/Entrance_door_Metallic.png" id="100_vuo27"]
+[ext_resource type="Material" uid="uid://fhttkxx3o4dv" path="res://resources/assets/materials/Monitor.tres" id="101_0i3gv"]
+[ext_resource type="Texture2D" uid="uid://c1vcc1me1ipn3" path="res://resources/assets/textures/Entrance/Entrance_door_Normal.png" id="101_h17um"]
+[ext_resource type="Texture2D" uid="uid://q2fuilqna70n" path="res://resources/assets/textures/Entrance/Entrance_Pipe_1_Height.png" id="101_lrvy0"]
+[ext_resource type="Texture2D" uid="uid://c4fh0afc1urmv" path="res://resources/assets/textures/Entrance/Entrance_door_Roughness.png" id="102_j7epm"]
+[ext_resource type="Texture2D" uid="uid://bj60nfm7l2f76" path="res://resources/assets/textures/Entrance/Entrance_Pipe_1_Metallic.png" id="102_lea4x"]
+[ext_resource type="Texture2D" uid="uid://bu78r1qdslfl0" path="res://resources/assets/textures/Entrance/Entrance_Pipe_1_Normal.png" id="103_oykgp"]
+[ext_resource type="Texture2D" uid="uid://boeivi703ltgu" path="res://resources/assets/textures/Entrance/Entrance_Pipe_1_Roughness.png" id="104_nliq0"]
+[ext_resource type="Texture2D" uid="uid://c86awm0tdgux7" path="res://resources/assets/textures/Entrance/Entrance_Pipe_2_Base_color.png" id="105_e3l5k"]
+[ext_resource type="Texture2D" uid="uid://dyomf8om56edd" path="res://resources/assets/textures/Office/BaranMelvin.png" id="105_qqc4h"]
+[ext_resource type="Texture2D" uid="uid://dt4quanxtycqm" path="res://resources/assets/textures/Entrance/Entrance_Pipe_2_Metallic.png" id="106_epi3u"]
+[ext_resource type="Texture2D" uid="uid://tsijte4lvu7f" path="res://resources/assets/textures/Entrance/Entrance_Pipe_2_Normal.png" id="107_n2sb7"]
+[ext_resource type="Texture2D" uid="uid://babem50rsv6n7" path="res://resources/assets/textures/Entrance/Entrance_Pipe_2_Roughness.png" id="108_v78r4"]
+[ext_resource type="Texture2D" uid="uid://oaic7ax5ohxs" path="res://resources/assets/textures/Entrance/Entrance_Pipe_3_Base_color.png" id="109_qqhb5"]
+[ext_resource type="Texture2D" uid="uid://crdujxl1lgkkb" path="res://resources/assets/textures/Entrance/Entrance_Pipe_3_Metallic.png" id="110_s2n2m"]
+[ext_resource type="Texture2D" uid="uid://clikojra8qk2o" path="res://resources/assets/textures/Entrance/Entrance_Pipe_3_Normal.png" id="111_wys8s"]
+[ext_resource type="Material" uid="uid://cqdg8v5nlxaae" path="res://resources/assets/materials/Entrance_lamp.tres" id="112_hiqci"]
+[ext_resource type="Texture2D" uid="uid://m7qfjfdeltd8" path="res://resources/assets/textures/Entrance/Entrance_Pipe_3_Roughness.png" id="112_qw5ky"]
+[ext_resource type="Material" uid="uid://bkqsobxkjtp8q" path="res://resources/assets/materials/Entrance_wheel.tres" id="113_s2n2m"]
+[ext_resource type="Texture2D" uid="uid://bcdln04iro37t" path="res://resources/assets/textures/Entrance/Entrance_Pipe_Box_Base_color.png" id="135_lmtqe"]
+[ext_resource type="Texture2D" uid="uid://bmxj0q60xj6ae" path="res://resources/assets/textures/Entrance/Entrance_Pipe_Box_Metallic.png" id="136_qk0aj"]
+[ext_resource type="Texture2D" uid="uid://ceiqvefpopyie" path="res://resources/assets/textures/Entrance/Entrance_Pipe_Box_Normal.png" id="137_cn87d"]
+[ext_resource type="Texture2D" uid="uid://boret8c1xkjox" path="res://resources/assets/textures/Entrance/Entrance_Pipe_Box_Roughness.png" id="138_vm2xw"]
+[ext_resource type="Script" uid="uid://bevevta8owgq6" path="res://levels/first_riddle_fix_gen.gd" id="140_gjclm"]
+[ext_resource type="Texture2D" uid="uid://cc3v3p1t3ohm4" path="res://resources/assets/textures/Bridge/Bridge_pipe_1_Base_color.png" id="161_cv8gu"]
+[ext_resource type="Texture2D" uid="uid://5ebqkd5waiu4" path="res://resources/assets/textures/Bridge/Bridge_wheels_Base_color.png" id="161_yf7a7"]
+[ext_resource type="Texture2D" uid="uid://ca4pe4chvcva" path="res://resources/assets/textures/Bridge/Bridge_pipe_1_Metallic.png" id="162_riv5k"]
+[ext_resource type="Texture2D" uid="uid://c3ha7nt3r6m7c" path="res://resources/assets/textures/Bridge/Bridge_wheels_Metallic.png" id="162_wp6hd"]
+[ext_resource type="Texture2D" uid="uid://dnobmyrwdmvhf" path="res://resources/assets/textures/Bridge/Bridge_wheels_Normal.png" id="163_pks5g"]
+[ext_resource type="Texture2D" uid="uid://cbd5o6rq7ragt" path="res://resources/assets/textures/Bridge/Bridge_pipe_1_Normal_OpenGL.png" id="163_qqive"]
+[ext_resource type="Texture2D" uid="uid://rtfhmldxbo7m" path="res://resources/assets/textures/Bridge/Bridge_wheels_Roughness.png" id="164_rbtfl"]
+[ext_resource type="Texture2D" uid="uid://cq36m55rvrnkn" path="res://resources/assets/textures/Bridge/Bridge_pipe_1_Roughness.png" id="164_si3yo"]
+[ext_resource type="PackedScene" uid="uid://bkknvsdujj2pe" path="res://components/interactables/interactable_component.tscn" id="169_riv5k"]
+[ext_resource type="Texture2D" uid="uid://bqu2o7q87pb1u" path="res://resources/assets/textures/Bridge/Bridge_pipe_2_Base_color.png" id="171_0i3gv"]
+[ext_resource type="Texture2D" uid="uid://diinvoplxc0xn" path="res://resources/assets/textures/Bridge/Bridge_pipe_2_Metallic.png" id="172_d53yc"]
+[ext_resource type="Texture2D" uid="uid://bmkk0rnmif7d5" path="res://resources/assets/textures/Bridge/Bridge_pipe_2_Normal_OpenGL.png" id="173_3i62b"]
+[ext_resource type="Texture2D" uid="uid://c8r6tata4wuj1" path="res://resources/assets/textures/Bridge/Bridge_pipe_2_Roughness.png" id="174_swnqc"]
+[ext_resource type="Texture2D" uid="uid://p5j0ahpwxmt" path="res://resources/assets/textures/Bridge/Exid_sign_Base_color.png" id="175_33ckb"]
+[ext_resource type="Material" uid="uid://ck54jxqjsi63j" path="res://resources/assets/materials/Bridge_breaker_2.tres" id="175_kp8cn"]
+[ext_resource type="Texture2D" uid="uid://dt4k0y5qsrkj" path="res://resources/assets/textures/Bridge/Exid_sign_Metallic.png" id="176_qqc4h"]
+[ext_resource type="Texture2D" uid="uid://ct6ot8aglkfqk" path="res://resources/assets/textures/Bridge/Exid_sign_Normal_OpenGL.png" id="177_kp8cn"]
+[ext_resource type="Texture2D" uid="uid://b2giaf73u8keg" path="res://resources/assets/textures/Bridge/Exid_sign_Roughness.png" id="178_nc06o"]
+[ext_resource type="PackedScene" uid="uid://cu8jcm5u7g04v" path="res://components/pause_menu/pause_menu.tscn" id="183_de524"]
+[ext_resource type="PackedScene" uid="uid://dn1bfm2jtjxkj" path="res://components/interactables/interactable_door.tscn" id="183_vyl4c"]
+[ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="185_vdifd"]
+[ext_resource type="AudioStream" uid="uid://dhvyjv0o3oeb" path="res://common/audio/clock_tick.mp3" id="186_vyl4c"]
+[ext_resource type="Script" uid="uid://bybn0skool8vo" path="res://components/player/interaction_label.gd" id="187_ufk2c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf7a7"]
+albedo_texture = ExtResource("5_o3erk")
+metallic = 1.0
+metallic_texture = ExtResource("6_8vmfi")
+roughness_texture = ExtResource("8_1ov7p")
+normal_enabled = true
+normal_scale = -2.16
+normal_texture = ExtResource("7_u8w2r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xs1ry"]
+resource_name = "M_Hallway_floor"
+cull_mode = 2
+albedo_color = Color(0.4621973, 0.4621973, 0.4621973, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vy08r"]
+_surfaces = [{
+"aabb": AABB(-25.010456, -1.0000005, -3.6582098, 27.59619, 0.031509876, 6.299999),
+"format": 34896613377,
+"index_count": 156,
+"index_data": PackedByteArray("HAAdAB4AHAAfAB0AAAABAAIAAwAAAAIAAwACAAQAAAAFAAEABgABAAUABgAFAAcACAAGAAcACAAHAAkACQAKAAgACQALAAoACwAMAAoACwANAAwADgAMAA0ADgANAA8AEAAOAA8AEAAPABEAEQASABAAEQATABIAEwAUABIAEwAVABQAFgAUABUAFgAVABcAGAAWABcAGAAXABkAGQAaABgAGQAbABoAIAAhACIAIwAiACQAIwAgACIAIAAlACEAJQAmACEAJQAnACYAJQAoACcAKQAlACAAJQApACgAIwAqACAAKQAgACoAIwArACoALAAqACsAKQAqAC0ALAAtACoALgAoACkAKQAtAC4ALgAvACgALgAwAC8ALgAxADAAMQAuAC0AMQAtADIALAAyAC0ALAAzADIA"),
+"lods": [2.9605381, PackedByteArray("AAABAAIAAwAAAAIAAwACAAQAAAAFAAEABgABAAUABgAFAAcACAAGAAcACAAHAAkACQAKAAgACQALAAoACwAMAAoACwANAAwADgAMAA0ADgANAA8AEAAOAA8AEAAPABEAEQASABAAEQATABIAEwAUABIAEwAVABQAFgAUABUAFgAVABcAGAAWABcAGAAXABkAGQAaABgAGQAbABoA")],
+"name": "M_Hallway_floor",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 52,
+"vertex_data": PackedByteArray("yC4AADzPAADILv////8AAMguAAD//wAAAAAAADzPAAAAAAAA//8AAMgu//88zwAA3T7/////AADdPv//PM8AAN0+AAD//wAA3T4AADzPAACZVwAA//8AAJlXAAA8zwAAmVf/////AACZV///PM8AACdm/////wAAJ2b//zzPAAAnZgAA//8AACdmAAA8zwAAJbkAAP//AAAluQAAPM8AACW5/////wAAJbn//zzPAAA7yf////8AADvJ//88zwAAO8kAAP//AAA7yQAAPM8AAP//AAD//wAA//8AADzPAAAF0AAAEFoAAP//AAA8zwAABdAAADzPAAD//wAAEFoAAD0UAAArywAAhB0AADzPAAA9FAAAPM8AAEUTAAArywAARRMAADzPAACEHQAAK8sAAH0eAAA8zwAAfR4AACvLAAB9HgAAe1kAAIQdAAB7WQAAPRQAAHtZAABFEwAAe1kAAEUTAADYMAAAPRQAANgwAACEHQAA2DAAAH0eAADYMAAAfR4AAAAAAACEHQAAAAAAAD0UAAAAAAAARRMAAAAAAAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bva1w"]
+resource_name = "Kaunas_Cube_003"
+_surfaces = [{
+"aabb": AABB(-25.010456, -1.0000005, -3.6582098, 27.59619, 0.031509876, 6.299999),
+"attribute_data": PackedByteArray("5btNnO6nwJzup02c5bvAnP//2LcH7P//B+zYt//////g68ad6deUtunXxp3g65S27qeOteW7wJzlu4617qfAnO6niav2k/7/9pOJq+6n/v/2k/9//3/+//9//3/2k/7///+ykQfs2LcH7LKR///Yt93PHZ/lu4615bsdn93PjrXdz6me5bsdn+W7qZ7dzx2f6dcIt+DrlLbg6wi36deUtu6nArblu4615bsCtu6njrXg61Od6dfGnenXU53g68ad5bsCtt3PjrXdzwK25buOtenXArbup/7/7qcCtunX/v+m2ZD+Sur+/6bZ/v/p15D+6df+/0rqkP4H7P7/B+yQ/gfsidZK6onWptmJ1unXidbp1zrIptk6yErqOsgH7DrIB+wIt0rqCLem2Qi36dcItw=="),
+"format": 34896613399,
+"index_count": 156,
+"index_data": PackedByteArray("NAA1ADYANAA3ADUAAAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEAOAA5ADoAOwA6ADwAOwA4ADoAOAA9ADkAPQA+ADkAPQA/AD4APQBAAD8AQQA9ADgAPQBBAEAAOwBCADgAQQA4AEIAOwBDAEIARABCAEMAQQBCAEUARABFAEIARgBAAEEAQQBFAEYARgBHAEAARgBIAEcARgBJAEgASQBGAEUASQBFAEoARABKAEUARABLAEoA"),
+"lods": [2.9605381, PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEA")],
+"material": SubResource("StandardMaterial3D_xs1ry"),
+"name": "M_Hallway_floor",
+"primitive": 3,
+"uv_scale": Vector4(1.7196703, 2.0000005, 0, 0),
+"vertex_count": 76,
+"vertex_data": PackedByteArray("yC4AADzP///ILv///////8guAAD/////yC7//zzP//8AAAAAPM9U1cguAAD//1TVAAAAAP//VNXILgAAPM9U1TvJ/////1TVJbn//zzPVNU7yf//PM9U1SW5/////1TV3T7/////VNXILv//PM9U1d0+//88z1TVyC7/////VNU7yQAAPM9U1f//AAD//1TVO8kAAP//VNX//wAAPM9U1SdmAAA8z1TVJbkAAP//VNUnZgAA//9U1SW5AAA8z1TV3T4AADzPVNWZVwAA//9U1d0+AAD//1TVmVcAADzPVNUnZv////9U1ZlX//88z1TVJ2b//zzPVNWZV/////9U1SdmAAD/////J2b//zzP//8nZgAAPM///ydm////////JbkAADzP/78luf//////vyW5AAD///+/Jbn//zzP/7/dPgAA////v90+//88z/+/3T4AADzP/7/dPv//////vzvJAAD/////O8n//zzP//87yQAAPM///zvJ////////mVcAADzP/7+ZV///////v5lXAAD///+/mVf//zzP/78F0AAAEFpU1f//AAA8z1TVBdAAADzPVNX//wAAEFpU1T0UAAAry/+/hB0AADzP/789FAAAPM//v0UTAAAry/+/RRMAADzP/7+EHQAAK8v/v30eAAA8z/+/fR4AACvL/799HgAAe1n/v4QdAAB7Wf+/PRQAAHtZ/79FEwAAe1n/v0UTAADYMP+/PRQAANgw/7+EHQAA2DD/v30eAADYMP+/fR4AAAAA/7+EHQAAAAD/vz0UAAAAAP+/RRMAAAAA/7//P/9//z//f/8//3//P/9/VNWqKlTVqipU1aoqVNWqKqqqqqqqqqqqqqqqqqqqqqpU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqVNWqKlTVqipU1aoqqqqqqqqqqqqqqqqqqqqqqv+//3//v/9//7//f/+//3//f////3////9/////f////38AAP9/AAD/fwAA/38AAP+//3//v/9//7//f/+//3//f////3////9/////f///VNWqKlTVqipU1aoqVNWqKv///3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/////f////3////9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_vy08r")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnyny"]
+albedo_texture = ExtResource("7_jicni")
+metallic = 1.0
+metallic_texture = ExtResource("8_68ii4")
+roughness_texture = ExtResource("10_6ayu4")
+normal_enabled = true
+normal_scale = 0.53
+normal_texture = ExtResource("9_u54ki")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_px3hy"]
+cull_mode = 2
+albedo_texture = ExtResource("11_2gjly")
+metallic = 1.0
+metallic_texture = ExtResource("12_xsyha")
+roughness_texture = ExtResource("14_0wxyg")
+normal_enabled = true
+normal_scale = 0.3
+normal_texture = ExtResource("13_8seav")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wxyg"]
+albedo_texture = ExtResource("15_6ayu4")
+metallic = 1.0
+metallic_texture = ExtResource("16_2gjly")
+roughness_texture = ExtResource("18_8seav")
+normal_enabled = true
+normal_scale = 0.65
+normal_texture = ExtResource("17_xsyha")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8f8qe"]
+albedo_texture = ExtResource("19_0wxyg")
+metallic = 1.0
+metallic_texture = ExtResource("20_bva1w")
+roughness_texture = ExtResource("22_px3hy")
+normal_enabled = true
+normal_scale = 5.22
+normal_texture = ExtResource("21_lnyny")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5628o"]
+cull_mode = 2
+albedo_texture = ExtResource("3_3gvs5")
+metallic = 1.0
+metallic_texture = ExtResource("4_mc3al")
+roughness_texture = ExtResource("6_du4n2")
+normal_enabled = true
+normal_scale = 10.14
+normal_texture = ExtResource("5_bqa6y")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fuuk6"]
+cull_mode = 2
+albedo_texture = ExtResource("7_ra4rb")
+metallic = 1.0
+metallic_texture = ExtResource("8_ple6s")
+roughness_texture = ExtResource("10_56gn1")
+normal_enabled = true
+normal_scale = 9.09
+normal_texture = ExtResource("9_jo4nb")
+heightmap_scale = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cwgap"]
+albedo_texture = ExtResource("11_avmo2")
+metallic = 1.0
+metallic_texture = ExtResource("13_xoeau")
+roughness_texture = ExtResource("15_wj41c")
+normal_enabled = true
+normal_scale = 11.55
+normal_texture = ExtResource("14_6qn5j")
+heightmap_enabled = true
+heightmap_scale = 0.2
+heightmap_deep_parallax = true
+heightmap_min_layers = 8
+heightmap_max_layers = 32
+heightmap_texture = ExtResource("12_vyqle")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x5p1p"]
+transparency = 1
+albedo_color = Color(0.77562827, 0.6195237, 0.5127031, 0.9647059)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xib3"]
+albedo_texture = ExtResource("16_vyqle")
+metallic = 1.0
+metallic_texture = ExtResource("17_xoeau")
+roughness_texture = ExtResource("19_wj41c")
+normal_enabled = true
+normal_texture = ExtResource("18_6qn5j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_36jdj"]
+albedo_texture = ExtResource("3_rvswv")
+metallic = 0.2
+metallic_texture = ExtResource("4_boyg6")
+roughness_texture = ExtResource("6_hb5m1")
+normal_enabled = true
+normal_scale = 11.55
+normal_texture = ExtResource("5_e36ub")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2p71"]
+albedo_texture = ExtResource("7_x5p1p")
+metallic = 0.2
+metallic_texture = ExtResource("8_qhcbd")
+roughness_texture = ExtResource("10_vaj68")
+normal_enabled = true
+normal_scale = 13.31
+normal_texture = ExtResource("9_f1jbl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hve3p"]
+albedo_texture = ExtResource("3_ryrav")
+metallic = 0.2
+metallic_texture = ExtResource("4_eow3j")
+roughness_texture = ExtResource("6_vef74")
+normal_enabled = true
+normal_scale = 8.26
+normal_texture = ExtResource("5_j5wjh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mljfx"]
+albedo_texture = ExtResource("15_eu6ph")
+metallic = 1.0
+metallic_texture = ExtResource("16_edr7y")
+roughness_texture = ExtResource("18_t46w6")
+normal_enabled = true
+normal_scale = 2.41
+normal_texture = ExtResource("17_kq12w")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svdf4"]
+albedo_texture = ExtResource("32_baljx")
+metallic = 1.0
+metallic_texture = ExtResource("33_t2ssd")
+roughness_texture = ExtResource("35_3xib3")
+normal_enabled = true
+normal_scale = 3.11
+normal_texture = ExtResource("34_7noa1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpefm"]
+albedo_texture = ExtResource("27_m28ev")
+metallic = 1.0
+metallic_texture = ExtResource("28_lwlx3")
+roughness_texture = ExtResource("30_87ddb")
+normal_enabled = true
+normal_scale = 4.16
+normal_texture = ExtResource("29_0de7l")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lyuia"]
+points = PackedVector3Array(2.8788843, 2.9615552, 12.3829565, 2.8633642, 2.2007394, 12.441385, 2.003969, 2.9615552, 12.867127, 2.8788843, 3.000814, 12.3829565, 4.2382746, 2.9615552, 12.773092, 2.0620937, 2.2007394, 12.885082, 4.2203197, 2.2007394, 12.831218, 1.6722618, 2.2007394, 14.242037, 1.6138327, 2.9615552, 14.226517, 2.003969, 3.000814, 12.867127, 2.8773627, 3.006096, 12.389651, 4.2382746, 3.000814, 12.773092, 4.7227497, 2.9615552, 13.648008, 4.6640162, 2.2007394, 13.632487, 2.1159582, 2.2007394, 15.043307, 2.0980034, 2.9615552, 15.101433, 1.6138327, 3.000814, 14.226517, 1.6205277, 3.006096, 14.228039, 2.010664, 3.006096, 12.869561, 4.23584, 3.006096, 12.779788, 4.7227497, 3.000814, 13.648008, 4.332309, 2.9615552, 15.007398, 4.274184, 2.2007394, 14.989443, 3.4729137, 2.2007394, 15.43314, 2.0980034, 3.000814, 15.101433, 3.4573936, 2.9615552, 15.491873, 2.1004379, 3.006096, 15.094737, 4.71575, 3.006096, 13.646486, 4.325614, 3.006096, 15.004963, 4.332309, 3.000814, 15.007398, 3.4573936, 3.000814, 15.491873, 3.4589152, 3.006096, 15.484874)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wj41c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_baljx"]
+albedo_texture = ExtResource("48_ra4rb")
+metallic = 1.0
+metallic_texture = ExtResource("49_ple6s")
+roughness_texture = ExtResource("51_56gn1")
+normal_enabled = true
+normal_texture = ExtResource("50_jo4nb")
+heightmap_texture = SubResource("CompressedTexture2D_wj41c")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t2ssd"]
+albedo_texture = ExtResource("52_avmo2")
+metallic = 1.0
+metallic_texture = ExtResource("53_vyqle")
+roughness_texture = ExtResource("55_6qn5j")
+normal_enabled = true
+normal_texture = ExtResource("54_xoeau")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vyqle"]
+albedo_texture = ExtResource("50_ple6s")
+metallic = 1.0
+metallic_texture = ExtResource("51_jo4nb")
+roughness_texture = ExtResource("53_avmo2")
+normal_enabled = true
+normal_scale = 2.76
+normal_texture = ExtResource("52_56gn1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7noa1"]
+albedo_texture = ExtResource("3_rvswv")
+metallic = 1.0
+metallic_texture = ExtResource("4_boyg6")
+roughness_texture = ExtResource("6_hb5m1")
+normal_enabled = true
+normal_scale = 8.38
+normal_texture = ExtResource("5_e36ub")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3ggl"]
+albedo_texture = ExtResource("59_o46vb")
+metallic = 1.0
+metallic_texture = ExtResource("60_vqo61")
+roughness_texture = ExtResource("62_lon8v")
+normal_enabled = true
+normal_scale = 1.7
+normal_texture = ExtResource("61_pwsyv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4v2jo"]
+albedo_texture = ExtResource("23_36jdj")
+metallic = 1.0
+metallic_texture = ExtResource("24_xfvwf")
+roughness_texture = ExtResource("26_7knny")
+normal_enabled = true
+normal_scale = 2.41
+normal_texture = ExtResource("25_dhpj7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1i01"]
+albedo_texture = ExtResource("27_082n1")
+metallic = 1.0
+metallic_texture = ExtResource("28_xex6t")
+roughness_texture = ExtResource("30_iu0sx")
+normal_enabled = true
+normal_scale = 2.41
+normal_texture = ExtResource("29_aa0lp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_66xay"]
+albedo_texture = ExtResource("71_baljx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh772"]
+albedo_texture = ExtResource("73_7noa1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kp8cn"]
+albedo_texture = ExtResource("105_qqc4h")
+roughness = 0.0
+normal_enabled = true
+normal_scale = -16.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vf1qt"]
+cull_mode = 2
+albedo_texture = ExtResource("78_qw2kp")
+roughness = 0.55
+roughness_texture = ExtResource("80_71bxy")
+emission = Color(0.89492244, 0.89492244, 0.8949224, 1)
+normal_enabled = true
+normal_scale = -1.58
+normal_texture = ExtResource("79_ftkif")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j4tta"]
+cull_mode = 2
+albedo_texture = ExtResource("81_tssr6")
+roughness_texture = ExtResource("83_hl454")
+normal_enabled = true
+normal_scale = 4.52
+normal_texture = ExtResource("82_i3uta")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ell1s"]
+albedo_texture = ExtResource("81_8jd3k")
+roughness_texture = ExtResource("83_i3uta")
+normal_enabled = true
+normal_scale = 2.41
+normal_texture = ExtResource("82_tssr6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vbt48"]
+albedo_texture = ExtResource("87_qqhb5")
+metallic = 1.0
+metallic_texture = ExtResource("88_s2n2m")
+roughness_texture = ExtResource("90_qw5ky")
+normal_enabled = true
+normal_scale = 3.11
+normal_texture = ExtResource("89_wys8s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hsv4y"]
+transparency = 1
+albedo_color = Color(0.36078432, 0.5529412, 0.25882354, 0.8117647)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w0nw1"]
+albedo_texture = ExtResource("91_d3lbn")
+metallic = 1.0
+metallic_texture = ExtResource("92_0cg25")
+roughness_texture = ExtResource("94_nimm0")
+normal_enabled = true
+normal_texture = ExtResource("93_wtodx")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6gsc"]
+albedo_texture = ExtResource("95_5gs0r")
+metallic = 1.0
+metallic_texture = ExtResource("96_5i2ov")
+roughness_texture = ExtResource("98_cvwsf")
+normal_enabled = true
+normal_scale = 2.41
+normal_texture = ExtResource("97_vhk74")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4uvs"]
+albedo_texture = ExtResource("99_74iwm")
+metallic = 1.0
+metallic_texture = ExtResource("100_vuo27")
+roughness_texture = ExtResource("102_j7epm")
+normal_enabled = true
+normal_texture = ExtResource("101_h17um")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhxlk"]
+albedo_texture = ExtResource("74_4mai8")
+metallic = 1.0
+metallic_texture = ExtResource("76_7x3ck")
+roughness_texture = ExtResource("78_o46vb")
+normal_enabled = true
+normal_scale = 3.11
+normal_texture = ExtResource("77_vvpk2")
+heightmap_enabled = true
+heightmap_scale = 0.0
+heightmap_texture = ExtResource("75_w37fy")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gjclm"]
+points = PackedVector3Array(0.59426975, 0.43462288, -1.1716318, 0.59426975, -0.85511625, -1.1716318, 0.59426975, 0.43462288, -1.2930778, 0.35607946, 0.55937374, -1.1921427, 0.09282422, 0.53057444, 0.45493448, 0.25521994, 0.18387485, 1.1587813, 0.42136788, -0.035166204, 0.6910794, 0.48935795, -0.57999957, 1.3476973, -0.5899282, -0.85511625, -1.1716318, 0.59426975, -0.85511625, -1.2930778, 0.48935795, -0.7433804, 1.3476973, 0.35833073, -0.7433804, 1.3568733, 0.31645608, -0.43904907, -1.3813286, 0.30579972, -0.3990346, -1.3813286, 0.27653253, -0.3698199, -1.3813286, -0.8191133, 0.5016366, -1.3764707, -0.8591869, 0.512298, -1.3764707, 0.35607946, 0.55937374, -1.2725669, -0.35188788, 0.55937374, -1.1921427, 0.048247933, 0.5489894, 0.45493448, 0.2424624, 0.18387485, 1.1895478, 0.3241105, -0.07338071, 1.2872443, 0.28538775, -0.088472664, 1.3285358, 0.24006104, -0.009966791, 1.3285358, 0.35833073, -0.57072294, 1.3757648, -0.9274772, 0.39128542, -0.92064357, -0.9283777, 0.392393, -1.3764707, -0.5899282, -0.85511625, -1.2930778, -0.3541392, -0.7433804, 1.3568733, -0.48516646, -0.7433804, 1.3476973, 0.2364589, -0.51907796, -1.3813286, 0.27653253, -0.5082782, -1.3813286, 0.30579972, -0.4790635, -1.3813286, 0.35833073, -0.72455007, 1.3757648, 0.2364589, -0.35902014, -1.3813286, -0.89911044, 0.5016366, -1.3764707, -0.85603505, 0.5089749, -0.9049905, -0.35188788, 0.55937374, -1.2725669, -0.044056475, 0.5489894, 0.45493448, 0.0020207167, 0.14621413, 1.2872443, 0.21184444, 0.18387485, 1.2022321, 0.17357183, 0.051785648, 1.3285358, 0.27248013, 0.01592493, 1.2872443, 0.03669113, -0.08778036, 1.343919, 0.0020207167, -0.082518935, 1.343919, -0.3541392, -0.57072294, 1.3757648, 0.09177363, 0.091107786, 1.3285358, -0.9363324, 0.42922294, -0.9066098, -0.939034, 0.43226898, -1.3764707, -0.89911044, 0.36303985, -1.3764707, 0.16711807, -0.4790635, -1.3813286, 0.19653535, -0.5082782, -1.3813286, -0.3541392, -0.72455007, 1.3757648, -0.48516646, -0.57999957, 1.3476973, 0.19653535, -0.3698199, -1.3813286, 0.16711807, -0.3990346, -1.3813286, -0.9283777, 0.47228348, -1.3764707, -0.92447543, 0.46799123, -0.8982435, -0.89505804, 0.49720597, -0.89770377, -0.0886327, 0.53057444, 0.45493448, -0.09988934, 0.13084531, 1.2872443, 0.0020207167, 0.10467672, 1.3285358, 0.104080915, 0.13084531, 1.2872443, -0.08758211, 0.091107786, 1.3285358, -0.032349527, -0.08778036, 1.343919, -0.1693803, 0.051785648, 1.3285358, -0.23586953, -0.009966791, 1.3285358, 0.15646172, -0.43904907, -1.3813286, -0.28119624, -0.088472664, 1.3285358, -0.31991905, -0.07338071, 1.2872443, -0.2682886, 0.01592493, 1.2872443, -0.19279414, 0.08612329, 1.2872443)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qw2kp"]
+albedo_texture = ExtResource("79_vqo61")
+metallic = 1.0
+metallic_texture = ExtResource("81_lon8v")
+roughness_texture = ExtResource("83_sueei")
+normal_enabled = true
+normal_scale = 2.05
+normal_texture = ExtResource("82_r3ggl")
+heightmap_enabled = true
+heightmap_scale = 0.0
+heightmap_texture = ExtResource("80_pwsyv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5ru8x"]
+albedo_texture = ExtResource("100_hsv4y")
+metallic = 1.0
+metallic_texture = ExtResource("102_lea4x")
+roughness_texture = ExtResource("104_nliq0")
+normal_enabled = true
+normal_scale = 2.75
+normal_texture = ExtResource("103_oykgp")
+heightmap_enabled = true
+heightmap_scale = 0.0
+heightmap_texture = ExtResource("101_lrvy0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcyeq"]
+albedo_texture = ExtResource("105_e3l5k")
+metallic = 1.0
+metallic_texture = ExtResource("106_epi3u")
+roughness_texture = ExtResource("108_v78r4")
+normal_enabled = true
+normal_scale = 8.03
+normal_texture = ExtResource("107_n2sb7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g8r2m"]
+albedo_texture = ExtResource("109_qqhb5")
+metallic = 1.0
+metallic_texture = ExtResource("110_s2n2m")
+roughness_texture = ExtResource("112_qw5ky")
+normal_enabled = true
+normal_scale = 2.41
+normal_texture = ExtResource("111_wys8s")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74iwm"]
+albedo_texture = ExtResource("135_lmtqe")
+metallic = 0.81
+metallic_texture = ExtResource("136_qk0aj")
+roughness_texture = ExtResource("138_vm2xw")
+normal_enabled = true
+normal_scale = 1.7
+normal_texture = ExtResource("137_cn87d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqlas"]
+albedo_texture = ExtResource("161_cv8gu")
+metallic = 1.0
+metallic_texture = ExtResource("162_riv5k")
+roughness_texture = ExtResource("164_si3yo")
+normal_enabled = true
+normal_scale = 0.65
+normal_texture = ExtResource("163_qqive")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_swvvi"]
+albedo_texture = ExtResource("171_0i3gv")
+metallic = 1.0
+metallic_texture = ExtResource("172_d53yc")
+roughness = 0.99
+roughness_texture = ExtResource("174_swnqc")
+normal_enabled = true
+normal_scale = 3.81
+normal_texture = ExtResource("173_3i62b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cv8gu"]
+albedo_texture = ExtResource("161_yf7a7")
+metallic = 1.0
+metallic_texture = ExtResource("162_wp6hd")
+roughness_texture = ExtResource("164_rbtfl")
+normal_enabled = true
+normal_scale = 1.35
+normal_texture = ExtResource("163_pks5g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_riv5k"]
+cull_mode = 2
+albedo_color = Color(0.16298601, 0.35472998, 0.1477215, 1)
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 10.49
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qnd83"]
+albedo_texture = ExtResource("175_33ckb")
+metallic = 1.0
+metallic_texture = ExtResource("176_qqc4h")
+roughness_texture = ExtResource("178_nc06o")
+normal_enabled = true
+normal_texture = ExtResource("177_kp8cn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqive"]
+transparency = 1
+albedo_color = Color(0.3019608, 1, 0.35686275, 0.8980392)
+
+[sub_resource type="GDScript" id="GDScript_u647y"]
+
+[sub_resource type="Environment" id="Environment_x5p1p"]
+background_color = Color(0.28485027, 0.28485027, 0.28485027, 1)
+background_energy_multiplier = 5.54
+ambient_light_energy = 0.0
+tonemap_mode = 3
+tonemap_exposure = 0.59
+ssao_enabled = true
+ssao_intensity = 7.11
+glow_enabled = true
+glow_intensity = 0.05
+fog_enabled = true
+fog_light_color = Color(0.4696024, 0.693596, 0.80766106, 1)
+fog_light_energy = 5.12
+fog_sky_affect = 0.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.4635
+volumetric_fog_albedo = Color(0.66984934, 0.7841468, 0.75148755, 1)
+volumetric_fog_ambient_inject = 0.3
+volumetric_fog_sky_affect = 0.163
+
+[node name="World" type="Node3D" unique_id=1671539021]
+
+[node name="CharacterBody3D" parent="." unique_id=2061108605 instance=ExtResource("2_e2o6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.113211, 1.271434, 4.0317993)
+
+[node name="Kaunas" parent="." unique_id=160383185 instance=ExtResource("2_feb5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.158005, 0, -16.815361)
+
+[node name="Alarm" parent="Kaunas" index="1" unique_id=1922592637]
+surface_material_override/0 = ExtResource("4_y4uvs")
+
+[node name="Alarm_001" parent="Kaunas" index="2" unique_id=199758869]
+material_override = ExtResource("4_y4uvs")
+
+[node name="Alarm_002" parent="Kaunas" index="3" unique_id=753980827]
+material_override = ExtResource("4_y4uvs")
+
+[node name="Alarm_003" parent="Kaunas" index="4" unique_id=1391157407]
+material_override = ExtResource("4_y4uvs")
+
+[node name="Hallway_lamp" parent="Kaunas" index="5" unique_id=1035447205]
+surface_material_override/0 = SubResource("StandardMaterial3D_yf7a7")
+
+[node name="Hallway_breaker_1" parent="Kaunas" index="6" unique_id=1111489427]
+material_override = ExtResource("4_hxd3m")
+
+[node name="Hallway_breaker_1_001" parent="Kaunas" index="7" unique_id=1194544830]
+material_override = ExtResource("4_hxd3m")
+
+[node name="Hallway_breaker_2" parent="Kaunas" index="8" unique_id=1597804763]
+material_override = ExtResource("5_lmtqe")
+
+[node name="Hallway_floor" parent="Kaunas" index="9" unique_id=420974493]
+mesh = SubResource("ArrayMesh_bva1w")
+surface_material_override/0 = SubResource("StandardMaterial3D_lnyny")
+
+[node name="Hallway_wall" parent="Kaunas" index="11" unique_id=1107374864]
+surface_material_override/0 = SubResource("StandardMaterial3D_px3hy")
+
+[node name="Hallway_pipes" parent="Kaunas" index="12" unique_id=50208718]
+surface_material_override/0 = SubResource("StandardMaterial3D_0wxyg")
+
+[node name="Hallway_door" parent="Kaunas" index="14" unique_id=198548676]
+material_override = ExtResource("19_lnyny")
+
+[node name="Hallway_door_001" parent="Kaunas" index="15" unique_id=1704582699]
+material_override = ExtResource("19_lnyny")
+
+[node name="Hallway_door_002" parent="Kaunas" index="16" unique_id=624502605]
+material_override = ExtResource("19_lnyny")
+
+[node name="Hallway_door_003" parent="Kaunas" index="17" unique_id=33686346]
+surface_material_override/0 = ExtResource("19_lnyny")
+
+[node name="Hallway_door_004" parent="Kaunas" index="18" unique_id=1103557818]
+material_override = ExtResource("19_lnyny")
+
+[node name="Hallway_door_frame" parent="Kaunas" index="19" unique_id=1382489272]
+surface_material_override/0 = SubResource("StandardMaterial3D_8f8qe")
+
+[node name="Hallway_door_locked" parent="Kaunas" index="20" unique_id=364524100]
+surface_material_override/0 = ExtResource("24_px3hy")
+
+[node name="Hallway_door_locked_001" parent="Kaunas" index="21" unique_id=1689022476]
+material_override = ExtResource("24_px3hy")
+
+[node name="Hallway_door_locked_002" parent="Kaunas" index="22" unique_id=250870558]
+material_override = ExtResource("24_px3hy")
+
+[node name="Office_ceiling" parent="Kaunas" index="23" unique_id=546229881]
+surface_material_override/0 = SubResource("StandardMaterial3D_5628o")
+
+[node name="Office_floor" parent="Kaunas" index="24" unique_id=331313812]
+surface_material_override/0 = SubResource("StandardMaterial3D_fuuk6")
+
+[node name="Office_walls" parent="Kaunas" index="25" unique_id=1204035462]
+surface_material_override/0 = SubResource("StandardMaterial3D_cwgap")
+
+[node name="Office_window_glass" parent="Kaunas" index="26" unique_id=82317363]
+surface_material_override/0 = SubResource("StandardMaterial3D_x5p1p")
+
+[node name="Office_window_frame" parent="Kaunas" index="27" unique_id=133115291]
+surface_material_override/0 = SubResource("StandardMaterial3D_3xib3")
+
+[node name="Closet" parent="Kaunas" index="28" unique_id=1519536268]
+surface_material_override/0 = SubResource("StandardMaterial3D_36jdj")
+
+[node name="Cabinet_small" parent="Kaunas" index="29" unique_id=609834176]
+surface_material_override/0 = SubResource("StandardMaterial3D_i2p71")
+
+[node name="Cabinet_big" parent="Kaunas" index="30" unique_id=968737746]
+surface_material_override/0 = SubResource("StandardMaterial3D_hve3p")
+
+[node name="Table_shelve_big" parent="Kaunas" index="31" unique_id=1727410676]
+surface_material_override/0 = SubResource("StandardMaterial3D_mljfx")
+
+[node name="Table_shelve_small" parent="Kaunas" index="32" unique_id=1676371014]
+surface_material_override/0 = SubResource("StandardMaterial3D_svdf4")
+
+[node name="Table" parent="Kaunas" index="33" unique_id=1738269130]
+surface_material_override/0 = SubResource("StandardMaterial3D_qpefm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Table" index="0" unique_id=1819407652]
+script = ExtResource("69_u647y")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Table/StaticBody3D" unique_id=283143404]
+shape = SubResource("ConvexPolygonShape3D_lyuia")
+
+[node name="InteractableComponent" parent="Kaunas/Table/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
+
+[node name="Pinboard_big" parent="Kaunas" index="34" unique_id=1911947776]
+surface_material_override/0 = SubResource("StandardMaterial3D_baljx")
+
+[node name="Pinboard_small" parent="Kaunas" index="35" unique_id=1387485919]
+surface_material_override/0 = SubResource("StandardMaterial3D_t2ssd")
+
+[node name="Office_lamp" parent="Kaunas" index="36" unique_id=1979850282]
+surface_material_override/0 = SubResource("StandardMaterial3D_vyqle")
+
+[node name="Closet_001" parent="Kaunas" index="37" unique_id=162723585]
+surface_material_override/0 = SubResource("StandardMaterial3D_7noa1")
+
+[node name="Chair_001" parent="Kaunas" index="38" unique_id=2096452379]
+material_override = ExtResource("36_vuohh")
+
+[node name="Chair_back_001" parent="Kaunas" index="39" unique_id=25977831]
+surface_material_override/0 = ExtResource("57_xoeau")
+
+[node name="Chair_pillow_001" parent="Kaunas" index="40" unique_id=725423929]
+material_override = ExtResource("37_3gvs5")
+
+[node name="Chair_002" parent="Kaunas" index="41" unique_id=1033433271]
+material_override = ExtResource("36_vuohh")
+
+[node name="Chair_back_002" parent="Kaunas" index="42" unique_id=512674279]
+material_override = ExtResource("57_xoeau")
+
+[node name="Chair_pillow_002" parent="Kaunas" index="43" unique_id=810793522]
+material_override = ExtResource("37_3gvs5")
+
+[node name="Chair_003" parent="Kaunas" index="44" unique_id=438836569]
+material_override = ExtResource("36_vuohh")
+
+[node name="Chair_back_003" parent="Kaunas" index="45" unique_id=249911524]
+material_override = ExtResource("57_xoeau")
+
+[node name="Chair_pillow_003" parent="Kaunas" index="46" unique_id=177114225]
+material_override = ExtResource("37_3gvs5")
+
+[node name="Chair_004" parent="Kaunas" index="48" unique_id=1346915484]
+material_override = ExtResource("36_vuohh")
+
+[node name="Chair_back_004" parent="Kaunas" index="49" unique_id=1986739470]
+material_override = ExtResource("57_xoeau")
+
+[node name="Chair_pillow_004" parent="Kaunas" index="50" unique_id=1921589255]
+material_override = ExtResource("37_3gvs5")
+
+[node name="Office_supportbeams" parent="Kaunas" index="51" unique_id=917177560]
+surface_material_override/0 = SubResource("StandardMaterial3D_r3ggl")
+
+[node name="Folder_big" parent="Kaunas" index="52" unique_id=1978013571]
+surface_material_override/0 = SubResource("StandardMaterial3D_4v2jo")
+
+[node name="Folder_small" parent="Kaunas" index="53" unique_id=1631673709]
+surface_material_override/0 = SubResource("StandardMaterial3D_l1i01")
+
+[node name="Mouse" parent="Kaunas" index="54" unique_id=1724780374]
+material_override = ExtResource("98_de524")
+
+[node name="Document_Storage" parent="Kaunas" index="55" unique_id=1438794766]
+surface_material_override/0 = ExtResource("98_nc06o")
+
+[node name="Document_Storage_Shelves" parent="Kaunas" index="56" unique_id=638702313]
+transform = Transform3D(0.14831018, 0, 0.9889409, 0, 1, 0, -0.9889409, 0, 0.14831018, 3.5684934, 3.1406677, 14.931621)
+surface_material_override/0 = ExtResource("99_qnd83")
+
+[node name="Monitor_002" parent="Kaunas" index="57" unique_id=813659215]
+material_override = ExtResource("101_0i3gv")
+
+[node name="Monitor_003" parent="Kaunas" index="59" unique_id=1908371214]
+material_override = ExtResource("101_0i3gv")
+
+[node name="Monitor_007" parent="Kaunas" index="61" unique_id=1107360558]
+material_override = ExtResource("101_0i3gv")
+
+[node name="Monitor_009" parent="Kaunas" index="63" unique_id=1911091467]
+surface_material_override/0 = ExtResource("101_0i3gv")
+
+[node name="Mouse_001" parent="Kaunas" index="65" unique_id=206517683]
+surface_material_override/0 = ExtResource("98_de524")
+
+[node name="Mouse_002" parent="Kaunas" index="66" unique_id=1800393088]
+material_override = ExtResource("98_de524")
+
+[node name="Mouse_003" parent="Kaunas" index="67" unique_id=831465701]
+material_override = ExtResource("98_de524")
+
+[node name="Computer_001" parent="Kaunas" index="68" unique_id=960729545]
+material_override = ExtResource("58_mc3al")
+
+[node name="Computer_002" parent="Kaunas" index="69" unique_id=1794858981]
+material_override = ExtResource("58_mc3al")
+
+[node name="Computer_003" parent="Kaunas" index="70" unique_id=48688362]
+surface_material_override/0 = ExtResource("58_mc3al")
+
+[node name="Document_Storage_001" parent="Kaunas" index="71" unique_id=1335240949]
+material_override = ExtResource("98_nc06o")
+
+[node name="Document_Storage_Shelves_001" parent="Kaunas" index="72" unique_id=1644349482]
+material_override = ExtResource("99_qnd83")
+
+[node name="Document_Storage_002" parent="Kaunas" index="73" unique_id=101247326]
+material_override = ExtResource("98_nc06o")
+
+[node name="Document_Storage_Shelves_002" parent="Kaunas" index="74" unique_id=882444205]
+material_override = ExtResource("99_qnd83")
+
+[node name="Folder_big_001" parent="Kaunas" index="75" unique_id=212859469]
+material_override = ExtResource("59_mc3al")
+
+[node name="Folder_big_002" parent="Kaunas" index="76" unique_id=1959480216]
+material_override = ExtResource("59_mc3al")
+
+[node name="Folder_small_001" parent="Kaunas" index="77" unique_id=153615110]
+material_override = ExtResource("60_bqa6y")
+
+[node name="Folder_big_003" parent="Kaunas" index="78" unique_id=1258012722]
+material_override = ExtResource("59_mc3al")
+
+[node name="Folder_small_002" parent="Kaunas" index="79" unique_id=717718282]
+material_override = ExtResource("60_bqa6y")
+
+[node name="Folder_big_004" parent="Kaunas" index="80" unique_id=1358089854]
+material_override = ExtResource("59_mc3al")
+
+[node name="Folder_big_005" parent="Kaunas" index="81" unique_id=1038912331]
+material_override = ExtResource("59_mc3al")
+
+[node name="Picture_frame" parent="Kaunas" index="82" unique_id=1297981653]
+surface_material_override/0 = ExtResource("70_wj41c")
+
+[node name="Picture_frame_glass" parent="Kaunas" index="83" unique_id=675530149]
+surface_material_override/0 = ExtResource("71_t2ssd")
+
+[node name="Picture_frame_picture" parent="Kaunas" index="84" unique_id=1955673879]
+surface_material_override/0 = SubResource("StandardMaterial3D_66xay")
+
+[node name="Computer_004" parent="Kaunas" index="85" unique_id=1947656796]
+material_override = ExtResource("58_mc3al")
+
+[node name="Picture_frame_001" parent="Kaunas" index="86" unique_id=1905545121]
+material_override = ExtResource("70_wj41c")
+
+[node name="Picture_frame_glass_001" parent="Kaunas" index="87" unique_id=1574650047]
+material_override = ExtResource("71_t2ssd")
+
+[node name="Picture_frame_picture_001" parent="Kaunas" index="88" unique_id=376582942]
+surface_material_override/0 = SubResource("StandardMaterial3D_lh772")
+
+[node name="Poster" parent="Kaunas" index="89" unique_id=1023944996]
+surface_material_override/0 = SubResource("StandardMaterial3D_kp8cn")
+
+[node name="Monitor_001" parent="Kaunas" index="90" unique_id=921209560]
+material_override = ExtResource("101_0i3gv")
+
+[node name="Entrance_floor" parent="Kaunas" index="92" unique_id=1129351901]
+surface_material_override/0 = SubResource("StandardMaterial3D_vf1qt")
+
+[node name="Entrance_ceiling" parent="Kaunas" index="93" unique_id=2088941030]
+surface_material_override/0 = SubResource("StandardMaterial3D_j4tta")
+
+[node name="Entrance_walls" parent="Kaunas" index="94" unique_id=259479155]
+surface_material_override/0 = SubResource("StandardMaterial3D_ell1s")
+
+[node name="Entrance_window_frame" parent="Kaunas" index="95" unique_id=1039284739]
+surface_material_override/0 = SubResource("StandardMaterial3D_vbt48")
+
+[node name="Entrance_window_glass" parent="Kaunas" index="96" unique_id=742312965]
+surface_material_override/0 = SubResource("StandardMaterial3D_hsv4y")
+
+[node name="Entrance_stairs" parent="Kaunas" index="97" unique_id=1059117124]
+surface_material_override/0 = SubResource("StandardMaterial3D_w0nw1")
+
+[node name="Entrance_supportbeams" parent="Kaunas" index="98" unique_id=714347232]
+surface_material_override/0 = SubResource("StandardMaterial3D_w6gsc")
+
+[node name="Entrance_door" parent="Kaunas" index="99" unique_id=572553302]
+surface_material_override/0 = SubResource("StandardMaterial3D_y4uvs")
+
+[node name="Pallet" parent="Kaunas" index="100" unique_id=279627521]
+material_override = ExtResource("78_vqo61")
+
+[node name="Pallet_001" parent="Kaunas" index="101" unique_id=1479486374]
+material_override = ExtResource("78_vqo61")
+
+[node name="Pallet_002" parent="Kaunas" index="102" unique_id=1339812718]
+material_override = ExtResource("78_vqo61")
+
+[node name="Pallet_003" parent="Kaunas" index="103" unique_id=300289478]
+surface_material_override/0 = ExtResource("78_vqo61")
+
+[node name="RadioactiveWaste" parent="Kaunas" index="104" unique_id=399428374]
+surface_material_override/0 = ExtResource("88_i3uta")
+
+[node name="Generator_1" parent="Kaunas" index="105" unique_id=1198501445]
+surface_material_override/0 = SubResource("StandardMaterial3D_qhxlk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Generator_1" index="0" unique_id=815474112]
+script = ExtResource("140_gjclm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Generator_1/StaticBody3D" unique_id=1085007011]
+shape = SubResource("ConvexPolygonShape3D_gjclm")
+
+[node name="InteractableComponent" parent="Kaunas/Generator_1/StaticBody3D" unique_id=605302879 instance=ExtResource("169_riv5k")]
+
+[node name="Generator_2" parent="Kaunas" index="106" unique_id=206103982]
+surface_material_override/0 = SubResource("StandardMaterial3D_qw2kp")
+
+[node name="Bag" parent="Kaunas" index="107" unique_id=1720332518]
+material_override = ExtResource("98_tssr6")
+
+[node name="Bag_001" parent="Kaunas" index="108" unique_id=271324208]
+material_override = ExtResource("98_tssr6")
+
+[node name="Bag_002" parent="Kaunas" index="109" unique_id=294316620]
+material_override = ExtResource("98_tssr6")
+
+[node name="Bag_003" parent="Kaunas" index="110" unique_id=169702354]
+surface_material_override/0 = ExtResource("98_tssr6")
+
+[node name="Entrance_breaker_1" parent="Kaunas" index="111" unique_id=501495347]
+surface_material_override/0 = ExtResource("4_hxd3m")
+
+[node name="Entrance_breaker_2" parent="Kaunas" index="112" unique_id=1166792665]
+surface_material_override/0 = ExtResource("5_lmtqe")
+
+[node name="Entrance_lamp" parent="Kaunas" index="113" unique_id=1847672216]
+surface_material_override/0 = ExtResource("112_hiqci")
+
+[node name="Entrance_lamp_001" parent="Kaunas" index="114" unique_id=1000398070]
+material_override = ExtResource("112_hiqci")
+
+[node name="Entrance_Pipe_1" parent="Kaunas" index="115" unique_id=513494406]
+surface_material_override/0 = SubResource("StandardMaterial3D_5ru8x")
+
+[node name="Entrance_Pipe_2" parent="Kaunas" index="116" unique_id=1628453841]
+surface_material_override/0 = SubResource("StandardMaterial3D_mcyeq")
+
+[node name="Entrance" parent="Kaunas/Entrance" parent_id_path=PackedInt32Array(160383185, 1630618345) index="0" unique_id=1770032689]
+material_override = ExtResource("113_s2n2m")
+
+[node name="Entrance_001" parent="Kaunas/Entrance_001" parent_id_path=PackedInt32Array(160383185, 607122936) index="0" unique_id=583095489]
+surface_material_override/0 = ExtResource("113_s2n2m")
+
+[node name="Entrance_Pipe_3" parent="Kaunas" index="119" unique_id=1674550709]
+surface_material_override/0 = SubResource("StandardMaterial3D_g8r2m")
+
+[node name="Entrance_Pipe_Box" parent="Kaunas" index="120" unique_id=1075559158]
+surface_material_override/0 = SubResource("StandardMaterial3D_74iwm")
+
+[node name="RadioactiveWaste_001" parent="Kaunas" index="121" unique_id=1789203687]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_002" parent="Kaunas" index="122" unique_id=1682956316]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_003" parent="Kaunas" index="123" unique_id=1554786202]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_004" parent="Kaunas" index="124" unique_id=764388345]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_005" parent="Kaunas" index="125" unique_id=832701]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_006" parent="Kaunas" index="126" unique_id=1906270856]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_007" parent="Kaunas" index="127" unique_id=885949762]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_008" parent="Kaunas" index="128" unique_id=1920551065]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_009" parent="Kaunas" index="129" unique_id=6230958]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_010" parent="Kaunas" index="130" unique_id=1647594719]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_011" parent="Kaunas" index="131" unique_id=1394374775]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_012" parent="Kaunas" index="132" unique_id=853710309]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_013" parent="Kaunas" index="133" unique_id=1224905597]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_014" parent="Kaunas" index="134" unique_id=1881767019]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_015" parent="Kaunas" index="135" unique_id=888328052]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_016" parent="Kaunas" index="136" unique_id=229021661]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_017" parent="Kaunas" index="137" unique_id=376742819]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_018" parent="Kaunas" index="138" unique_id=1415890506]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_019" parent="Kaunas" index="139" unique_id=150734944]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_020" parent="Kaunas" index="140" unique_id=624653826]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_021" parent="Kaunas" index="141" unique_id=710135077]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_022" parent="Kaunas" index="142" unique_id=1913375228]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_024" parent="Kaunas" index="144" unique_id=1046443099]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_025" parent="Kaunas" index="145" unique_id=886714034]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_026" parent="Kaunas" index="146" unique_id=1770884386]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_027" parent="Kaunas" index="147" unique_id=1879938068]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_028" parent="Kaunas" index="148" unique_id=1282687351]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_029" parent="Kaunas" index="149" unique_id=2084395159]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_030" parent="Kaunas" index="150" unique_id=1123336371]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_031" parent="Kaunas" index="151" unique_id=270295121]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_032" parent="Kaunas" index="152" unique_id=2012690632]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_033" parent="Kaunas" index="153" unique_id=1778518114]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_034" parent="Kaunas" index="154" unique_id=256552935]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_035" parent="Kaunas" index="155" unique_id=1235619457]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_036" parent="Kaunas" index="156" unique_id=911195385]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_037" parent="Kaunas" index="157" unique_id=861678310]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_038" parent="Kaunas" index="158" unique_id=598448737]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_039" parent="Kaunas" index="159" unique_id=100414994]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_040" parent="Kaunas" index="160" unique_id=1711050791]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_041" parent="Kaunas" index="161" unique_id=1602913416]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_042" parent="Kaunas" index="162" unique_id=233168418]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_043" parent="Kaunas" index="163" unique_id=2053382047]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_044" parent="Kaunas" index="164" unique_id=1474837430]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_046" parent="Kaunas" index="165" unique_id=1389673719]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_047" parent="Kaunas" index="166" unique_id=1600564674]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_048" parent="Kaunas" index="167" unique_id=245899737]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_049" parent="Kaunas" index="168" unique_id=1053326764]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_050" parent="Kaunas" index="169" unique_id=965055183]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_051" parent="Kaunas" index="170" unique_id=1141191297]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_052" parent="Kaunas" index="171" unique_id=306658196]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_053" parent="Kaunas" index="172" unique_id=2055770403]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_054" parent="Kaunas" index="173" unique_id=1923251894]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_055" parent="Kaunas" index="174" unique_id=1076562104]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_056" parent="Kaunas" index="175" unique_id=1495376695]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_057" parent="Kaunas" index="176" unique_id=313305444]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_059" parent="Kaunas" index="177" unique_id=1884961438]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_060" parent="Kaunas" index="178" unique_id=47294144]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_061" parent="Kaunas" index="179" unique_id=385776888]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_062" parent="Kaunas" index="180" unique_id=385178308]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_063" parent="Kaunas" index="181" unique_id=1826379432]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_045" parent="Kaunas" index="182" unique_id=658299593]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_058" parent="Kaunas" index="183" unique_id=2022193543]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_064" parent="Kaunas" index="184" unique_id=1891528492]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_065" parent="Kaunas" index="185" unique_id=1054239914]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_066" parent="Kaunas" index="186" unique_id=35874843]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_067" parent="Kaunas" index="187" unique_id=1911959725]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_068" parent="Kaunas" index="188" unique_id=1688531440]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_069" parent="Kaunas" index="189" unique_id=1873103607]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_070" parent="Kaunas" index="190" unique_id=1278483336]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_071" parent="Kaunas" index="191" unique_id=1800041865]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_072" parent="Kaunas" index="192" unique_id=1983670864]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_073" parent="Kaunas" index="193" unique_id=2101687929]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_074" parent="Kaunas" index="194" unique_id=1735089064]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_075" parent="Kaunas" index="195" unique_id=1606619237]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_076" parent="Kaunas" index="196" unique_id=868754512]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_077" parent="Kaunas" index="197" unique_id=435337817]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_078" parent="Kaunas" index="198" unique_id=2094523496]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_079" parent="Kaunas" index="199" unique_id=276426563]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_080" parent="Kaunas" index="200" unique_id=1804141028]
+material_override = ExtResource("88_i3uta")
+
+[node name="RadioactiveWaste_081" parent="Kaunas" index="201" unique_id=1317002640]
+material_override = ExtResource("88_i3uta")
+
+[node name="Bridge_pipe_1" parent="Kaunas" index="208" unique_id=395193405]
+surface_material_override/0 = SubResource("StandardMaterial3D_lqlas")
+
+[node name="Bridge_pipe_2" parent="Kaunas" index="209" unique_id=718770058]
+surface_material_override/0 = SubResource("StandardMaterial3D_swvvi")
+
+[node name="Bridge_wheels" parent="Kaunas" index="210" unique_id=1215199316]
+surface_material_override/0 = SubResource("StandardMaterial3D_cv8gu")
+
+[node name="Bridge_breaker_1" parent="Kaunas" index="211" unique_id=1138061597]
+material_override = ExtResource("4_hxd3m")
+
+[node name="Bridge_breaker_2" parent="Kaunas" index="212" unique_id=1837316424]
+surface_material_override/0 = ExtResource("175_kp8cn")
+
+[node name="Point Grün" parent="Kaunas" index="214" unique_id=304370705]
+transform = Transform3D(0, -1, 0, 0, 0, 1, -1, 0, 0, 41.916096, 1.0382601, 24.319597)
+light_energy = 0.1
+
+[node name="Point Grün_001" parent="Kaunas" index="215" unique_id=966900187]
+transform = Transform3D(0, -1, 0, 0, 0, 1, -1, 0, 0, 41.643867, 1.0354753, 24.319597)
+light_energy = 0.05
+
+[node name="Point Grün_002" parent="Kaunas" index="216" unique_id=2112090896]
+transform = Transform3D(0, -1, 0, 0, 0, 1, -1, 0, 0, 41.801292, 1.0340829, 24.319597)
+light_energy = 0.05
+
+[node name="Exid" parent="Kaunas" index="217" unique_id=951324985]
+surface_material_override/0 = SubResource("StandardMaterial3D_riv5k")
+
+[node name="Exid_sign" parent="Kaunas" index="218" unique_id=1624455823]
+surface_material_override/0 = SubResource("StandardMaterial3D_qnd83")
+
+[node name="Exid_sign_glass" parent="Kaunas" index="219" unique_id=841744171]
+surface_material_override/0 = SubResource("StandardMaterial3D_qqive")
+
+[node name="Storage_breaker_1" parent="Kaunas" index="221" unique_id=921698201]
+material_override = ExtResource("4_hxd3m")
+
+[node name="Storage_breaker_2" parent="Kaunas" index="222" unique_id=1380021619]
+material_override = ExtResource("175_kp8cn")
+
+[node name="interactable_door4" parent="Kaunas" unique_id=1430987452 instance=ExtResource("183_vyl4c")]
+transform = Transform3D(0.009895876, 0, -0.999951, 0, 1, 0, 0.999951, 0, 0.009895876, 4.0415726, 3.248474, 17.090551)
+required_riddle_id = "cable_hex"
+
+[node name="interactable_door5" parent="Kaunas" unique_id=618945629 instance=ExtResource("183_vyl4c")]
+transform = Transform3D(0.009895876, 0, -0.999951, 0, 1, 0, 0.999951, 0, 0.009895876, 6.1543407, 3.248474, 13.103258)
+
+[node name="interactable_door6" parent="Kaunas" unique_id=1702719880 instance=ExtResource("183_vyl4c")]
+transform = Transform3D(-0.99980515, 0, -0.019738419, 0, 1, 0, 0.019738419, 0, -0.99980515, 29.759977, 3.248474, 18.146708)
+required_riddle_id = "chess_password"
+
+[node name="Point Grün2" type="OmniLight3D" parent="Kaunas" unique_id=829680001]
+transform = Transform3D(0.9659258, -0.25881916, 0, 0, 0, 1, -0.25881916, -0.9659258, 0, 55.88851, -0.7837614, 26.63538)
+visible = false
+light_color = Color(0.3348429, 1, 0.31123266, 1)
+light_energy = 0.1
+omni_range = 4096.0
+omni_attenuation = 2.0
+
+[node name="Point Grün_003" type="OmniLight3D" parent="Kaunas" unique_id=1084710813]
+transform = Transform3D(0.9659258, -0.25881916, 0, 0, 0, 1, -0.25881916, -0.9659258, 0, 56.14461, -0.78654623, 26.632757)
+visible = false
+light_color = Color(1, 0.17851466, 0.22400875, 1)
+light_energy = 0.05
+omni_range = 4096.0
+omni_attenuation = 2.0
+
+[node name="Point Grün_004" type="OmniLight3D" parent="Kaunas" unique_id=1203627197]
+transform = Transform3D(0.9659258, -0.25881916, 0, 0, 0, 1, -0.25881916, -0.9659258, 0, 55.97546, -0.7879386, 26.648668)
+visible = false
+light_color = Color(1, 0.9137341, 0.16714278, 1)
+light_energy = 0.05
+omni_range = 4096.0
+omni_attenuation = 2.0
+
+[node name="Lights" type="Node3D" parent="." unique_id=476661733]
+script = SubResource("GDScript_u647y")
+
+[node name="Office_Light" type="OmniLight3D" parent="Lights" unique_id=1330032139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.340454, 4.0317764, -2.9572206)
+visible = false
+light_energy = 3.143
+light_indirect_energy = 12.259
+light_volumetric_fog_energy = 0.0
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights" unique_id=469909925]
+transform = Transform3D(1, 0, 0, 0, 0.7626683, 0.6467898, 0, -0.6467898, 0.7626683, -11.352858, 6.67974, 13.420752)
+visible = false
+light_color = Color(0.9969793, 0.9208307, 0.7608952, 1)
+light_volumetric_fog_energy = 10.188
+light_specular = 3.218
+shadow_enabled = true
+sky_mode = 1
+
+[node name="Entrance_light" type="OmniLight3D" parent="Lights" unique_id=1993270872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.371484, 3.0664032, 4.0139275)
+visible = false
+
+[node name="Entrance_light2" type="OmniLight3D" parent="Lights" unique_id=1217159268]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4698608, 3.8320704, 0.7232597)
+visible = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=7447981]
+transform = Transform3D(1, 0, 0, 0, 0.25200185, 0.96772677, 0, -0.96772677, 0.25200185, -10.385865, 2.7530208, 4.3049994)
+light_energy = 5.045
+light_indirect_energy = 5.944
+light_volumetric_fog_energy = 0.0
+light_size = 0.871
+light_specular = 0.051
+shadow_enabled = true
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=287734399]
+transform = Transform3D(1, 0, 0, 0, 0.25200185, 0.96772677, 0, -0.96772677, 0.25200185, -13.842764, 2.7530208, 4.3049994)
+light_energy = 5.045
+light_indirect_energy = 5.944
+light_volumetric_fog_energy = 0.0
+light_size = 0.871
+light_specular = 0.051
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=679256751]
+environment = SubResource("Environment_x5p1p")
+
+[node name="CanvasLayer" parent="." unique_id=1682503635 instance=ExtResource("183_de524")]
+
+[node name="HUDLayer" type="CanvasLayer" parent="." unique_id=1732300675]
+
+[node name="HUD" type="Control" parent="HUDLayer" unique_id=618609561]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("1_m637p")
+
+[node name="MarginContainer" type="MarginContainer" parent="HUDLayer/HUD" unique_id=1311620673]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.0
+offset_right = 21.0
+offset_bottom = 43.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 20
+
+[node name="TimeLabel" type="Label" parent="HUDLayer/HUD/MarginContainer" unique_id=1707834516]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("185_vdifd")
+theme_override_font_sizes/font_size = 35
+text = "00:00"
+
+[node name="GameTimer" type="Timer" parent="HUDLayer/HUD" unique_id=1221119760]
+wait_time = 180.0
+one_shot = true
+autostart = true
+
+[node name="TickAudio" type="AudioStreamPlayer" parent="HUDLayer/HUD" unique_id=2011445846]
+stream = ExtResource("186_vyl4c")
+volume_db = -10.769
+autoplay = true
+parameters/looping = true
+
+[node name="InteractionText" type="Control" parent="HUDLayer" unique_id=1559098688 groups=["interaction_ui"]]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("187_ufk2c")
+
+[node name="InteractionLabel" type="Label" parent="HUDLayer/InteractionText" unique_id=59783825]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.5
+offset_top = -11.5
+offset_right = 75.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="timeout" from="HUDLayer/HUD/GameTimer" to="HUDLayer/HUD" method="_on_game_timer_timeout"]
+
+[editable path="Kaunas"]

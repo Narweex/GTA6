@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ca8231ns4xtdr"]
+
+[ext_resource type="Texture2D" uid="uid://c8tgpl46htays" path="res://resources/assets/textures/Entrance/Pallet_Base_color.png" id="1_m6ce3"]
+[ext_resource type="Texture2D" uid="uid://ca0604qerxbwj" path="res://resources/assets/textures/Entrance/Pallet_Normal.png" id="2_4v7mp"]
+[ext_resource type="Texture2D" uid="uid://gf7tkjys57u6" path="res://resources/assets/textures/Entrance/Pallet_Roughness.png" id="3_nbo84"]
+
+[resource]
+albedo_texture = ExtResource("1_m6ce3")
+roughness_texture = ExtResource("3_nbo84")
+normal_enabled = true
+normal_texture = ExtResource("2_4v7mp")

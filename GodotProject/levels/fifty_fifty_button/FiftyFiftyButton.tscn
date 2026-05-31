@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dbbwcmlcxxc2q"]
+
+[ext_resource type="Script" uid="uid://fovucm68qo0s" path="res://levels/fifty_fifty_button/fifty_fifty_button.gd" id="1_vfjg0"]
+
+[node name="FiftyFiftyButton" type="Control" unique_id=303303235]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vfjg0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=278489866]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeftButton" type="Button" parent="HBoxContainer" unique_id=1942313997]
+layout_mode = 2
+text = "CLICK ME!"
+
+[node name="RightButton" type="Button" parent="HBoxContainer" unique_id=813389792]
+layout_mode = 2
+text = "CLICK ME!"
+
+[node name="ResultLabel" type="Label" parent="." unique_id=827771794]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

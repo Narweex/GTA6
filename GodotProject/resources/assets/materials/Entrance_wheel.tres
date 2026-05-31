@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bkqsobxkjtp8q"]
+
+[ext_resource type="Texture2D" uid="uid://b4ll5usvolfqr" path="res://resources/assets/textures/Entrance/Bridge_wheels_Base_color.png" id="1_yubfh"]
+[ext_resource type="Texture2D" uid="uid://e8tsothifnfb" path="res://resources/assets/textures/Entrance/Bridge_wheels_Metallic.png" id="2_noig6"]
+[ext_resource type="Texture2D" uid="uid://bi2d7xj0mfvw1" path="res://resources/assets/textures/Entrance/Bridge_wheels_Normal.png" id="3_stgh3"]
+[ext_resource type="Texture2D" uid="uid://dquj2b5d1lweq" path="res://resources/assets/textures/Entrance/Bridge_wheels_Roughness.png" id="4_us3ia"]
+
+[resource]
+albedo_texture = ExtResource("1_yubfh")
+metallic = 1.0
+metallic_texture = ExtResource("2_noig6")
+roughness_texture = ExtResource("4_us3ia")
+normal_enabled = true
+normal_texture = ExtResource("3_stgh3")

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b1ut06ifln2a3"]
+
+[ext_resource type="Texture2D" uid="uid://bdgyabfoi6ahg" path="res://resources/assets/textures/Office/Chair_pillow_Base_color.png" id="1_gptdp"]
+[ext_resource type="Texture2D" uid="uid://qn7ohyfflshq" path="res://resources/assets/textures/Office/Chair_pillow_Metallic.png" id="2_eawtq"]
+[ext_resource type="Texture2D" uid="uid://cpi6wbss0vsah" path="res://resources/assets/textures/Office/Chair_pillow_Normal.png" id="3_sdvjn"]
+[ext_resource type="Texture2D" uid="uid://2ff2pnli1mxk" path="res://resources/assets/textures/Office/Chair_pillow_Roughness.png" id="4_c77q6"]
+
+[resource]
+albedo_texture = ExtResource("1_gptdp")
+metallic = 1.0
+metallic_specular = 0.36
+metallic_texture = ExtResource("2_eawtq")
+roughness_texture = ExtResource("4_c77q6")
+normal_enabled = true
+normal_texture = ExtResource("3_sdvjn")

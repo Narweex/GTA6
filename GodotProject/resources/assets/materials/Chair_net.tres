@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dq5jikmpuicbn"]
+
+[ext_resource type="Texture2D" uid="uid://cs3ce426xfgdf" path="res://resources/assets/textures/Office/Chair_net_bc.png" id="1_hlyhx"]
+
+[resource]
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_hlyhx")
+roughness = 0.0
