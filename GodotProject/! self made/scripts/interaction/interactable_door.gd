@@ -3,9 +3,10 @@ extends StaticBody3D
 @export_category("Door Settings")
 ## How long the rotation animation takes in seconds
 @export var animation_time : float = 0.5
-
 ## Bestimmt die Drehrichtung: Wenn aktiviert, dreht sich die Tür in die eine Richtung, wenn deaktiviert in die andere.
 @export var swing_clockwise : bool = true
+## Rotation amount of door (always positive)
+@export var rotation_amount : int = 90
 
 var is_open : bool = false
 var initial_rotation_y : float
@@ -21,7 +22,7 @@ func _toggle_door() -> void:
 	is_open = !is_open
 	
 	# Lege fest, ob wir +90 Grad oder -90 Grad rechnen wollen, je nach Inspektor-Einstellung
-	var offset := deg_to_rad(90) if swing_clockwise else deg_to_rad(-90)
+	var offset := deg_to_rad(rotation_amount) if swing_clockwise else deg_to_rad(-rotation_amount)
 	
 	# Das neue Ziel ist entweder die Start-Rotation + 90 Grad (offen) oder wieder exakt die Start-Rotation (zu)
 	var target_rotation_y := initial_rotation_y + offset if is_open else initial_rotation_y

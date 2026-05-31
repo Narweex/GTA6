@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://coigv1lrleto7"]
+
+[ext_resource type="Script" uid="uid://ckho6eq6wlxu6" path="res://! self made/scripts/interaction/interactable_gate.gd" id="1_i4krb"]
+[ext_resource type="PackedScene" uid="uid://cfnlg8c7xg3qk" path="res://! self made/scenes/doors/interactable_component.tscn" id="2_1gyr0"]
+[ext_resource type="PackedScene" uid="uid://bmrb2k7ssewao" path="res://! self made/assets/geometry/glb/Gate_left.glb" id="3_h4tpr"]
+[ext_resource type="Texture2D" uid="uid://hesj2gn81e8l" path="res://! self made/assets/textures/Reactor/Gate_left_Base_color.png" id="3_llnsr"]
+[ext_resource type="PackedScene" uid="uid://bmxh77ocgsa6i" path="res://! self made/assets/geometry/glb/Gate_right.glb" id="4_pjgwa"]
+[ext_resource type="Texture2D" uid="uid://b7q7q1piookcn" path="res://! self made/assets/textures/Reactor/Gate_left_Metallic.png" id="4_sise7"]
+[ext_resource type="Texture2D" uid="uid://tapcr1u2jeid" path="res://! self made/assets/textures/Reactor/Gate_left_Normal_OpenGL.png" id="5_urm43"]
+[ext_resource type="Texture2D" uid="uid://bv2g0rosudm5g" path="res://! self made/assets/textures/Reactor/Gate_left_Roughness.png" id="6_dnj2w"]
+[ext_resource type="Texture2D" uid="uid://coc3ber53gpqu" path="res://! self made/assets/textures/Reactor/Gate_right_Base_color.png" id="8_uldln"]
+[ext_resource type="Texture2D" uid="uid://bvibqjduu8ll" path="res://! self made/assets/textures/Reactor/Gate_right_Metallic.png" id="9_wrwqe"]
+[ext_resource type="Texture2D" uid="uid://bd15465ihqw41" path="res://! self made/assets/textures/Reactor/Gate_right_Normal_OpenGL.png" id="10_ih3vy"]
+[ext_resource type="Texture2D" uid="uid://j3v5bokfcciy" path="res://! self made/assets/textures/Reactor/Gate_right_Roughness.png" id="11_gsily"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h4tpr"]
+albedo_texture = ExtResource("3_llnsr")
+metallic = 1.0
+metallic_texture = ExtResource("4_sise7")
+roughness_texture = ExtResource("6_dnj2w")
+normal_enabled = true
+normal_texture = ExtResource("5_urm43")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uldln"]
+albedo_texture = ExtResource("8_uldln")
+metallic = 1.0
+metallic_texture = ExtResource("9_wrwqe")
+roughness_texture = ExtResource("11_gsily")
+normal_enabled = true
+normal_texture = ExtResource("10_ih3vy")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h4tpr"]
+size = Vector3(2.5805664, 2.1154785, 0.44726563)
+
+[node name="interactable_gate" type="StaticBody3D" unique_id=516772561]
+script = ExtResource("1_i4krb")
+
+[node name="left side" type="Node3D" parent="." unique_id=1564422243]
+
+[node name="Gate_left2" parent="left side" unique_id=237725867 instance=ExtResource("3_h4tpr")]
+
+[node name="Gate_left" parent="left side/Gate_left2" index="0" unique_id=961194134]
+surface_material_override/0 = SubResource("StandardMaterial3D_h4tpr")
+
+[node name="right side" type="Node3D" parent="." unique_id=390439163]
+
+[node name="Gate_right2" parent="right side" unique_id=1410662718 instance=ExtResource("4_pjgwa")]
+
+[node name="Gate_right" parent="right side/Gate_right2" index="0" unique_id=1779778451]
+surface_material_override/0 = SubResource("StandardMaterial3D_uldln")
+
+[node name="InteractableComponent" parent="." unique_id=2066935556 instance=ExtResource("2_1gyr0")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1346098953]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.055908203, 0.021118164, -0.005859375)
+shape = SubResource("BoxShape3D_h4tpr")
+
+[editable path="left side/Gate_left2"]
+[editable path="right side/Gate_right2"]
