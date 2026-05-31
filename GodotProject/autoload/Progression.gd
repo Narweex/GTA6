@@ -3,6 +3,7 @@ extends Node
 #track the progress of all riddles and base the walkthrough on it
 signal riddle_completed(riddle_id: String)
 signal riddle_cancelled(riddle_id: String)
+signal stage_changed(riddle_id: String)
 
 var riddles = {
 	"cable_hex": false,
@@ -24,6 +25,9 @@ func complete_riddle(riddle_id: String):
 			
 			# send signal with new text for UI
 			stage_changed.emit(get_current_stage_text())
+			
+			#emit the signal
+			riddle_completed.emit(riddle_id)
 			
 
 #function that controls, where player currently is
@@ -48,8 +52,7 @@ func get_current_stage_text() -> String:
 		return "CURRENT OBJECTIVE: solve the final Captcha code to escape"
 		
 	return "All tasks completed! Escape!"
-			#emit the signal
-			riddle_completed.emit(riddle_id)
+
 			
 func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
 	# 1. Safely load and instance the UI scene
