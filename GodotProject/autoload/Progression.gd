@@ -9,8 +9,8 @@ signal facility_detonated
 var riddles = {
 	"cable_hex": true,
 	"open_safe": false,
-	"wire_loop": false,
-	"circuit_gta": false,
+	"remote_use": false,
+	"key_search": false,
 	"chess_password": false,
 	"fifty_fifty_button": false,
 	"locker_key_found": false,
@@ -37,10 +37,10 @@ func get_current_stage_text() -> String:
 		return "CURRENT OBJECTIVE: Repair the generator wiring"
 	if not riddles["open_safe"]:
 		return "CURRENT OBJECTIVE: Find the safe in the office"
-	if not riddles["wire_loop"]:
-		return "CURRENT OBJECTIVE: connect the wires"
-	if not riddles["circuit_gta"]:
-		return "CURRENT OBJECTIVE: crash into the circuit board"
+	if not riddles["remote_use"]:
+		return "CURRENT OBJECTIVE: Use the remote from the safe"
+	if not riddles["key_search"]:
+		return "CURRENT OBJECTIVE: Find a key in the storage room with radioactive barells"
 	if not riddles["chess_password"]:
 		return "CURRENT OBJECTIVE: Not Implemented"
 	if not riddles["fifty_fifty_button"]:
