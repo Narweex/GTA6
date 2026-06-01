@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ppi2qtrxmaim"]
+
+[ext_resource type="Texture2D" uid="uid://p5j0ahpwxmt" path="res://resources/assets/textures/Bridge/Exid_sign_Base_color.png" id="1_xanln"]
+[ext_resource type="Texture2D" uid="uid://dt4k0y5qsrkj" path="res://resources/assets/textures/Bridge/Exid_sign_Metallic.png" id="2_52brh"]
+[ext_resource type="Texture2D" uid="uid://ct6ot8aglkfqk" path="res://resources/assets/textures/Bridge/Exid_sign_Normal_OpenGL.png" id="3_wprmm"]
+[ext_resource type="Texture2D" uid="uid://b2giaf73u8keg" path="res://resources/assets/textures/Bridge/Exid_sign_Roughness.png" id="4_d1jrj"]
+
+[resource]
+albedo_texture = ExtResource("1_xanln")
+metallic = 1.0
+metallic_texture = ExtResource("2_52brh")
+roughness_texture = ExtResource("4_d1jrj")
+normal_enabled = true
+normal_texture = ExtResource("3_wprmm")
