@@ -1,7 +1,7 @@
 extends Node3D 
 
 @export_category("Scene References")
-@export var safe_door_node: Node3D 
+@onready var safe_door_node: Node3D = $interactable_safe_door
 
 # Track if the ambient flickering should be alive
 var is_power_restored: bool = false
@@ -24,7 +24,7 @@ func _on_riddle_solved(riddle_id: String) -> void:
 
 func _open_safe_animation(instant: bool) -> void:
 	if not safe_door_node: return
-	var target_rotation_y: float = deg_to_rad(-110)
+	var target_rotation_y: float = deg_to_rad(80)
 	
 	if instant:
 		safe_door_node.rotation.y = target_rotation_y
