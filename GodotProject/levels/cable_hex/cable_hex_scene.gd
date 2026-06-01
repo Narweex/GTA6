@@ -17,7 +17,7 @@ var colors: Array[Color] = [
 	Color("33cc33"), # Green
 	Color("3366ff"), # Blue
 	Color("ffcc00"), # Yellow
-	Color("ff6600")  # Orange/Purple replacement for classic high-voltage look
+	Color("ff6600")  
 ]
 
 var is_dragging: bool = false
@@ -31,16 +31,13 @@ func _ready() -> void:
 	active_line.begin_cap_mode = Line2D.LINE_CAP_ROUND
 	active_line.end_cap_mode = Line2D.LINE_CAP_ROUND
 	
-	# Set up UI text instruction
 	if hint_label:
 		hint_label.text = hint_text
 	
-	# Generate industrial sockets for both columns
 	_setup_terminals(left_vbox, true)
 	_setup_terminals(right_vbox, false)
 
 func _unhandled_input(event: InputEvent) -> void:
-	# Allow backing out of the minigame safely using UI cancel action (e.g., Escape)
 	if event.is_action_pressed("ui_cancel"):
 		riddle_cancelled.emit()
 

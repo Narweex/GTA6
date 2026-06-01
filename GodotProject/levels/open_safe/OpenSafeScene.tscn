@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://d2wmsfw4yfttc"]
+
+[ext_resource type="Script" uid="uid://dccc7fays8sul" path="res://levels/open_safe/open_safe_scene.gd" id="1_0jjhh"]
+[ext_resource type="Texture2D" uid="uid://cw8aegniqbkgn" path="res://resources/assets/2d assets/Safe.png" id="2_j5dqs"]
+
+[node name="OpenSafe" type="Control" unique_id=1223323298]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0jjhh")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=14509402]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_j5dqs")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1482134198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 817.0
+offset_top = 152.0
+offset_right = 817.0
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RiddleLabel" type="Label" parent="VBoxContainer" unique_id=1313237281]
+layout_mode = 2
+text = "Input the code to open the safe"
+
+[node name="CodeInput" type="LineEdit" parent="VBoxContainer" unique_id=351646109]
+layout_mode = 2
+
+[node name="SubmitButton" type="Button" parent="VBoxContainer" unique_id=993170803]
+layout_mode = 2
+text = "ENTER"
+
+[node name="FeedbackLabel" type="Label" parent="VBoxContainer" unique_id=900705538]
+layout_mode = 2

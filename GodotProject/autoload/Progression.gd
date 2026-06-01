@@ -7,7 +7,7 @@ signal stage_changed(riddle_id: String)
 
 var riddles = {
 	"cable_hex": false,
-	"button_order": false,
+	"open_safe": false,
 	"wire_loop": false,
 	"circuit_gta": false,
 	"chess_password": false,
@@ -33,23 +33,23 @@ func complete_riddle(riddle_id: String):
 #function that controls, where player currently is
 func get_current_stage_text() -> String:
 	if not riddles["cable_hex"]:
-		return "CURRENT OBJECTIVE: find and repair damaged cables"
-	if not riddles["button_order"]:
-		return "CURRENT OBJECTIVE: enter the correct button order"
+		return "CURRENT OBJECTIVE: Repair the generator wiring"
+	if not riddles["open_safe"]:
+		return "CURRENT OBJECTIVE: Find the safe in the office"
 	if not riddles["wire_loop"]:
 		return "CURRENT OBJECTIVE: connect the wires"
 	if not riddles["circuit_gta"]:
 		return "CURRENT OBJECTIVE: crash into the circuit board"
 	if not riddles["chess_password"]:
-		return "CURRENT OBJECTIVE: solve the chess cipher"
+		return "CURRENT OBJECTIVE: Not Implemented"
 	if not riddles["fifty_fifty_button"]:
-		return "CURRENT OBJECTIVE: good luck with this button my nigga"
+		return "CURRENT OBJECTIVE: Oh no, what button do I press?"
 	if not riddles["locker_key_found"]:
-		return "CURRENT OBJECTIVE: find key from the locker"
+		return "CURRENT OBJECTIVE: Find a key in the storage room"
 	if not riddles["locker_unlocked"]:
-		return "CURRENT OBJECTIVE: unlock locker"
+		return "CURRENT OBJECTIVE: Unlock the main door"
 	if not riddles["captcha_riddle"]:
-		return "CURRENT OBJECTIVE: solve the final Captcha code to escape"
+		return "CURRENT OBJECTIVE: Solve the final captcha code"
 		
 	return "All tasks completed! Escape!"
 

@@ -101,7 +101,6 @@
 [ext_resource type="Texture2D" uid="uid://kpi2ma3ue3ox" path="res://resources/assets/textures/Office/Office_supportbeams_Metallic.png" id="60_vqo61"]
 [ext_resource type="Texture2D" uid="uid://dxuy4reu6ofva" path="res://resources/assets/textures/Office/Office_supportbeams_Normal.png" id="61_pwsyv"]
 [ext_resource type="Texture2D" uid="uid://chsuy66cnpvt2" path="res://resources/assets/textures/Office/Office_supportbeams_Roughness.png" id="62_lon8v"]
-[ext_resource type="Script" uid="uid://kybv0xsrp86o" path="res://levels/second_riddle_password.gd" id="69_u647y"]
 [ext_resource type="Material" uid="uid://bqxdh1suyuc61" path="res://resources/assets/materials/Picture_frame.tres" id="70_wj41c"]
 [ext_resource type="Texture2D" uid="uid://cx155paljenyf" path="res://resources/assets/textures/Office/Mausi.png" id="71_baljx"]
 [ext_resource type="Material" uid="uid://c2yev3lrurmnq" path="res://resources/assets/materials/Picture_frame_glass.tres" id="71_t2ssd"]
@@ -168,7 +167,8 @@
 [ext_resource type="Texture2D" uid="uid://bmxj0q60xj6ae" path="res://resources/assets/textures/Entrance/Entrance_Pipe_Box_Metallic.png" id="136_qk0aj"]
 [ext_resource type="Texture2D" uid="uid://ceiqvefpopyie" path="res://resources/assets/textures/Entrance/Entrance_Pipe_Box_Normal.png" id="137_cn87d"]
 [ext_resource type="Texture2D" uid="uid://boret8c1xkjox" path="res://resources/assets/textures/Entrance/Entrance_Pipe_Box_Roughness.png" id="138_vm2xw"]
-[ext_resource type="Script" uid="uid://bevevta8owgq6" path="res://levels/first_riddle_fix_gen.gd" id="140_gjclm"]
+[ext_resource type="Script" uid="uid://bevevta8owgq6" path="res://levels/game_triggers/first_riddle_fix_gen.gd" id="140_gjclm"]
+[ext_resource type="PackedScene" uid="uid://d2e7fvrdpthhk" path="res://components/lightning/Reflectors.tscn" id="151_ybcoh"]
 [ext_resource type="Texture2D" uid="uid://cc3v3p1t3ohm4" path="res://resources/assets/textures/Bridge/Bridge_pipe_1_Base_color.png" id="161_cv8gu"]
 [ext_resource type="Texture2D" uid="uid://5ebqkd5waiu4" path="res://resources/assets/textures/Bridge/Bridge_wheels_Base_color.png" id="161_yf7a7"]
 [ext_resource type="Texture2D" uid="uid://ca4pe4chvcva" path="res://resources/assets/textures/Bridge/Bridge_pipe_1_Metallic.png" id="162_riv5k"]
@@ -191,6 +191,7 @@
 [ext_resource type="PackedScene" uid="uid://dn1bfm2jtjxkj" path="res://components/interactables/interactable_door.tscn" id="183_vyl4c"]
 [ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="185_vdifd"]
 [ext_resource type="AudioStream" uid="uid://dhvyjv0o3oeb" path="res://common/audio/clock_tick.mp3" id="186_vyl4c"]
+[ext_resource type="Script" uid="uid://b1wg8enw4q2kl" path="res://levels/game_triggers/second_riddle_open_safe.gd" id="187_kv68m"]
 [ext_resource type="Script" uid="uid://bybn0skool8vo" path="res://components/player/interaction_label.gd" id="187_ufk2c"]
 [ext_resource type="Texture2D" uid="uid://710rtvbutaeb" path="res://resources/assets/textures/Office/Fire_extinguisher_Base_color.png" id="187_ybcoh"]
 [ext_resource type="Texture2D" uid="uid://8wv12pa5s80" path="res://resources/assets/textures/Office/Door_remote_Roughness.png" id="188_0ylqr"]
@@ -389,9 +390,6 @@ roughness_texture = ExtResource("30_87ddb")
 normal_enabled = true
 normal_scale = 4.16
 normal_texture = ExtResource("29_0de7l")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lyuia"]
-points = PackedVector3Array(2.8788843, 2.9615552, 12.3829565, 2.8633642, 2.2007394, 12.441385, 2.003969, 2.9615552, 12.867127, 2.8788843, 3.000814, 12.3829565, 4.2382746, 2.9615552, 12.773092, 2.0620937, 2.2007394, 12.885082, 4.2203197, 2.2007394, 12.831218, 1.6722618, 2.2007394, 14.242037, 1.6138327, 2.9615552, 14.226517, 2.003969, 3.000814, 12.867127, 2.8773627, 3.006096, 12.389651, 4.2382746, 3.000814, 12.773092, 4.7227497, 2.9615552, 13.648008, 4.6640162, 2.2007394, 13.632487, 2.1159582, 2.2007394, 15.043307, 2.0980034, 2.9615552, 15.101433, 1.6138327, 3.000814, 14.226517, 1.6205277, 3.006096, 14.228039, 2.010664, 3.006096, 12.869561, 4.23584, 3.006096, 12.779788, 4.7227497, 3.000814, 13.648008, 4.332309, 2.9615552, 15.007398, 4.274184, 2.2007394, 14.989443, 3.4729137, 2.2007394, 15.43314, 2.0980034, 3.000814, 15.101433, 3.4573936, 2.9615552, 15.491873, 2.1004379, 3.006096, 15.094737, 4.71575, 3.006096, 13.646486, 4.325614, 3.006096, 15.004963, 4.332309, 3.000814, 15.007398, 3.4573936, 3.000814, 15.491873, 3.4589152, 3.006096, 15.484874)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wj41c"]
 
@@ -648,6 +646,9 @@ albedo_color = Color(0.3019608, 1, 0.35686275, 0.8980392)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpkc6"]
 albedo_texture = ExtResource("187_ybcoh")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ybcoh"]
+points = PackedVector3Array(0.19507603, 0.14251223, -0.35147947, 0.1857331, 0.14191511, -0.31673056, 0.20116964, -0.19606979, -0.3741432, -0.11330618, 0.14264326, -0.4459567, 0.070134535, 0.14913501, 0.11321191, 0.069847435, -0.19749999, 0.112336345, -0.113305055, -0.1915396, -0.44595328, -0.24019764, 0.14815536, 0.03190394, -0.24019764, -0.19705379, 0.03190394, -0.25553077, -0.13826366, 0.0013008565, -0.0892112, 0.14696123, -0.453044, 0.20116964, 0.14717136, -0.3741432, -0.25553077, 0.08936523, 0.0013008565, -0.0892112, -0.19585966, -0.453044, 0.042207327, -0.19475743, 0.10783486, 0.042207327, 0.145859, 0.10783486, 0.17415775, -0.19558586, -0.38231593, 0.07528013, -0.1916096, 0.09407404, 0.17415775, 0.14668743, -0.38231593)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4lpa"]
 albedo_texture = ExtResource("188_0ylqr")
 
@@ -666,8 +667,9 @@ fog_light_color = Color(0.4696024, 0.693596, 0.80766106, 1)
 fog_light_energy = 5.12
 fog_sky_affect = 0.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.4635
-volumetric_fog_albedo = Color(0.66984934, 0.7841468, 0.75148755, 1)
+volumetric_fog_density = 0.5665
+volumetric_fog_anisotropy = 0.38
+volumetric_fog_length = 229.02
 volumetric_fog_ambient_inject = 0.3
 volumetric_fog_sky_affect = 0.163
 
@@ -786,14 +788,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_svdf4")
 
 [node name="Table" parent="Kaunas" index="42" unique_id=927045153]
 surface_material_override/0 = SubResource("StandardMaterial3D_qpefm")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Table" index="0" unique_id=1819407652]
-script = ExtResource("69_u647y")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Table/StaticBody3D" unique_id=283143404]
-shape = SubResource("ConvexPolygonShape3D_lyuia")
-
-[node name="InteractableComponent" parent="Kaunas/Table/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
 
 [node name="Pinboard_big" parent="Kaunas" index="43" unique_id=1738614523]
 surface_material_override/0 = SubResource("StandardMaterial3D_baljx")
@@ -1024,10 +1018,14 @@ surface_material_override/0 = ExtResource("4_hxd3m")
 surface_material_override/0 = ExtResource("5_lmtqe")
 
 [node name="Entrance_lamp" parent="Kaunas" index="125" unique_id=943776672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.63636017, 0)
 surface_material_override/0 = ExtResource("112_hiqci")
 
 [node name="Entrance_lamp_001" parent="Kaunas" index="126" unique_id=1607671073]
 material_override = ExtResource("112_hiqci")
+
+[node name="Reflectors" parent="Kaunas/Entrance_lamp_001" index="0" unique_id=904596548 instance=ExtResource("151_ybcoh")]
+transform = Transform3D(-0.24024004, 0.09380556, 0.96617043, 0, 0.99531984, -0.09663568, -0.9707135, -0.02321576, -0.23911569, 5.2245913, 2.1472309, 21.104548)
 
 [node name="Entrance_Pipe_1" parent="Kaunas" index="127" unique_id=1561072088]
 surface_material_override/0 = SubResource("StandardMaterial3D_5ru8x")
@@ -1332,6 +1330,14 @@ material_override = ExtResource("175_kp8cn")
 [node name="Fire_extinguisher" parent="Kaunas" index="294" unique_id=936771513]
 material_override = SubResource("StandardMaterial3D_tpkc6")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Save" parent_id_path=PackedInt32Array(160383185, 1709694659) index="0" unique_id=1441892069]
+script = ExtResource("187_kv68m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Save/StaticBody3D" unique_id=522021857]
+shape = SubResource("ConvexPolygonShape3D_ybcoh")
+
+[node name="InteractableComponent" parent="Kaunas/Save/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
+
 [node name="Door_remote" parent="Kaunas" index="300" unique_id=1979828453]
 material_override = SubResource("StandardMaterial3D_n4lpa")
 
@@ -1395,30 +1401,9 @@ light_specular = 3.218
 shadow_enabled = true
 sky_mode = 1
 
-[node name="Entrance_light" type="OmniLight3D" parent="Lights" unique_id=1993270872]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.371484, 1.9760287, 4.0139275)
-visible = false
-
 [node name="Entrance_light2" type="OmniLight3D" parent="Lights" unique_id=1217159268]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4698608, 3.8320704, 0.7232597)
 visible = false
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Lights" unique_id=1086326903 groups=["facility_lights"]]
-transform = Transform3D(1, 0, 0, 0, 0.016632225, 0.9998617, 0, -0.9998617, 0.016632225, -10.427224, 2.7810075, 4.266346)
-light_energy = 3.14
-spot_attenuation = 2.48
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="Lights" unique_id=546314369 groups=["facility_lights"]]
-transform = Transform3D(1, 0, 0, 0, 0.016632225, 0.9998617, 0, -0.9998617, 0.016632225, -13.893331, 2.7524767, 4.3215218)
-spot_attenuation = 2.48
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="Lights" unique_id=2112021970 groups=["facility_lights"]]
-transform = Transform3D(1, 0, 0, 0, 0.016632225, 0.9998617, 0, -0.9998617, 0.016632225, -2.61935, 4.49271, 0.78372467)
-spot_attenuation = 2.48
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="Lights" unique_id=1934873542 groups=["facility_lights"]]
-transform = Transform3D(1, 0, 0, 0, 0.016632225, 0.9998617, 0, -0.9998617, 0.016632225, 4.402123, 4.418634, 0.78372467)
-spot_attenuation = 2.48
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=679256751]
 environment = SubResource("Environment_x5p1p")
