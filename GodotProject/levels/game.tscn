@@ -259,6 +259,12 @@
 [ext_resource type="Texture2D" uid="uid://t78xy0yhj8iu" path="res://resources/textures/Reactor/Reactor_Machine_handle_Metallic.png" id="233_yeg2t"]
 [ext_resource type="Texture2D" uid="uid://c431mjy1nxgeq" path="res://resources/textures/Reactor/Reactor_Machine_handle_Normal_OpenGL.png" id="234_rc4og"]
 [ext_resource type="Texture2D" uid="uid://c3iwio76f55ma" path="res://resources/textures/Reactor/Reactor_Machine_handle_Roughness.png" id="235_4n5fo"]
+[ext_resource type="Texture2D" uid="uid://chivylct0uvm0" path="res://resources/assets/textures/Office/Coat_stand_Base_color.png" id="237_62sbg"]
+[ext_resource type="Texture2D" uid="uid://dbdfi32uw7e5i" path="res://resources/assets/textures/Office/Coat_stand_Metallic.png" id="238_lxfha"]
+[ext_resource type="Texture2D" uid="uid://b0ty4g4253cwr" path="res://resources/assets/textures/Office/Coat_stand_Normal_OpenGL.png" id="239_fjk2m"]
+[ext_resource type="Texture2D" uid="uid://dveki7y845dus" path="res://resources/assets/textures/Office/Coat_stand_Roughness.png" id="240_e72x8"]
+[ext_resource type="PackedScene" uid="uid://bkekgwm3pgh86" path="res://components/interactables/interactable_safe_door.tscn" id="260_dxj52"]
+[ext_resource type="PackedScene" uid="uid://coigv1lrleto7" path="res://components/interactables/interactable_gate.tscn" id="265_lxfha"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf7a7"]
 albedo_texture = ExtResource("5_o3erk")
@@ -388,7 +394,7 @@ metallic = 1.0
 metallic_texture = ExtResource("13_xoeau")
 roughness_texture = ExtResource("15_wj41c")
 normal_enabled = true
-normal_scale = 11.55
+normal_scale = 0.2
 normal_texture = ExtResource("14_6qn5j")
 heightmap_enabled = true
 heightmap_scale = 0.2
@@ -806,6 +812,46 @@ roughness_texture = ExtResource("235_4n5fo")
 normal_enabled = true
 normal_texture = ExtResource("234_rc4og")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpkc6"]
+albedo_texture = ExtResource("187_ybcoh")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yeg2t"]
+albedo_texture = ExtResource("237_62sbg")
+metallic = 1.0
+metallic_texture = ExtResource("238_lxfha")
+roughness_texture = ExtResource("240_e72x8")
+normal_enabled = true
+normal_texture = ExtResource("239_fjk2m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8gu7t"]
+albedo_texture = ExtResource("225_mln05")
+metallic = 0.33
+metallic_texture = ExtResource("226_66vxw")
+roughness_texture = ExtResource("228_a1ep4")
+normal_enabled = true
+normal_texture = ExtResource("227_ecr6t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yrv25"]
+albedo_texture = ExtResource("188_7rdwf")
+metallic = 1.0
+metallic_texture = ExtResource("189_jtpn8")
+roughness_texture = ExtResource("191_bvd67")
+normal_enabled = true
+normal_texture = ExtResource("190_5rx34")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ybcoh"]
+points = PackedVector3Array(0.19507603, 0.14251223, -0.35147947, 0.1857331, 0.14191511, -0.31673056, 0.20116964, -0.19606979, -0.3741432, -0.11330618, 0.14264326, -0.4459567, 0.070134535, 0.14913501, 0.11321191, 0.069847435, -0.19749999, 0.112336345, -0.113305055, -0.1915396, -0.44595328, -0.24019764, 0.14815536, 0.03190394, -0.24019764, -0.19705379, 0.03190394, -0.25553077, -0.13826366, 0.0013008565, -0.0892112, 0.14696123, -0.453044, 0.20116964, 0.14717136, -0.3741432, -0.25553077, 0.08936523, 0.0013008565, -0.0892112, -0.19585966, -0.453044, 0.042207327, -0.19475743, 0.10783486, 0.042207327, 0.145859, 0.10783486, 0.17415775, -0.19558586, -0.38231593, 0.07528013, -0.1916096, 0.09407404, 0.17415775, 0.14668743, -0.38231593)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqb38"]
+albedo_texture = ExtResource("194_6vp0y")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1lfes"]
+metallic = 1.0
+metallic_texture = ExtResource("195_2ncpx")
+roughness_texture = ExtResource("188_0ylqr")
+normal_enabled = true
+normal_texture = ExtResource("196_xdkbi")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_stl0t"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_rdd27"]
@@ -839,38 +885,6 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rdd27")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tpkc6"]
-albedo_texture = ExtResource("187_ybcoh")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8gu7t"]
-albedo_texture = ExtResource("225_mln05")
-metallic = 0.33
-metallic_texture = ExtResource("226_66vxw")
-roughness_texture = ExtResource("228_a1ep4")
-normal_enabled = true
-normal_texture = ExtResource("227_ecr6t")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yrv25"]
-albedo_texture = ExtResource("188_7rdwf")
-metallic = 1.0
-metallic_texture = ExtResource("189_jtpn8")
-roughness_texture = ExtResource("191_bvd67")
-normal_enabled = true
-normal_texture = ExtResource("190_5rx34")
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ybcoh"]
-points = PackedVector3Array(0.19507603, 0.14251223, -0.35147947, 0.1857331, 0.14191511, -0.31673056, 0.20116964, -0.19606979, -0.3741432, -0.11330618, 0.14264326, -0.4459567, 0.070134535, 0.14913501, 0.11321191, 0.069847435, -0.19749999, 0.112336345, -0.113305055, -0.1915396, -0.44595328, -0.24019764, 0.14815536, 0.03190394, -0.24019764, -0.19705379, 0.03190394, -0.25553077, -0.13826366, 0.0013008565, -0.0892112, 0.14696123, -0.453044, 0.20116964, 0.14717136, -0.3741432, -0.25553077, 0.08936523, 0.0013008565, -0.0892112, -0.19585966, -0.453044, 0.042207327, -0.19475743, 0.10783486, 0.042207327, 0.145859, 0.10783486, 0.17415775, -0.19558586, -0.38231593, 0.07528013, -0.1916096, 0.09407404, 0.17415775, 0.14668743, -0.38231593)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqb38"]
-albedo_texture = ExtResource("194_6vp0y")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1lfes"]
-metallic = 1.0
-metallic_texture = ExtResource("195_2ncpx")
-roughness_texture = ExtResource("188_0ylqr")
-normal_enabled = true
-normal_texture = ExtResource("196_xdkbi")
 
 [sub_resource type="Environment" id="Environment_x5p1p"]
 background_color = Color(0.28485027, 0.28485027, 0.28485027, 1)
@@ -1601,6 +1615,30 @@ surface_material_override/0 = SubResource("StandardMaterial3D_42dgx")
 [node name="Reactor_Machine_handle" parent="Kaunas" index="240" unique_id=435948083]
 surface_material_override/0 = SubResource("StandardMaterial3D_nc7um")
 
+[node name="Fire_extinguisher" parent="Kaunas" index="294" unique_id=662496125]
+material_override = SubResource("StandardMaterial3D_tpkc6")
+
+[node name="Coat_stand" parent="Kaunas" index="295" unique_id=1430686327]
+surface_material_override/0 = SubResource("StandardMaterial3D_yeg2t")
+
+[node name="Key" parent="Kaunas" index="296" unique_id=1619270617]
+surface_material_override/0 = SubResource("StandardMaterial3D_8gu7t")
+
+[node name="Save" parent="Kaunas" index="297" unique_id=512881965]
+surface_material_override/0 = SubResource("StandardMaterial3D_yrv25")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Save" index="0" unique_id=1441892069]
+script = ExtResource("187_kv68m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Save/StaticBody3D" unique_id=522021857]
+shape = SubResource("ConvexPolygonShape3D_ybcoh")
+
+[node name="InteractableComponent" parent="Kaunas/Save/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
+
+[node name="Door_remote" parent="Kaunas" index="300" unique_id=897605221]
+material_override = SubResource("StandardMaterial3D_lqb38")
+surface_material_override/0 = SubResource("StandardMaterial3D_1lfes")
+
 [node name="Reactor_Machine_handle2" type="MeshInstance3D" parent="Kaunas" unique_id=897761108]
 transform = Transform3D(0.7476113, 0, 0.33469978, 0, 0.8191132, 0, -0.33469978, 0, 0.7476113, 25.841711, 4.0937233, 7.1114554)
 mesh = SubResource("ArrayMesh_8yfap")
@@ -1617,32 +1655,17 @@ metadata/extras = {
 "td_settings": []
 }
 
-[node name="Fire_extinguisher" parent="Kaunas" index="296" unique_id=662496125]
-material_override = SubResource("StandardMaterial3D_tpkc6")
-
-[node name="Key" parent="Kaunas" index="298" unique_id=1619270617]
-surface_material_override/0 = SubResource("StandardMaterial3D_8gu7t")
-
-[node name="Save" parent="Kaunas" index="299" unique_id=512881965]
-surface_material_override/0 = SubResource("StandardMaterial3D_yrv25")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Save" index="0" unique_id=1441892069]
-script = ExtResource("187_kv68m")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Save/StaticBody3D" unique_id=522021857]
-shape = SubResource("ConvexPolygonShape3D_ybcoh")
-
-[node name="InteractableComponent" parent="Kaunas/Save/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
-
 [node name="interactable_door4" parent="Kaunas" unique_id=1430987452 instance=ExtResource("183_vyl4c")]
 transform = Transform3D(0.009895876, 0, -0.999951, 0, 1, 0, 0.999951, 0, 0.009895876, 4.0415726, 3.248474, 17.090551)
+swing_clockwise = true
 required_riddle_id = "cable_hex"
 
 [node name="interactable_door5" parent="Kaunas" unique_id=618945629 instance=ExtResource("183_vyl4c")]
-transform = Transform3D(0.009895876, 0, -0.999951, 0, 1, 0, 0.999951, 0, 0.009895876, 6.1543407, 3.248474, 13.103258)
+transform = Transform3D(-0.0098959645, 0, 0.999951, 0, 1, 0, -0.999951, 0, -0.0098959645, 6.2270093, 3.248474, 14.092346)
+swing_clockwise = true
 
 [node name="interactable_door6" parent="Kaunas" unique_id=1702719880 instance=ExtResource("183_vyl4c")]
-transform = Transform3D(-0.99980515, 0, -0.019738419, 0, 1, 0, 0.019738419, 0, -0.99980515, 29.759977, 3.248474, 18.146708)
+transform = Transform3D(-0.99980515, 0, -0.019738419, 0, 1, 0, 0.019738419, 0, -0.99980515, 29.759977, 3.248474, 18.207802)
 
 [node name="Point Grün2" type="OmniLight3D" parent="Kaunas" unique_id=829680001]
 transform = Transform3D(0.9659258, -0.25881916, 0, 0, 0, 1, -0.25881916, -0.9659258, 0, 55.88851, -0.7837614, 26.63538)
@@ -1664,10 +1687,6 @@ light_color = Color(1, 0.9137341, 0.16714278, 1)
 light_energy = 0.05
 omni_range = 4096.0
 omni_attenuation = 2.0
-
-[node name="Door_remote" parent="Kaunas" index="308" unique_id=897605221]
-material_override = SubResource("StandardMaterial3D_lqb38")
-surface_material_override/0 = SubResource("StandardMaterial3D_1lfes")
 
 [node name="Lights" type="Node3D" parent="." unique_id=476661733 groups=["sky_light"]]
 
@@ -1732,7 +1751,7 @@ label_settings = SubResource("LabelSettings_8irk1")
 script = ExtResource("190_8irk1")
 
 [node name="GameTimer" type="Timer" parent="HUDLayer/HUD" unique_id=1221119760]
-wait_time = 8.475
+wait_time = 4096.0
 one_shot = true
 autostart = true
 
@@ -1783,10 +1802,21 @@ script = ExtResource("197_0ylqr")
 
 [node name="SirenPlayer" type="AudioStreamPlayer3D" parent="ExplosionEventManager" unique_id=393733163]
 stream = ExtResource("198_h1ruc")
+volume_db = -42.105
 
 [node name="ExplosionPlayer" type="AudioStreamPlayer3D" parent="ExplosionEventManager" unique_id=665035175]
 stream = ExtResource("199_tpkc6")
-volume_db = 69.851
+volume_db = 12.307
+
+[node name="interactable_safe_door" parent="." unique_id=80944927 instance=ExtResource("260_dxj52")]
+transform = Transform3D(0.9509756, 0, -0.30926597, 0, 1, 0, 0.30926597, 0, 0.9509756, -6.619732, 3.309255, -1.9460121)
+
+[node name="interactable_door" parent="." unique_id=1163958114 instance=ExtResource("183_vyl4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.730963, 3.192514, 0.14309925)
+swing_clockwise = true
+
+[node name="interactable_gate" parent="." unique_id=516772561 instance=ExtResource("265_lxfha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.134352, 3.1925135, -2.492455)
 
 [connection signal="timeout" from="HUDLayer/HUD/GameTimer" to="HUDLayer/HUD" method="_on_game_timer_timeout"]
 
