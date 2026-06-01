@@ -8,8 +8,8 @@ signal facility_detonated
 
 var riddles = {
 	"cable_hex": true,
-	"open_safe": true,
-	"remote_use": true,
+	"open_safe": false,
+	"remote_use": false,
 	"key_search": false,
 	"chess_password": false,
 	"fifty_fifty_button": false,
@@ -38,11 +38,11 @@ func get_current_stage_text() -> String:
 	if not riddles["open_safe"]:
 		return "CURRENT OBJECTIVE: Find the safe in the office"
 	if not riddles["remote_use"]:
-		return "CURRENT OBJECTIVE: Use the remote to open the basement door"
+		return "CURRENT OBJECTIVE: Use the remote from the safe"
 	if not riddles["key_search"]:
-		return "CURRENT OBJECTIVE: Search for the key in the basement with the radioactive barrels"
-	if not riddles["hex_riddle"]:
-		return "CURRENT OBJECTIVE: Find the circuit board in the hallway and fix it"
+		return "CURRENT OBJECTIVE: Find a key in the storage room with radioactive barells"
+	if not riddles["chess_password"]:
+		return "CURRENT OBJECTIVE: Not Implemented"
 	if not riddles["fifty_fifty_button"]:
 		return "CURRENT OBJECTIVE: Oh no, what button do I press?"
 	if not riddles["locker_key_found"]:
