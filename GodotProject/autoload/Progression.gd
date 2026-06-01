@@ -8,8 +8,8 @@ signal facility_detonated
 
 var riddles = {
 	"cable_hex": true,
-	"open_safe": false,
-	"remote_use": false,
+	"open_safe": true,
+	"remote_use": true,
 	"key_search": false,
 	"chess_password": false,
 	"fifty_fifty_button": false,

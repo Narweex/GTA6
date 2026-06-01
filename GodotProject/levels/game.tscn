@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bbfxg2g0wxhgj" path="res://resources/assets/textures/Office/Closet_Base_color.png" id="3_rvswv"]
 [ext_resource type="Texture2D" uid="uid://bu86x13amrfxa" path="res://resources/assets/textures/Office/Cabinet_big_Base_color.png" id="3_ryrav"]
 [ext_resource type="Texture2D" uid="uid://ciyrr70odgwp" path="res://resources/assets/textures/Office/Closet_Metallic.png" id="4_boyg6"]
+[ext_resource type="Script" uid="uid://ch5gv5q6ob82u" path="res://components/interactables/interactable_button_riddle.gd" id="4_e72x8"]
 [ext_resource type="Texture2D" uid="uid://dka71ybjukdq7" path="res://resources/assets/textures/Office/Cabinet_big_Metallic.png" id="4_eow3j"]
 [ext_resource type="Material" uid="uid://ctum52dvnprc4" path="res://resources/assets/materials/Entrance_breaker_1.tres" id="4_hxd3m"]
 [ext_resource type="Texture2D" uid="uid://d1nkcgvevcjf7" path="res://resources/assets/textures/Office/Office_ceilling_Metallic.png" id="4_mc3al"]
@@ -286,6 +287,9 @@
 [ext_resource type="Texture2D" uid="uid://dmphx76ewky47" path="res://resources/textures/Storage/Stairs_beams_long_Roughness.png" id="254_imtll"]
 [ext_resource type="PackedScene" uid="uid://bkekgwm3pgh86" path="res://components/interactables/interactable_safe_door.tscn" id="260_dxj52"]
 [ext_resource type="PackedScene" uid="uid://coigv1lrleto7" path="res://components/interactables/interactable_gate.tscn" id="265_lxfha"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bn4ab"]
+points = PackedVector3Array(-0.058104213, -0.25618282, -0.058104213, -0.058104213, -0.25618282, 0.058104213, -0.058104213, 0.25612822, -0.058104213, 0.058104213, -0.25618282, -0.058104213, 0.058104213, -0.25618282, 0.058104213, -0.058104213, 0.25612822, 0.058104213, 0.058104213, 0.25612822, -0.058104213, -0.038447972, 0.29705217, -1.1377037e-05, -0.027186584, 0.29705217, -0.027186584, -1.1377037e-05, 0.29705217, -0.038447972, 0.058104213, 0.25612822, 0.058104213, -1.1377037e-05, 0.29705217, 0.038436595, -0.027186584, 0.29705217, 0.027175207, 0.027175207, 0.29705217, -0.027186584, 0.038436595, 0.29705217, -1.1377037e-05, -0.024172172, 0.2997732, 0.024149422, -0.03417092, 0.2997732, -1.1377037e-05, -0.024172172, 0.2997732, -0.024172172, -1.1377037e-05, 0.2997732, -0.03417092, 0.024149422, 0.2997732, -0.024172172, 0.027175207, 0.29705217, 0.027175207, -1.1377037e-05, 0.2997732, 0.034159545, 0.034159545, 0.2997732, -1.1377037e-05, 0.024149422, 0.2997732, 0.024149422)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf7a7"]
 albedo_texture = ExtResource("5_o3erk")
@@ -975,6 +979,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.113211, 1.271434, 4.031799
 
 [node name="Kaunas" parent="." unique_id=1384118855 instance=ExtResource("2_feb5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.158005, 0, -16.815361)
+
+[node name="Red_button" parent="Kaunas" index="2" unique_id=127083451]
+transform = Transform3D(-0.46773824, -0.2503567, 0.8476689, 0, 0.95904565, 0.28325155, -0.8838671, 0.13248758, -0.44858232, 21.582561, 5.382269, 2.7928867)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Red_button" index="0" unique_id=1254219173]
+script = ExtResource("4_e72x8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Red_button/StaticBody3D" unique_id=282617965]
+shape = SubResource("ConvexPolygonShape3D_bn4ab")
+
+[node name="InteractableComponent" parent="Kaunas/Red_button/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
 
 [node name="Point" parent="Kaunas" index="3" unique_id=684043022]
 light_energy = 3.259
@@ -1778,15 +1793,17 @@ material_override = SubResource("StandardMaterial3D_tpkc6")
 surface_material_override/0 = SubResource("StandardMaterial3D_yeg2t")
 
 [node name="Key" parent="Kaunas" index="327" unique_id=895683919]
+transform = Transform3D(-1.3113416e-09, -0.03, 0, 0.03, -1.3113416e-09, 0, 0, 0, 0.03, 61.030487, -1.6950879, 21.234983)
 surface_material_override/0 = SubResource("StandardMaterial3D_8gu7t")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Key" index="0" unique_id=407238504]
+transform = Transform3D(3, -2.842171e-14, 0, 2.842171e-14, 3, 0, 0, 0, 3, 1.8943138, -4.998291, 0)
 script = ExtResource("245_fjk2m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Key/StaticBody3D" unique_id=286684483]
 shape = SubResource("ConvexPolygonShape3D_jpo5b")
 
-[node name="InteractableComponent" parent="Kaunas/Key/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
+[node name="InteractableComponent" parent="Kaunas/Key/StaticBody3D" unique_id=982559477 instance=ExtResource("169_riv5k")]
 
 [node name="Save" parent="Kaunas" index="328" unique_id=737685876]
 surface_material_override/0 = SubResource("StandardMaterial3D_yrv25")
