@@ -4,6 +4,7 @@ extends Node
 signal riddle_completed(riddle_id: String)
 signal riddle_cancelled(riddle_id: String)
 signal stage_changed(riddle_id: String)
+signal facility_detonated
 
 var riddles = {
 	"cable_hex": false,

@@ -26,7 +26,7 @@ func play_countdown_tick() -> void:
 	# Plays your clock audio stream instantly
 	tick_audio.play()
 func _on_game_timer_timeout() -> void:
-	trigger_explosion_sequence()
+		Progression.facility_detonated.emit()
 		#trigger the explosion. This will be pain to code
 	
 func trigger_explosion_sequence() -> void:

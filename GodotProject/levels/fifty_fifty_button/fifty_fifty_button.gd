@@ -22,10 +22,10 @@ func _on_button_pressed(clicked_button_index: int):
 	button_right.disabled = true
 	
 	if clicked_button_index == winning_button_index:
-		result_label.text = "You won!"
+		result_label.text = "You have won! Congratulations. Now get out the facility."
 		result_label.add_theme_color_override("font_color", Color.GREEN)
 	else:
-		result_label.text = "You lost!"
+		result_label.text = "Skill issue, sorry but you will die a comical death now. Enjoy"
 		result_label.add_theme_color_override("font_color", Color.RED)
 	
 	await get_tree().create_timer(1.5).timeout

@@ -196,6 +196,9 @@
 [ext_resource type="Texture2D" uid="uid://710rtvbutaeb" path="res://resources/assets/textures/Office/Fire_extinguisher_Base_color.png" id="187_ybcoh"]
 [ext_resource type="Texture2D" uid="uid://8wv12pa5s80" path="res://resources/assets/textures/Office/Door_remote_Roughness.png" id="188_0ylqr"]
 [ext_resource type="Script" uid="uid://bfk7jgicmqmbw" path="res://components/hint_banner/hud.gd" id="190_8irk1"]
+[ext_resource type="Script" uid="uid://cyu5wl1soeu22" path="res://levels/explosion_event_manager.gd" id="197_0ylqr"]
+[ext_resource type="AudioStream" uid="uid://dilyoyqhh413a" path="res://common/audio/nuclear_alarm.mp3" id="198_h1ruc"]
+[ext_resource type="AudioStream" uid="uid://nei4xqx8pa7p" path="res://common/audio/explosion.mp3" id="199_tpkc6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf7a7"]
 albedo_texture = ExtResource("5_o3erk")
@@ -1372,7 +1375,7 @@ light_energy = 0.05
 omni_range = 4096.0
 omni_attenuation = 2.0
 
-[node name="Lights" type="Node3D" parent="." unique_id=476661733]
+[node name="Lights" type="Node3D" parent="." unique_id=476661733 groups=["sky_light"]]
 
 [node name="Office_Light" type="OmniLight3D" parent="Lights" unique_id=1330032139]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.340454, 4.0317764, -2.9572206)
@@ -1381,9 +1384,8 @@ light_energy = 3.143
 light_indirect_energy = 12.259
 light_volumetric_fog_energy = 0.0
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights" unique_id=1674313606]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights" unique_id=1674313606 groups=["sky_light"]]
 transform = Transform3D(1, 0, 0, 0, -0.7614592, 0.6482129, 0, -0.6482129, -0.7614592, -9.025187, 10.465784, -18.169619)
-visible = false
 light_color = Color(0.9969793, 0.9208307, 0.7608952, 1)
 light_energy = 7.688
 light_indirect_energy = 3.938
@@ -1392,16 +1394,15 @@ light_specular = 3.218
 shadow_enabled = true
 sky_mode = 1
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights" unique_id=469909925]
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights" unique_id=469909925 groups=["sky_light"]]
 transform = Transform3D(1, 0, 0, 0, 0.7626683, 0.6467898, 0, -0.6467898, 0.7626683, -11.352858, 6.67974, 13.420752)
-visible = false
 light_color = Color(0.9969793, 0.9208307, 0.7608952, 1)
 light_volumetric_fog_energy = 10.188
 light_specular = 3.218
 shadow_enabled = true
 sky_mode = 1
 
-[node name="Entrance_light2" type="OmniLight3D" parent="Lights" unique_id=1217159268]
+[node name="Entrance_light2" type="OmniLight3D" parent="Lights" unique_id=1217159268 groups=["sky_light"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4698608, 3.8320704, 0.7232597)
 visible = false
 
@@ -1417,6 +1418,7 @@ layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
+mouse_filter = 2
 script = ExtResource("1_m637p")
 
 [node name="MarginContainer" type="MarginContainer" parent="HUDLayer/HUD" unique_id=1311620673]
@@ -1428,10 +1430,12 @@ offset_left = -21.0
 offset_right = 21.0
 offset_bottom = 43.0
 grow_horizontal = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HUDLayer/HUD/MarginContainer" unique_id=664262541]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="TimeLabel" type="Label" parent="HUDLayer/HUD/MarginContainer/VBoxContainer" unique_id=1707834516]
 layout_mode = 2
@@ -1447,7 +1451,7 @@ label_settings = SubResource("LabelSettings_8irk1")
 script = ExtResource("190_8irk1")
 
 [node name="GameTimer" type="Timer" parent="HUDLayer/HUD" unique_id=1221119760]
-wait_time = 180.0
+wait_time = 8.475
 one_shot = true
 autostart = true
 
@@ -1456,6 +1460,17 @@ stream = ExtResource("186_vyl4c")
 volume_db = -10.769
 autoplay = true
 parameters/looping = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="HUDLayer/HUD" unique_id=1029197719]
+
+[node name="ColorRect" type="ColorRect" parent="HUDLayer/HUD/CanvasLayer" unique_id=1230502859]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
 
 [node name="InteractionText" type="Control" parent="HUDLayer" unique_id=1559098688 groups=["interaction_ui"]]
 layout_mode = 3
@@ -1481,6 +1496,16 @@ offset_right = 75.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ExplosionEventManager" type="Node3D" parent="." unique_id=1004142026]
+script = ExtResource("197_0ylqr")
+
+[node name="SirenPlayer" type="AudioStreamPlayer3D" parent="ExplosionEventManager" unique_id=393733163]
+stream = ExtResource("198_h1ruc")
+
+[node name="ExplosionPlayer" type="AudioStreamPlayer3D" parent="ExplosionEventManager" unique_id=665035175]
+stream = ExtResource("199_tpkc6")
+volume_db = 69.851
 
 [connection signal="timeout" from="HUDLayer/HUD/GameTimer" to="HUDLayer/HUD" method="_on_game_timer_timeout"]
 
