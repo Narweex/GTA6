@@ -1,7 +1,7 @@
 extends StaticBody3D
 
-# Openable door sound reference 
-@onready var open_sound: AudioStreamPlayer3D = $OpenCloseSound
+# the open and close sound will be added later hopefully
+#@onready var open_sound: AudioStreamPlayer3D = $OpenCloseSound
 
 @export_category("Door Settings")
 ## How long the rotation animation takes in seconds
@@ -43,7 +43,7 @@ func _on_door_interacted() -> void:
 
 func _toggle_door() -> void:
 	is_open = !is_open
-	open_sound.play()
+	#open_sound.play()
 	
 	# Lege fest, ob wir +90 Grad oder -90 Grad rechnen wollen, je nach Inspektor-Einstellung
 	var offset := deg_to_rad(90) if swing_clockwise else deg_to_rad(-90)

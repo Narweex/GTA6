@@ -934,6 +934,10 @@ spot_angle = 100.08
 transform = Transform3D(1.0000001, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000002, -0.006, 0, 0.099)
 remote_path = NodePath("../SpotLight3D")
 
+[node name="Camera3D" type="Camera3D" parent="Kaunas/Alarm" index="1" unique_id=2129936011]
+transform = Transform3D(0.3923692, 0, -0.9198078, 0, 1, 0, 0.9198078, 0, 0.3923692, -0.22069573, 0, 0.4750163)
+current = true
+
 [node name="Alarm_001" parent="Kaunas" index="5" unique_id=1249086451]
 material_override = ExtResource("4_y4uvs")
 
@@ -1847,8 +1851,7 @@ stream = ExtResource("199_tpkc6")
 volume_db = 69.851
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1900344697]
-transform = Transform3D(0.2822121, -0.34925538, -0.89351946, 0.0061794017, 0.93202066, -0.36235288, 0.95933217, 0.09673894, 0.26518565, -4.6442747, 3.3505747, 1.0551121)
-current = true
+transform = Transform3D(0.017051065, 0, -0.9998546, 0, 1, 0, 0.9998546, 0, 0.017051065, -4.6442747, 3.3505747, 1.0551121)
 
 [connection signal="timeout" from="HUDLayer/HUD/GameTimer" to="HUDLayer/HUD" method="_on_game_timer_timeout"]
 
