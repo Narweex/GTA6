@@ -11,7 +11,7 @@ script = ExtResource("1_4flbx")
 
 [node name="Head" type="Node3D" parent="." unique_id=411113928]
 
-[node name="Camera" type="Camera3D" parent="Head" unique_id=1743651650]
+[node name="Camera" type="Camera3D" parent="Head" unique_id=1743651650 groups=["player_camera"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 fov = 80.0
 

@@ -28,9 +28,9 @@ func _on_button_pressed(clicked_button_index: int):
 		result_label.text = "Skill issue, sorry but you will die a comical death now. Enjoy"
 		result_label.add_theme_color_override("font_color", Color.RED)
 	
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(2).timeout
 	
 	if clicked_button_index == winning_button_index:
 		riddle_completed.emit()
 	else:
-		riddle_cancelled.emit()
+		Progression.facility_detonated.emit()

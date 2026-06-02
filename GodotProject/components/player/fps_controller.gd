@@ -2,7 +2,7 @@ extends CharacterBody3D
 var base_camera_y: float = 0.0
 @export_category("Movement Settings")
 ## Base speed of the character
-@export var speed: float = 3.0
+@export var speed: float = 2.8
 ## Mouse sensitivity
 @export var sensitivity: float = 0.002
 

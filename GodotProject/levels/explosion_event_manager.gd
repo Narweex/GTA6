@@ -39,13 +39,18 @@ func _process(delta: float) -> void:
 # The core destruction sequence
 func trigger_facility_destruction() -> void:
 	print("WARNING - Explosion sequence initialized. Running fail-safes...")
-	
-	# FAIL-SAFE: If inspector paths are cleared, automatically discover the critical nodes via groups
+	# 1. DYNAMIC CAMERA LOOKUP
 	if not player_camera:
 		var cameras = get_tree().get_nodes_in_group("player_camera")
 		if not cameras.is_empty(): player_camera = cameras[0] as Camera3D
 		
+	var suns = get_tree().get_nodes_in_group("sky_light")
+	if not suns.is_empty(): outside_sun = suns[0] as DirectionalLight3D
 
+	var whiteouts = get_tree().get_nodes_in_group("whiteout_screen")
+	if not whiteouts.is_empty(): 
+		whiteout_rect = whiteouts[0] as ColorRect
+		
 	# --- PHASE 1: THE ALARM LOCKDOWN ---
 	is_alarm_active = true
 	if siren_player:
@@ -64,14 +69,11 @@ func trigger_facility_destruction() -> void:
 	print("IMPACT TIME. INITIALIZING DETONATION EFFECTS...")
 	
 	# Overclock EVERY light tagged in the sky_light group
-	var suns = get_tree().get_nodes_in_group("sky_light")
 	for sun in suns:
 		if sun is DirectionalLight3D:
 			var light_tween = create_tween()
 			sun.light_color = Color(1.0, 0.95, 0.85) # Nuclear white-hot hue
 			
-			# FIX: Changed to TRANS_QUAD + EASE_OUT so the light flare-up 
-			# begins swelling visibly right away instead of delaying until the last frame
 			light_tween.tween_property(sun, "light_energy", 120.0, 3.0)\
 				.set_trans(Tween.TRANS_QUAD)\
 				.set_ease(Tween.EASE_OUT)
