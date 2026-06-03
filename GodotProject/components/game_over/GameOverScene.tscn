@@ -5,14 +5,6 @@
 [ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="3_vnfop"]
 [ext_resource type="AudioStream" uid="uid://0jowctxv3an" path="res://common/audio/soundtrack.mp3" id="4_8bg1d"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7jga"]
-bg_color = Color(0.6030338, 0.54393774, 0.3154333, 0)
-border_width_left = 10
-border_width_top = 5
-border_width_right = 10
-border_width_bottom = 5
-border_color = Color(0.8, 0.8, 0.8, 0)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s50wb"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_left = 10
@@ -68,17 +60,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 size_flags_stretch_ratio = 1.91
 focus_neighbor_top = NodePath("../game_over_title")
-focus_neighbor_bottom = NodePath("../restart_button")
-
-[node name="restart_button" type="Button" parent="VBoxContainer" unique_id=999480069]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_stretch_ratio = 1.59
-theme_override_colors/font_color = Color(0.24313726, 0.2901961, 0.24313726, 1)
-theme_override_fonts/font = ExtResource("3_vnfop")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxFlat_c7jga")
-text = "Try again?"
 
 [node name="main_menu_button" type="Button" parent="VBoxContainer" unique_id=1711961579]
 layout_mode = 2
@@ -87,12 +68,10 @@ theme_override_colors/font_color = Color(0.24313726, 0.2901961, 0.24313726, 1)
 theme_override_fonts/font = ExtResource("3_vnfop")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_s50wb")
-text = "Give up"
+text = "Retry?"
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1117954555]
 stream = ExtResource("4_8bg1d")
 
-[connection signal="pressed" from="VBoxContainer/restart_button" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_main_menu_button_pressed"]

@@ -18,6 +18,21 @@ var riddles = {
 	"captcha_riddle": false
 }
 
+#reset the game state on retry
+func reset_game() -> void:
+	# Revert every single puzzle state back to its original uncompleted state
+	riddles = {
+		"cable_hex": false,
+		"open_safe": false,
+		"remote_use": false,
+		"key_search": false,
+		"chess_password": false,
+		"fifty_fifty_button": false,
+		"locker_key_found": false,
+		"locker_unlocked": false,
+		"captcha_riddle": false
+	}
+	
 func complete_riddle(riddle_id: String):
 		if(riddles.has(riddle_id)):
 			riddles[riddle_id] = true
