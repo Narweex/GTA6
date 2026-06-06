@@ -7,9 +7,9 @@ signal stage_changed(riddle_id: String)
 signal facility_detonated
 
 var riddles = {
-	"cable_hex": true,
-	"open_safe": true,
-	"remote_use": true,
+	"cable_hex": false,
+	"open_safe": false,
+	"remote_use": false,
 	"key_search": false,
 	"chess_password": false,
 	"fifty_fifty_button": false,
