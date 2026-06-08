@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://gvj4e7ya305t"]
+
+[ext_resource type="Script" uid="uid://cpmepwy35tw0s" path="res://components/game_won/game_won_script.gd" id="1_yo3o1"]
+[ext_resource type="Texture2D" uid="uid://c5jhi0rpw4pbm" path="res://resources/assets/2d assets/Menu_screen.png" id="2_i7kej"]
+[ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="3_ic2iv"]
+[ext_resource type="AudioStream" uid="uid://0jowctxv3an" path="res://common/audio/soundtrack.mp3" id="4_pqkug"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s50wb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_width_bottom = 5
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[node name="GameOver" type="Control" unique_id=1864481565]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yo3o1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1303626252]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i7kej")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=413691771]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="game_won_title" type="Label" parent="VBoxContainer" unique_id=2039936419]
+modulate = Color(0.6216626, 0.4200915, 0.21146363, 1)
+self_modulate = Color(0.933207, 0.933207, 0.9332069, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6117647, 0.05490196, 0.05490196, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_ic2iv")
+theme_override_font_sizes/font_size = 63
+text = "You have won our game! Congrats
+"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=330186641]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+size_flags_stretch_ratio = 1.91
+focus_neighbor_top = NodePath("../game_won_title")
+
+[node name="main_menu_button" type="Button" parent="VBoxContainer" unique_id=1711961579]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.24313726, 0.2901961, 0.24313726, 1)
+theme_override_fonts/font = ExtResource("3_ic2iv")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_s50wb")
+text = "Return to Main Menu"
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1117954555]
+stream = ExtResource("4_pqkug")
+
+[connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_quit_button_pressed"]
