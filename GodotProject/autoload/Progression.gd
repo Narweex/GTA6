@@ -12,10 +12,7 @@ var riddles = {
 	"remote_use": false,
 	"key_search": false,
 	"control_room": false,
-	"fifty_fifty_button": false,
-	"locker_key_found": false,
-	"locker_unlocked": false,
-	"captcha_riddle": false
+	"fifty_fifty_button": false
 }
 
 #reset the game state on retry

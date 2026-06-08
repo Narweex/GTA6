@@ -2495,7 +2495,7 @@ label_settings = SubResource("LabelSettings_8irk1")
 script = ExtResource("190_8irk1")
 
 [node name="GameTimer" type="Timer" parent="HUDLayer/HUD" unique_id=1221119760]
-wait_time = 300.0
+wait_time = 3.719
 one_shot = true
 autostart = true
 

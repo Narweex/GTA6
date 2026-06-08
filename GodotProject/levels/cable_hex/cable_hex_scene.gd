@@ -3,7 +3,7 @@ extends Control
 signal riddle_completed
 signal riddle_cancelled
 
-@export var hint_text: String = "WARNING: AUXILIARY POWER FAILURE. MATCH VOLTAGE FREQUENCIES TO REBOOT GENERATOR."
+@export var hint_text: String = "Connect the correct color vables to repair the generator"
 
 @onready var left_vbox: VBoxContainer = $HBoxContainer/LeftWiresContainer
 @onready var right_vbox: VBoxContainer = $HBoxContainer/RightWiresContainer
@@ -11,7 +11,6 @@ signal riddle_cancelled
 @onready var completed_lines: Node = $CompletedLines
 @onready var hint_label: Label = $HintLabel 
 
-# Industrial/Generator color palette (Solid electrical wire colors)
 var colors: Array[Color] = [
 	Color("ff3333"), # Red
 	Color("33cc33"), # Green
@@ -157,7 +156,7 @@ func _create_permanent_line(start_node: Panel, end_node: Panel) -> void:
 
 func _all_wires_connected() -> void:
 	if hint_label:
-		hint_label.text = "SYSTEM ONLINE. POWER RESTORED."
+		hint_label.text = "POWER RESTORED."
 		hint_label.add_theme_color_override("font_color", Color.GREEN)
 		
 	await get_tree().create_timer(0.6).timeout
