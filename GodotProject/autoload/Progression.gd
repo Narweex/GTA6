@@ -11,7 +11,7 @@ var riddles = {
 	"open_safe": false,
 	"remote_use": false,
 	"key_search": false,
-	"chess_password": false,
+	"control_room": false,
 	"fifty_fifty_button": false,
 	"locker_key_found": false,
 	"locker_unlocked": false,
@@ -56,18 +56,11 @@ func get_current_stage_text() -> String:
 		return "CURRENT OBJECTIVE: Use the remote from the safe"
 	if not riddles["key_search"]:
 		return "CURRENT OBJECTIVE: Find a key in the storage room with radioactive barells"
-	if not riddles["chess_password"]:
-		return "CURRENT OBJECTIVE: Not Implemented"
+	if not riddles["control_room"]:
+		return "CURRENT OBJECTIVE: Search for the control room to defuse the bomb"
 	if not riddles["fifty_fifty_button"]:
 		return "CURRENT OBJECTIVE: Oh no, what button do I press?"
-	if not riddles["locker_key_found"]:
-		return "CURRENT OBJECTIVE: Find a key in the storage room"
-	if not riddles["locker_unlocked"]:
-		return "CURRENT OBJECTIVE: Unlock the main door"
-	if not riddles["captcha_riddle"]:
-		return "CURRENT OBJECTIVE: Solve the final captcha code"
-		
-	return "All tasks completed! Escape!"
+	return "All tasks completed! Find the exit (it's marked with exit signs)"
 
 			
 func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:

@@ -73,5 +73,5 @@ text = "Retry?"
 [node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1117954555]
 stream = ExtResource("4_8bg1d")
 
-[connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_quit_button_pressed"]
