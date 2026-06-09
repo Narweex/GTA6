@@ -3,6 +3,8 @@
 [ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="1_7xoae"]
 [ext_resource type="Script" uid="uid://clh41ii0w1jo5" path="res://components/main_menu/main_menu.gd" id="1_c7jga"]
 [ext_resource type="Texture2D" uid="uid://c5jhi0rpw4pbm" path="res://resources/assets/2d assets/Menu_screen.png" id="2_c7jga"]
+[ext_resource type="Script" uid="uid://w40yrolo4hox" path="res://components/main_menu/enable_tutorial.gd" id="4_e7231"]
+[ext_resource type="Script" uid="uid://c0m6a3rmhpa31" path="res://components/main_menu/challenge_mode.gd" id="4_qpshq"]
 [ext_resource type="AudioStream" uid="uid://0jowctxv3an" path="res://common/audio/soundtrack.mp3" id="4_s50wb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7jga"]
@@ -88,6 +90,18 @@ theme_override_fonts/font = ExtResource("1_7xoae")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_s50wb")
 text = "Quit"
+
+[node name="enable_tutorial" type="CheckButton" parent="VBoxContainer" unique_id=688707787]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Enable Tutorial"
+script = ExtResource("4_e7231")
+
+[node name="challenge_mode" type="CheckButton" parent="VBoxContainer" unique_id=884459940]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Challenge Mode"
+script = ExtResource("4_qpshq")
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1117954555]
 stream = ExtResource("4_s50wb")

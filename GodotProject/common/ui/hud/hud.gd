@@ -8,11 +8,9 @@ extends Control
 @onready var clock_label: Label = $MarginContainer/VBoxContainer/TimeLabel
 @onready var tick_audio: AudioStreamPlayer = $TickAudio
 
-# Seconds tracker used to prevent audio looping infinitely on a single frame
 var last_tracked_second: int = -1
 
 func _ready() -> void:
-	# 1. Instantly freeze the match environment so physics and countdowns don't run
 	get_tree().paused = true
 	
 	# 2. Spawn and overlay the 2D tutorial screen over the player viewport
@@ -38,11 +36,9 @@ func _process(_delta: float) -> void:
 	var seconds: int = int(time_left) % 60
 	var current_second: int = int(time_left)
 	
-	# String formatting to pad zeros (e.g., "05:09")
 	clock_label.text = "%02d:%02d" % [minutes, seconds]
 	
-	# --- panicking countdown ticks ---
-	# If time is running out (10 seconds or lower) and we transition into a brand-new integer second
+	#not implemented
 	if current_second <= 10 and current_second > 0:
 		if current_second != last_tracked_second:
 			last_tracked_second = current_second
@@ -53,15 +49,10 @@ func play_countdown_tick() -> void:
 		tick_audio.play()
 
 func _start_gameplay_countdown() -> void:
-	print("[HUD] Tutorial closed. Unpausing facility grids and starting countdown clock...")
-	# Unfreeze physics, movement, and standard frame execution loops
 	get_tree().paused = false
 	
-	# Start the core match timer!
 	if game_timer:
 		game_timer.start()
 
 func _on_game_timer_timeout() -> void:
-	print("[HUD] ZERO HOUR REACHED. IMMINENT BLAST WAVE INCOMING.")
-	# Fire the blast sequence across the entire global singleton event bus
 	Progression.facility_detonated.emit()

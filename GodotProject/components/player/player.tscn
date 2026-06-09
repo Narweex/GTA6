@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ckly1y14a2yds" path="res://components/player/fps_controller.gd" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://gs8m6jg562ym" path="res://components/player/raycast.gd" id="2_kfe3d"]
 [ext_resource type="AudioStream" uid="uid://fygetxx014gw" path="res://common/audio/step.mp3" id="3_ph1f6"]
+[ext_resource type="Script" uid="uid://c3s6iwvrl8oky" path="res://components/player/flashlight.gd" id="3_wa6cj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_onrkg"]
 
@@ -18,6 +19,19 @@ fov = 80.0
 [node name="RayCast" type="RayCast3D" parent="Head/Camera" unique_id=1644416140]
 target_position = Vector3(0, 0, -2)
 script = ExtResource("2_kfe3d")
+
+[node name="Flashlight" type="SpotLight3D" parent="Head/Camera" unique_id=720105393]
+transform = Transform3D(1, 0, 0, 0, 0.9952274, 0.0975829, 0, -0.0975829, 0.9952274, 0, -0.025, 0)
+light_color = Color(0.9019608, 0.9411765, 1, 1)
+light_energy = 11.09
+light_indirect_energy = 6.495
+light_volumetric_fog_energy = 0.01
+shadow_enabled = true
+shadow_blur = 2.188
+spot_range = 45.571
+spot_attenuation = 1.65
+spot_angle = 28.0
+script = ExtResource("3_wa6cj")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2063656693]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cy5n5n7s5q4qk"]
 
-[ext_resource type="Script" uid="uid://cdo0x676jcy7f" path="res://components/hud.gd" id="1_5qgif"]
+[ext_resource type="Script" uid="uid://cdo0x676jcy7f" path="res://components/quest_label.gd" id="1_5qgif"]
 [ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="2_yw45s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g6srp"]

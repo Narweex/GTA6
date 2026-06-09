@@ -1146,11 +1146,11 @@ ssao_intensity = 7.11
 glow_enabled = true
 glow_intensity = 0.05
 fog_enabled = true
-fog_light_color = Color(0.4696024, 0.693596, 0.80766106, 1)
-fog_light_energy = 5.12
+fog_light_color = Color(0.25739715, 0.44756263, 0.54129857, 1)
+fog_light_energy = 8.08
 fog_sky_affect = 0.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.46
+volumetric_fog_density = 1.0
 volumetric_fog_albedo = Color(0.7241164, 0.9999998, 0.95228094, 1)
 volumetric_fog_anisotropy = 0.38
 volumetric_fog_length = 229.02
@@ -1160,12 +1160,7 @@ volumetric_fog_sky_affect = 0.163
 [sub_resource type="LabelSettings" id="LabelSettings_lyuia"]
 font_size = 50
 
-[sub_resource type="LabelSettings" id="LabelSettings_8irk1"]
-font = ExtResource("185_vdifd")
-font_size = 20
-font_color = Color(0.24313726, 0.2901961, 0.24313726, 1)
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_c4gfx"]
 
 [node name="World" type="Node3D" unique_id=1671539021]
 script = ExtResource("1_lyuia")
@@ -1176,7 +1171,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.113211, 1.271434, 4.031799
 [node name="Kaunas" parent="." unique_id=811689345 instance=ExtResource("2_feb5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.158005, 0, -16.815361)
 
-[node name="Alarm" parent="Kaunas" index="0" unique_id=1261033215]
+[node name="Alarm" parent="Kaunas" index="0" unique_id=877666680]
 surface_material_override/0 = ExtResource("4_y4uvs")
 
 [node name="Marker3D" type="Marker3D" parent="Kaunas/Alarm" index="0" unique_id=1169873265]
@@ -1187,13 +1182,14 @@ script = ExtResource("7_eyw7r")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3841858e-07, 0.09899998)
 light_color = Color(0.8117647, 0, 0, 1)
 light_energy = 3.819
+light_volumetric_fog_energy = 5.119
 spot_angle = 108.08
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="Kaunas/Alarm/Marker3D" unique_id=1821381250]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099)
 remote_path = NodePath("../SpotLight3D")
 
-[node name="Alarm_001" parent="Kaunas" index="1" unique_id=1243813584]
+[node name="Alarm_001" parent="Kaunas" index="1" unique_id=2145304189]
 material_override = ExtResource("4_y4uvs")
 
 [node name="Marker3D" type="Marker3D" parent="Kaunas/Alarm_001" index="0" unique_id=960278861]
@@ -1210,7 +1206,7 @@ spot_angle = 108.08
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099)
 remote_path = NodePath("../SpotLight3D")
 
-[node name="Alarm_002" parent="Kaunas" index="2" unique_id=323210550]
+[node name="Alarm_002" parent="Kaunas" index="2" unique_id=15079645]
 material_override = ExtResource("4_y4uvs")
 
 [node name="Marker3D" type="Marker3D" parent="Kaunas/Alarm_002" index="0" unique_id=2030614311]
@@ -1227,7 +1223,7 @@ spot_angle = 108.08
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099)
 remote_path = NodePath("../SpotLight3D")
 
-[node name="Alarm_003" parent="Kaunas" index="3" unique_id=353176255]
+[node name="Alarm_003" parent="Kaunas" index="3" unique_id=1484531413]
 material_override = ExtResource("4_y4uvs")
 
 [node name="Marker3D" type="Marker3D" parent="Kaunas/Alarm_003" index="0" unique_id=1419780985]
@@ -2084,7 +2080,7 @@ shape = SubResource("ConvexPolygonShape3D_jpo5b")
 
 [node name="InteractableComponent" parent="Kaunas/Key/StaticBody3D" unique_id=982559477 instance=ExtResource("169_riv5k")]
 
-[node name="Save" parent="Kaunas" index="328" unique_id=46670819]
+[node name="Save" parent="Kaunas" index="328" unique_id=537963973]
 surface_material_override/0 = SubResource("StandardMaterial3D_yrv25")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Save" index="0" unique_id=1441892069]
@@ -2095,11 +2091,11 @@ shape = SubResource("ConvexPolygonShape3D_ybcoh")
 
 [node name="InteractableComponent" parent="Kaunas/Save/StaticBody3D" unique_id=508249845 instance=ExtResource("169_riv5k")]
 
-[node name="Door_remote" parent="Kaunas" index="331" unique_id=1651782892]
+[node name="Door_remote" parent="Kaunas" index="331" unique_id=1445007379]
 material_override = SubResource("StandardMaterial3D_lqb38")
 surface_material_override/0 = SubResource("StandardMaterial3D_1lfes")
 
-[node name="Red_button" parent="Kaunas" index="334" unique_id=1277835865]
+[node name="Red_button" parent="Kaunas" index="334" unique_id=1977050132]
 transform = Transform3D(0.16693814, 0.365828, 0.9155882, 0.25560233, 0.88081527, -0.39853787, -0.9522602, 0.30055752, 0.053535067, 18.331913, 5.347867, 1.1642647)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Red_button" index="0" unique_id=1254219173]
@@ -2195,6 +2191,16 @@ surface_material_override/0 = SubResource("StandardMaterial3D_j6l26")
 
 [node name="Control_room_glass" parent="Kaunas" index="363" unique_id=1362371931]
 surface_material_override/0 = SubResource("StandardMaterial3D_v8sug")
+
+[node name="GeneratorLight_1" parent="Kaunas" index="364" unique_id=467025786 groups=["facility_lights"]]
+visible = false
+light_energy = 0.1
+shadow_enabled = true
+
+[node name="GeneratorLight_2" parent="Kaunas" index="365" unique_id=145120630 groups=["facility_lights"]]
+visible = false
+light_energy = 0.1
+shadow_enabled = true
 
 [node name="Alarm_004" type="MeshInstance3D" parent="Kaunas" unique_id=2072402144]
 transform = Transform3D(0.9996374, -0.011316476, 0.024432465, 0.01184207, 0.9996994, -0.021475734, -0.024182063, 0.021757273, 0.99947095, 19.660885, 7.3043494, -0.8465767)
@@ -2456,6 +2462,7 @@ required_riddle_id = "key_search"
 transform = Transform3D(1, 0, 0, 0, -0.7614592, 0.6482129, 0, -0.6482129, -0.7614592, -9.025187, 10.465784, -18.169619)
 light_color = Color(0.99996585, 0.9171419, 0.7848763, 1)
 light_energy = 1.322
+light_volumetric_fog_energy = 8.03
 light_specular = 3.218
 shadow_enabled = true
 sky_mode = 1
@@ -2465,7 +2472,7 @@ transform = Transform3D(1, 0, 0, 0, 0.7626683, 0.6467898, 0, -0.6467898, 0.76266
 light_color = Color(0.9969793, 0.9208307, 0.7608952, 1)
 light_energy = 3.586
 light_indirect_energy = 11.069
-light_volumetric_fog_energy = 0.552
+light_volumetric_fog_energy = 8.472
 light_specular = 3.218
 shadow_enabled = true
 sky_mode = 1
@@ -2511,7 +2518,9 @@ horizontal_alignment = 1
 
 [node name="QuestLabel" type="Label" parent="HUDLayer/HUD/MarginContainer/VBoxContainer" unique_id=1272532483]
 layout_mode = 2
-label_settings = SubResource("LabelSettings_8irk1")
+theme_override_colors/font_color = Color(1, 1, 1, 0.78431374)
+theme_override_fonts/font = ExtResource("185_vdifd")
+label_settings = SubResource("LabelSettings_c4gfx")
 script = ExtResource("190_8irk1")
 
 [node name="GameTimer" type="Timer" parent="HUDLayer/HUD" unique_id=1221119760]
@@ -2535,6 +2544,15 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
+
+[node name="Label" type="Label" parent="HUDLayer/HUD" unique_id=2735149]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 40.0
+offset_right = 227.0
+offset_bottom = 63.0
+theme_override_fonts/font = ExtResource("185_vdifd")
+text = "Press T to toggle flashlight"
 
 [node name="InteractionText" type="Control" parent="HUDLayer" unique_id=1559098688 groups=["interaction_ui"]]
 layout_mode = 3
