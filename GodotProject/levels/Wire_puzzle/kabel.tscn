@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cur8gvvpgv2wg"]
+
+[ext_resource type="Script" uid="uid://ufk23rvee4ny" path="res://levels/Wire_puzzle/kabel.gd" id="1_heod0"]
+
+[node name="Kabel" type="Control" unique_id=2062621606]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_heod0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1367622090]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 50.215
+mouse_filter = 2
+
+[node name="Button" type="Button" parent="." unique_id=2093879743]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 53.0

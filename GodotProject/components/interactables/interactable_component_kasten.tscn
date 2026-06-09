@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bcy60aonm74hp"]
+
+[ext_resource type="Script" uid="uid://o5ckrb3del3x" path="res://resources/scripts/interaction/interactable_component.gd" id="1_yqhi0"]
+
+[node name="InteractableComponent" type="Node" unique_id=545760649]
+script = ExtResource("1_yqhi0")
+metadata/_custom_type_script = "uid://o5ckrb3del3x"

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://voaqikrtm63l"]
+
+[ext_resource type="PackedScene" uid="uid://bi4v6n42utkc3" path="res://resources/assets/geometry/glb/Kaunas.glb" id="3_oyxj5"]
+[ext_resource type="Script" uid="uid://clwv04rqttjvd" path="res://components/interactables/interactable_component.gd" id="3_suhiu"]
+
+[sub_resource type="GDScript" id="GDScript_vg1c4"]
+script/source = "extends StaticBody3D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_suhiu"]
+points = PackedVector3Array(0.18497865, 0.31497097, 0.217165, 0.1850009, 0.31497097, -0.282835, -0.0069758333, 0.31497097, 0.217165, 0.18497865, -0.48502904, 0.217165, -0.0069758333, 0.31497097, -0.282835, 0.1850009, -0.48502904, -0.282835, -0.033120096, 0.07573837, 0.1087566, -0.0069758333, -0.48502904, 0.217165, -0.033120096, 0.07573837, 0.009892076, -0.0069758333, -0.48502904, -0.282835, -0.042309523, -0.20202199, -0.21906249, -0.042309523, -0.28025222, -0.21906249, -0.0411525, -0.28025222, -0.19385692)
+
+[node name="Node3D" type="StaticBody3D" unique_id=2132639943]
+script = SubResource("GDScript_vg1c4")
+
+[node name="Kaunas" parent="." unique_id=866054172 instance=ExtResource("3_oyxj5")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Bridge_breaker_1" parent_id_path=PackedInt32Array(866054172, 176096943) index="0" unique_id=585792312]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Bridge_breaker_1/StaticBody3D" unique_id=8574411]
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_suhiu")
+
+[node name="InteractableComponent" type="Node" parent="Kaunas/Bridge_breaker_1/StaticBody3D" unique_id=1389086573]
+script = ExtResource("3_suhiu")
+metadata/_custom_type_script = "uid://o5ckrb3del3x"
+
+[connection signal="on_interact" from="Kaunas/Bridge_breaker_1/StaticBody3D/InteractableComponent" to="." method="_on_interactable_component_on_interact"]
+
+[editable path="Kaunas"]
