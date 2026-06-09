@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://tbpl0cv58457"]
 
 [ext_resource type="Script" uid="uid://cc5u8pm0mb06x" path="res://levels/tutorial/tutorial_overlay.gd" id="1_bw7ry"]
+[ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="2_mdstt"]
+[ext_resource type="Texture2D" uid="uid://d123ip21221ct" path="res://levels/tutorial/riddles_tutorial.png" id="3_nr4dt"]
+[ext_resource type="Texture2D" uid="uid://t4gkcd148pkj" path="res://levels/tutorial/tutorial_door.png" id="4_gasbd"]
+[ext_resource type="Texture2D" uid="uid://bi7xtyw74crr6" path="res://levels/tutorial/escape_tutorial.png" id="5_gasbd"]
 
 [node name="TutorialScene" type="CanvasLayer" unique_id=1391012206]
+layer = 10
 script = ExtResource("1_bw7ry")
 
 [node name="BackgroundDim" type="ColorRect" parent="." unique_id=1794857246]
@@ -11,35 +16,109 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0.6666667)
+color = Color(0, 0, 0, 0.78431374)
 
-[node name="TutorialWindow" type="PanelContainer" parent="BackgroundDim" unique_id=1946079084]
+[node name="VBoxContainer2" type="VBoxContainer" parent="BackgroundDim" unique_id=139938489]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
+offset_bottom = 89.0
 grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundDim/TutorialWindow" unique_id=1329554693]
-layout_mode = 2
 alignment = 1
 
-[node name="Title" type="Label" parent="BackgroundDim/TutorialWindow/VBoxContainer" unique_id=1708085840]
+[node name="Title" type="Label" parent="BackgroundDim/VBoxContainer2" unique_id=1708085840]
 layout_mode = 2
-text = "Welcome to this game. You have a very important task. A destruction sequence has been initiated. Your task is to defuse the bomb, save yourself and escape this facility. "
+theme_override_fonts/font = ExtResource("2_mdstt")
+theme_override_font_sizes/font_size = 40
+text = "How to play?"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Instructions" type="Label" parent="BackgroundDim/TutorialWindow/VBoxContainer" unique_id=1299011139]
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundDim" unique_id=1098494012]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -244.0
+offset_right = -19.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundDim/HBoxContainer" unique_id=1104507226]
 layout_mode = 2
-text = "Follow the the hints, solve the riddles and open the doors to access the final room to be able to defuse the bomb. After this tutorial the countdown will start. Your first task is to repair the generator so the facility is supplied with power. Then follow the hint. Good luck. Are you ready?"
+size_flags_horizontal = 3
+
+[node name="Instructions" type="Label" parent="BackgroundDim/HBoxContainer/VBoxContainer" unique_id=1299011139]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mdstt")
+theme_override_font_sizes/font_size = 20
+text = "Find and Solve the riddles"
 horizontal_alignment = 1
-vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="StartButton" type="Button" parent="BackgroundDim/TutorialWindow/VBoxContainer" unique_id=1979111147]
+[node name="TextureRect" type="TextureRect" parent="BackgroundDim/HBoxContainer/VBoxContainer" unique_id=1935764899]
 layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_nr4dt")
+expand_mode = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="BackgroundDim/HBoxContainer" unique_id=1023442660]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Instructions" type="Label" parent="BackgroundDim/HBoxContainer/VBoxContainer2" unique_id=119051824]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mdstt")
+theme_override_font_sizes/font_size = 20
+text = "Find the door to escape"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundDim/HBoxContainer/VBoxContainer2" unique_id=1800125699]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_gasbd")
+expand_mode = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="BackgroundDim/HBoxContainer" unique_id=597530778]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Instructions" type="Label" parent="BackgroundDim/HBoxContainer/VBoxContainer3" unique_id=2054566123]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mdstt")
+theme_override_font_sizes/font_size = 20
+text = "Do everything before the timer ends"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundDim/HBoxContainer/VBoxContainer3" unique_id=1461368941]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_gasbd")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundDim" unique_id=1329554693]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="StartButton" type="Button" parent="BackgroundDim/VBoxContainer" unique_id=1979111147]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.99996585, 0.9171419, 0.7848763, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("2_mdstt")
+theme_override_font_sizes/font_size = 28
 text = "Start"
 
-[connection signal="pressed" from="BackgroundDim/TutorialWindow/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="BackgroundDim/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
