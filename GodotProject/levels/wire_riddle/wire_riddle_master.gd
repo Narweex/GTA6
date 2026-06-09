@@ -1,4 +1,4 @@
-extends Control # Keeps your master scene root as a Control type
+extends CanvasLayer # FIX: This now perfectly matches your root CanvasLayer node!
 
 signal riddle_completed
 signal riddle_cancelled
@@ -6,18 +6,15 @@ signal riddle_cancelled
 var kabel_szene = preload("res://levels/wire_riddle/kabel.tscn") 
 var gesuchte_farbe : Color 
 
-# Setup onready paths to look down into your WireRiddleUI container child node
-@onready var ui_container: CanvasLayer = $WireRiddleUI
-@onready var panel: Panel = $WireRiddleUI/Panel
-@onready var label: Label = $WireRiddleUI/Panel/Label
-@onready var container: VBoxContainer = $WireRiddleUI/Panel/VBoxContainer
-@onready var time_penalty_label: Label = $WireRiddleUI/TimePenalty
+# Clean, direct onready paths to your newly organized layout
+@onready var panel: Panel = $Panel
+@onready var label: Label = $Panel/Label
+@onready var container: VBoxContainer = $Panel/VBoxContainer
+@onready var time_penalty_label: Label = $TimePenalty
 
 func _ready() -> void:
-	# 1. Ensure the UI wrapper is fully visible when loaded into the world tree
-	if ui_container:
-		ui_container.visible = true
-	
+	# CanvasLayers are visible by default when instanced
+	visible = true
 	if time_penalty_label:
 		time_penalty_label.visible = false 
 		
@@ -25,10 +22,10 @@ func _ready() -> void:
 
 func generiere_raetsel() -> void:
 	if container == null: 
-		push_error("VBoxContainer not found inside the layout paths!")
+		push_error("VBoxContainer layout path is missing!")
 		return
 	
-	# Clear out any old placeholder elements cleanly
+	# Clear out old puzzle items cleanly
 	for n in container.get_children():
 		n.queue_free()
 	
@@ -37,8 +34,6 @@ func generiere_raetsel() -> void:
 		farb_liste.append(Color(randf(), randf(), randf()))
 	
 	gesuchte_farbe = farb_liste.pick_random()
-	
-	# English UI generation string
 	label.text = "find the right wire: #" + gesuchte_farbe.to_html(false)
 	
 	farb_liste.shuffle()
@@ -55,24 +50,18 @@ func generiere_raetsel() -> void:
 			wire_button.pressed.connect(_on_kabel_pressed.bind(farbe))
 
 func _on_kabel_pressed(farbe: Color) -> void:
-	# FIX: Bypassed text string parsing entirely. 
-	# Comparing raw colors directly prevents mismatch failures.
 	if farbe == gesuchte_farbe:
-		print("Richtig! Signal wird gesendet.")
-		riddle_completed.emit() # Progression.gd intercepts this and closes the scene automatically
+		print("Richtig! Puzzle solved.")
+		riddle_completed.emit() 
 	else:
-		print("Falsche Farbe! Zeitstrafe.")
+		print("Falsche Farbe! Penalty applied.")
 		
-		# Locate your global game scene timer safely
 		var game_timer = get_node_or_null("/root/World/HUDLayer/HUD/GameTimer")
 		if game_timer and game_timer is Timer:
 			var neue_zeit = game_timer.time_left - 10.0
 			if neue_zeit < 0: 
 				neue_zeit = 0
 			game_timer.start(neue_zeit)
-			print("Timer wurde aktualisiert auf: ", neue_zeit)
-		else:
-			print("WARNING: GameTimer reference path could not be located.")
 		
 		show_game_over_and_close()
 
@@ -83,11 +72,9 @@ func show_game_over_and_close() -> void:
 	if time_penalty_label:
 		time_penalty_label.visible = false
 		
-	# Notify the manager to unpause and remove the puzzle window
 	riddle_cancelled.emit() 
 
 func _input(event: InputEvent) -> void:
-	# Pressing [E] or your interact action exits out of the menu screen safely
-	if event.is_action_pressed("interact") and ui_container and ui_container.visible:
+	if event.is_action_pressed("interact") and visible:
 		riddle_cancelled.emit()
 		get_viewport().set_input_as_handled()

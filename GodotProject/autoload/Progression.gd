@@ -9,27 +9,24 @@ var challenge_mode: bool = false
 var tutorial_enabled: bool = true
 
 var riddles = {
-	"cable_hex": false,
-	"open_safe": false,
-	"remote_use": false,
+	"cable_hex": true,
+	"open_safe": true,
+	"remote_use": true,
 	"key_search": false,
+	"wire_riddle": false,
 	"control_room": false,
 	"fifty_fifty_button": false
 }
 
 #reset the game state on retry
 func reset_game() -> void:
-	# Revert every single puzzle state back to its original uncompleted state
 	riddles = {
 		"cable_hex": false,
 		"open_safe": false,
 		"remote_use": false,
 		"key_search": false,
-		"chess_password": false,
+		"wire_riddle": false,
 		"fifty_fifty_button": false,
-		"locker_key_found": false,
-		"locker_unlocked": false,
-		"captcha_riddle": false
 	}
 	
 func complete_riddle(riddle_id: String):
