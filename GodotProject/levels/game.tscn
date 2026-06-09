@@ -2059,6 +2059,7 @@ transform = Transform3D(3, -2.842171e-14, 0, 2.842171e-14, 3, 0, 0, 0, 3, 1.8943
 script = ExtResource("245_fjk2m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Key/StaticBody3D" unique_id=286684483]
+transform = Transform3D(2, 1.4210855e-14, 0, -1.4210855e-14, 2, 0, 0, 0, 2, -0.66049576, -2.4830322, 0)
 shape = SubResource("ConvexPolygonShape3D_jpo5b")
 
 [node name="InteractableComponent" parent="Kaunas/Key/StaticBody3D" unique_id=982559477 instance=ExtResource("169_riv5k")]
@@ -2220,8 +2221,9 @@ mesh = SubResource("ArrayMesh_asqw2")
 [node name="Marker3D" type="Marker3D" parent="Kaunas/Destruction_alarm" unique_id=1322249152]
 transform = Transform3D(1, 0, 0, 0, 0.98768836, 0.15643448, 0, -0.15643448, 0.98768836, -0.0020580292, 0, 0.009000003)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Kaunas/Destruction_alarm/Marker3D" unique_id=1920521330 groups=["alarm_lights"]]
+[node name="SpotLight3D" type="SpotLight3D" parent="Kaunas/Destruction_alarm/Marker3D" unique_id=1920521330 groups=["alarm_lights", "facility_lights"]]
 transform = Transform3D(1, -4.656613e-10, 1.8626451e-09, 2.3283064e-10, 1.0000001, 1.8932042e-08, 0, -2.5778718e-08, 1, 0, 0, 0.09899998)
+visible = false
 light_color = Color(0.8117647, 0, 0, 1)
 light_energy = 3.819
 spot_angle = 108.08
@@ -2432,10 +2434,8 @@ required_riddle_id = "key_search"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights" unique_id=1674313606 groups=["sky_light"]]
 transform = Transform3D(1, 0, 0, 0, -0.7614592, 0.6482129, 0, -0.6482129, -0.7614592, -9.025187, 10.465784, -18.169619)
-light_color = Color(0.9969793, 0.9208307, 0.7608952, 1)
+light_color = Color(0.99996585, 0.9171419, 0.7848763, 1)
 light_energy = 1.322
-light_indirect_energy = 0.0
-light_volumetric_fog_energy = 2.142
 light_specular = 3.218
 shadow_enabled = true
 sky_mode = 1
@@ -2495,7 +2495,7 @@ label_settings = SubResource("LabelSettings_8irk1")
 script = ExtResource("190_8irk1")
 
 [node name="GameTimer" type="Timer" parent="HUDLayer/HUD" unique_id=1221119760]
-wait_time = 3.719
+wait_time = 4096.0
 one_shot = true
 autostart = true
 
