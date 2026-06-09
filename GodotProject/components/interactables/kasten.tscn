@@ -10,11 +10,18 @@ script/source = "extends StaticBody3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
+func _oeffne_raetsel() -> void:
+	
+	var ui = get_node(\"WireRiddleUI\")
+	if ui:
+		ui.visible = true
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		print(\"Rätsel geöffnet!\")
+	else:
+		print(\"Fehler: WireRiddleUI nicht gefunden!\")
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_interactable_component_on_interact() -> void:
+	pass # Replace with function body.
 "
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_suhiu"]
