@@ -1154,12 +1154,7 @@ volumetric_fog_sky_affect = 0.163
 [sub_resource type="LabelSettings" id="LabelSettings_lyuia"]
 font_size = 50
 
-[sub_resource type="LabelSettings" id="LabelSettings_8irk1"]
-font = ExtResource("185_vdifd")
-font_size = 20
-font_color = Color(0.24313726, 0.2901961, 0.24313726, 1)
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_c4gfx"]
 
 [node name="World" type="Node3D" unique_id=1671539021]
 script = ExtResource("1_lyuia")
@@ -2503,7 +2498,9 @@ horizontal_alignment = 1
 
 [node name="QuestLabel" type="Label" parent="HUDLayer/HUD/MarginContainer/VBoxContainer" unique_id=1272532483]
 layout_mode = 2
-label_settings = SubResource("LabelSettings_8irk1")
+theme_override_colors/font_color = Color(1, 1, 1, 0.78431374)
+theme_override_fonts/font = ExtResource("185_vdifd")
+label_settings = SubResource("LabelSettings_c4gfx")
 script = ExtResource("190_8irk1")
 
 [node name="GameTimer" type="Timer" parent="HUDLayer/HUD" unique_id=1221119760]
