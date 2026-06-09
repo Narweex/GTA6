@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cur8gvvpgv2wg"]
 
-[ext_resource type="Script" uid="uid://ufk23rvee4ny" path="res://levels/Wire_puzzle/kabel.gd" id="1_heod0"]
+[ext_resource type="Script" uid="uid://ufk23rvee4ny" path="res://levels/wire_riddle/kabel.gd" id="1_heod0"]
 
 [node name="Kabel" type="Control" unique_id=2062621606]
 layout_mode = 3
