@@ -7,11 +7,9 @@ func _ready() -> void:
 	# even when hud.gd freezes the rest of the 3D world game tree!
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
-	# 2. Force the mouse cursor to be completely visible over the viewport
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
-	# 3. Locate the button using your exact scene layout path
-	var button = $BackgroundDim/TutorialWindow/VBoxContainer/StartButton
+	var button = $BackgroundDim/VBoxContainer/StartButton
 	
 	if button:
 		# 4. ZOMBIE CLEANUP: Disconnect any broken relative links left over in the editor
