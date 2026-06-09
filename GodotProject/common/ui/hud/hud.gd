@@ -53,7 +53,6 @@ func play_countdown_tick() -> void:
 		tick_audio.play()
 
 func _start_gameplay_countdown() -> void:
-	print("[HUD] Tutorial closed. Unpausing facility grids and starting countdown clock...")
 	# Unfreeze physics, movement, and standard frame execution loops
 	get_tree().paused = false
 	
@@ -62,6 +61,4 @@ func _start_gameplay_countdown() -> void:
 		game_timer.start()
 
 func _on_game_timer_timeout() -> void:
-	print("[HUD] ZERO HOUR REACHED. IMMINENT BLAST WAVE INCOMING.")
-	# Fire the blast sequence across the entire global singleton event bus
 	Progression.facility_detonated.emit()
