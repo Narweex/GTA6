@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dvgycqkm1y6gb"]
+
+[resource]
+resource_name = "Pinboard_small"
+cull_mode = 2
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://30l6isrik4ry"]
+
+[resource]
+resource_name = "Office_ceilling"
+cull_mode = 2
+albedo_color = Color(0.7216888, 0.7216888, 0.7216888, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

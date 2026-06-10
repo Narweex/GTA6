@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ydst3h5ui6kc"]
+
+[resource]
+resource_name = "Folder_big"
+cull_mode = 2
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

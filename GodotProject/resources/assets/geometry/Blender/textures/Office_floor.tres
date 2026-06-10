@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://doqkwspxfj3fy"]
+
+[resource]
+resource_name = "Office_floor"
+cull_mode = 2
+albedo_color = Color(0.3254464, 0.26514375, 0.23669572, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

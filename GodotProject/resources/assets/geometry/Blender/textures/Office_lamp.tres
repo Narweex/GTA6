@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b46c7poge4s1p"]
+
+[resource]
+resource_name = "Office_lamp"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dcnb5rom54kmn"]
+
+[resource]
+resource_name = "M_Hallway_floor"
+cull_mode = 2
+albedo_color = Color(0.4621973, 0.4621973, 0.4621973, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cy44q0vr4sshs"]
+
+[ext_resource type="Texture2D" uid="uid://3xg5bdqg1fle" path="res://resources/assets/geometry/Blender/Kaunas_Screenshot 2026-06-10 224640.png.png" id="1_h14f1"]
+
+[resource]
+resource_name = "Material.025"
+cull_mode = 2
+albedo_texture = ExtResource("1_h14f1")
+roughness = 0.5

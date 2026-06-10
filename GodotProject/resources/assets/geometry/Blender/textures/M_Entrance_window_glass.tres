@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b7mopevylyds"]
+
+[resource]
+resource_name = "M_Entrance_window_glass"
+cull_mode = 2
+albedo_color = Color(0.50857764, 0.54758763, 0.4381451, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

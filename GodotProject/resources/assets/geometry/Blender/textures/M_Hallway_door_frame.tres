@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bx5yoaxfo3le3"]
+
+[resource]
+resource_name = "M_Hallway_door_frame"
+cull_mode = 2
+albedo_color = Color(0.46478808, 0.46478808, 0.46478808, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bhchbci0p83sx"]
+
+[resource]
+resource_name = "Office_walls"
+cull_mode = 2
+albedo_color = Color(0.9063355, 0.18347163, 0.19442478, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

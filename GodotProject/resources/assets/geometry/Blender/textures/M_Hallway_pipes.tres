@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bfc3wkkx3gumk"]
+
+[resource]
+resource_name = "M_Hallway_pipes"
+cull_mode = 2
+albedo_color = Color(0.60265964, 0.60265964, 0.60265964, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

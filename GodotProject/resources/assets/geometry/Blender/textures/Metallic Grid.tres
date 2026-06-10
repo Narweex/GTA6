@@ -1,0 +1,265 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://damc8stdthg6b"]
+
+[ext_resource type="Texture2D" uid="uid://cnbvfh4qtht1p" path="res://resources/assets/geometry/Blender/textures/MetalGrid_opacity.jpg" id="1_eeif3"]
+[ext_resource type="Texture2D" uid="uid://bddnt64yqwr2c" path="res://resources/assets/geometry/Blender/textures/MetalGrid_roughness.jpg" id="2_xrx2w"]
+[ext_resource type="Texture2D" uid="uid://dnkpracggphle" path="res://resources/assets/geometry/Blender/textures/MetalGrid_normalogl.jpg" id="3_sbi6q"]
+
+[resource]
+resource_name = "Metallic Grid"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_eeif3")
+metallic = 1.0
+metallic_texture = ExtResource("2_xrx2w")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_xrx2w")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_sbi6q")
+uv1_scale = Vector3(8, 8, 1)
+uv1_offset = Vector3(0, -7, 0)
+metadata/extras = {
+"asset_data": {
+"access": "free",
+"accessLabel": "Free",
+"addonVersion": "3.18.0",
+"assetBaseId": "3a72a688-4473-4ab9-84c8-e7b3ee42d2f8",
+"assetType": "material",
+"author": {
+"aboutMe": "3D artist and generalist.",
+"aboutMeUrl": "https://www.patreon.com/Sillet",
+"avatar128": "/avatar-redirect/c3b8d54b-249d-4922-be68-e4fc5a4f40fd/128/",
+"firstName": "Julio",
+"fullName": "Julio Sillet",
+"gravatarHash": "775143b46896be593570fa04745731da",
+"id": "10533",
+"lastName": "Sillet"
+},
+"available_resolutions": [512.0, 1024.0, 2048.0, 4096.0],
+"basePrice": "",
+"canDownload": true,
+"canDownloadError": true,
+"category": "metal",
+"created": "2025-11-29T21:30:49.497734+01:00",
+"description": "Metallic grid/mesh material.",
+"dictParameters": {
+"addons": true,
+"animated": false,
+"engine": "cycles",
+"joinBlenderkitDiscounts": true,
+"materialStyle": "realistic",
+"megapixels": 0.0,
+"nodeCount": 0.0,
+"pbrType": "metallic",
+"platforms": ["windows-x64", "macos-arm64", "linux-x64", "macos-x64", "windows-arm64"],
+"procedural": true,
+"purePbr": true,
+"sexualizedContent": false,
+"shaders": ["[]"],
+"textureCount": 0.0,
+"textureSizeMeters": 1.0,
+"uv": true
+},
+"displayName": "Metallic Grid",
+"downloaded": 0.0,
+"files": [{
+"created": "2025-11-29T21:30:59.244769+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/900496/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "blend",
+"fileUploadSize": 19970616.0,
+"filename": "assets/d22097b938964a3189b56e07c81b45ef/files/blend_40590cf1-4110-4b23-8cf6-12aa477b4a1f.blend",
+"modified": "2025-11-29T21:30:59.244782+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": ""
+}, {
+"created": "2025-12-01T12:33:21.180361+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/901341/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "resolution_0_5K",
+"fileUploadSize": 651950.0,
+"filename": "assets/d22097b938964a3189b56e07c81b45ef/files/resolution_0_5K_ac4f740d-0463-4e2f-9712-f484c4020f1e.blend",
+"modified": "2025-12-01T12:33:21.180375+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": ""
+}, {
+"created": "2025-12-01T12:33:19.754820+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/901340/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "resolution_1K",
+"fileUploadSize": 1820255.0,
+"filename": "assets/d22097b938964a3189b56e07c81b45ef/files/resolution_1K_ea064575-496e-4d6e-831f-061ef4292894.blend",
+"modified": "2025-12-01T12:33:19.754832+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": ""
+}, {
+"created": "2025-12-01T12:33:18.409173+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/901339/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "resolution_2K",
+"fileUploadSize": 5258958.0,
+"file_name": "C:\\Users\\Johanna\\Documents\\GitHub\\GTA6\\GodotProject\\! self made\\assets\\geometry\\Blender\\assets\\materials\\metallic-grid_d22097b9-3896-4a31-89b5-6e07c81b45ef\\metallic-grid_2K_e2f1983e-9c99-4d35-86af-eae28dd25d34.blend",
+"filename": "assets/d22097b938964a3189b56e07c81b45ef/files/resolution_2K_e2f1983e-9c99-4d35-86af-eae28dd25d34.blend",
+"modified": "2025-12-01T12:33:18.409194+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": "https://assets.blenderkit.com/assets/d22097b938964a3189b56e07c81b45ef/files/resolution_2K_e2f1983e-9c99-4d35-86af-eae28dd25d34.blend?verify=1780017681-L%2BZEk7pdwUhXIotPgGOmr5LsfdhzFLGCfSbiYElYywc%3D"
+}, {
+"created": "2025-12-01T12:33:16.549274+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/901338/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "resolution_4K",
+"fileUploadSize": 13254556.0,
+"filename": "assets/d22097b938964a3189b56e07c81b45ef/files/resolution_4K_1eedfb0a-8483-43fc-8512-2fc98b4569c5.blend",
+"modified": "2025-12-01T12:33:16.549294+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": ""
+}, {
+"created": "2025-11-29T21:30:54.795149+01:00",
+"downloadUrl": "https://www.blenderkit.com/api/v1/downloads/900495/",
+"fileThumbnail": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.96x96_q85_crop-%2C.png",
+"fileThumbnailLarge": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.1024x1024_q85_crop-%2C.png",
+"fileType": "thumbnail",
+"fileUploadSize": 4591410.0,
+"filename": "assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png",
+"modified": "2025-12-23T05:57:43.005817+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.512x512_q85_crop-%2C.png",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.256x256_q85_crop-%2C.png",
+"url": ""
+}],
+"filesSize": 44480.0,
+"id": "d22097b9-3896-4a31-89b5-6e07c81b45ef",
+"isForSale": false,
+"isFree": true,
+"isPrivate": false,
+"lastAnimatedThumbnailUpload": null,
+"lastBlendUpload": "2025-11-29T20:30:59.244769+00:00",
+"lastGltfGodotUpload": null,
+"lastGltfUpload": null,
+"lastPhotoThumbnailUpload": null,
+"lastResolutionUpload": "2025-12-01T11:33:21.180361+00:00",
+"lastThumbnailUpload": "2025-11-29T20:30:54.795149+00:00",
+"lastUserInteraction": "2025-11-29T21:30:59.706112+01:00",
+"lastVideoUpload": null,
+"lastZipFileUpload": "",
+"license": "royalty_free",
+"max_resolution": 4096.0,
+"name": "Metallic Grid",
+"pk": 191736.0,
+"ratingsAverage": {
+"bookmarks": 0.9859154929577464,
+"quality": 9.0,
+"virtualPrice": null,
+"workingHours": 1.0
+},
+"ratingsCount": {
+"bookmarks": 71.0,
+"quality": 1.0,
+"virtualPrice": 0.0,
+"workingHours": 1.0
+},
+"ratingsMedian": {
+"bookmarks": 1.0,
+"quality": 9.0,
+"virtualPrice": null,
+"workingHours": 1.0
+},
+"ratingsSum": {
+"bookmarks": 70.0,
+"quality": 9.0,
+"score": 90.0,
+"virtualPrice": null,
+"workingHours": 1.0
+},
+"resolution": "resolution_2K",
+"score": 90.0,
+"showMarketingLabels": true,
+"sourceAppName": "blender",
+"sourceAppVersion": "4.5.4",
+"tags": ["steel", "metal", "iron", "fence", "wire"],
+"texture_size_meters": 1.0,
+"thumbnail": "thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.512x512_q85_crop-%2C.png.webp",
+"thumbnailLargeUrl": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.1024x1024_q85_crop-%2C.png",
+"thumbnailLargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.1024x1024_q85.png",
+"thumbnailLargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.1024x1024_q85.png.webp?webp_generated=1766717289",
+"thumbnailLargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.1024x1024_q85_crop-%2C.png.webp?webp_generated=1766717289",
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.512x512_q85_crop-%2C.png",
+"thumbnailMiddleUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.512x512_q85.png",
+"thumbnailMiddleUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.512x512_q85.png.webp?webp_generated=1766717289",
+"thumbnailMiddleUrlWebp": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.512x512_q85_crop-%2C.png.webp?webp_generated=1766717289",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.256x256_q85_crop-%2C.png",
+"thumbnailSmallUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.256x256_q85.png",
+"thumbnailSmallUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.256x256_q85.png.webp?webp_generated=1766717289",
+"thumbnailSmallUrlWebp": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.256x256_q85_crop-%2C.png.webp?webp_generated=1766717289",
+"thumbnailXlargeUrl": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.2048x2048_q85_crop-%2C.png",
+"thumbnailXlargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.2048x2048_q85.png",
+"thumbnailXlargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.2048x2048_q85.png.webp?webp_generated=1766717289",
+"thumbnailXlargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/d22097b938964a3189b56e07c81b45ef/files/thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.2048x2048_q85_crop-%2C.png.webp?webp_generated=1766717289",
+"thumbnail_small": "thumbnail_eb2609aa-be7b-406a-844b-9709ac90a281.png.256x256_q85_crop-%2C.png.webp",
+"tooltip_data": {
+"aname": "Metallic Grid",
+"author_text": "by Julio Sillet",
+"base_price_bg_color": [0.7, 0.7, 0.7, 0.6],
+"base_price_color": [1.0, 1.0, 1.0, 0.9],
+"base_price_text": "",
+"quality": "9",
+"user_price_bg_color": [0.7, 0.7, 0.7, 0.6],
+"user_price_color": [1.0, 1.0, 1.0, 0.9],
+"user_price_text": ""
+},
+"url": "https://www.blenderkit.com/api/v1/assets/d22097b9-3896-4a31-89b5-6e07c81b45ef/",
+"verificationStatus": "validated",
+"versionNumber": 1.0,
+"videoLink": "",
+"webpGeneratedTimestamp": 1766717289.0
+},
+"blenderkit": {
+"adaptive_subdivision": 1.0,
+"asset_base_id": "3a72a688-4473-4ab9-84c8-e7b3ee42d2f8",
+"category": 19.0,
+"description": "Metallic grid/mesh material.",
+"has_thumbnail": 1.0,
+"id": "d22097b9-3896-4a31-89b5-6e07c81b45ef",
+"is_generating_thumbnail": 0.0,
+"is_private": 1.0,
+"is_procedural": 1.0,
+"name": "Metallic Grid",
+"name_changed": 1.0,
+"name_old": "Metallic Grid",
+"node_count": 0.0,
+"pbr": 1.0,
+"report": "",
+"shaders": "",
+"tags": "steel, metal, iron, fence, wire",
+"texture_count": 0.0,
+"texture_resolution_max": 0.0,
+"texture_resolution_min": 0.0,
+"thumbnail": "H:\\Work\\BlenderKit\\Vol 05\\MixPack_09\\Renders\\metalgrid_0000.png",
+"thumbnail_generating_state": "",
+"thumbnail_resolution": 3.0,
+"total_megapixels": 0.0,
+"upload_state": "",
+"uploading": 0.0,
+"uv": 1.0,
+"verification_status": 2.0
+},
+"zen_uv": {
+"trimsheet_image": {},
+"world_size_image": {}
+}
+}

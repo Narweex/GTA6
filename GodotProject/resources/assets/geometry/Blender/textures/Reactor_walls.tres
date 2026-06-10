@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://itkitx5i7lgq"]
+
+[resource]
+resource_name = "Reactor_walls"
+cull_mode = 2
+albedo_color = Color(0.48324448, 0.5580028, 0.9063355, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

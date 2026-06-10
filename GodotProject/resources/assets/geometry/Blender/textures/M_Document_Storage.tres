@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://mp51f7qjo1o7"]
+
+[resource]
+resource_name = "M_Document_Storage"
+cull_mode = 2
+albedo_color = Color(0.16334979, 0.16334979, 0.16334979, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

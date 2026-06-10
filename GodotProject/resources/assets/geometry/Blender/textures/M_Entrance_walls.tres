@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cp2ywav24e5i5"]
+
+[resource]
+resource_name = "M_Entrance_walls"
+cull_mode = 2
+albedo_color = Color(0.51764715, 0.51764715, 0.51764715, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

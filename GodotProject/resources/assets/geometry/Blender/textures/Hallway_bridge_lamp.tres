@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bruv814vjs2e6"]
+
+[resource]
+resource_name = "Hallway_bridge_lamp"
+cull_mode = 2
+albedo_color = Color(0.9063355, 0.82299644, 0.6533122, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

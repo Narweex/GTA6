@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://5u70v7cl4u5r"]
+
+[resource]
+resource_name = "M_door_locked"
+cull_mode = 2
+albedo_color = Color(0.62621963, 0.62621963, 0.62621963, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

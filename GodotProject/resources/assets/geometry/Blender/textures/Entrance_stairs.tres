@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://xspvr6wxhdwe"]
+
+[resource]
+resource_name = "Entrance_stairs"
+cull_mode = 2
+albedo_color = Color(0.43951982, 0.43951982, 0.43951982, 1)
+roughness = 0.5
+metadata/extras = {
+"blenderkit": {}
+}

@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b31lsdvjv6jn3"]
+
+[resource]
+resource_name = "Gomme"
+cull_mode = 2
+roughness = 0.5
