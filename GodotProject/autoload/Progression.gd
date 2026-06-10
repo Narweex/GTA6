@@ -17,6 +17,8 @@ func _ready() -> void:
 	
 func calculate_final_score(time_left: float) -> void:
 	
+	var time_bonus = round(time_left) * 10
+	current_score += int(time_bonus)
 
 	if current_score > high_score:
 		high_score = current_score
@@ -35,7 +37,6 @@ func save_game_data() -> void:
 func load_saved_data() -> void:
 	# Safeguard: Check if the file even exists yet (won't exist on first run)
 	if not FileAccess.file_exists(SAVE_FILE_PATH):
-		print("[SYSTEM] No previous save profile found. Starting fresh.")
 		high_score = 0
 		return
 		
@@ -56,9 +57,9 @@ func load_saved_data() -> void:
 
 
 var riddles = {
-	"cable_hex": true,
-	"open_safe": true,
-	"remote_use": true,
+	"cable_hex": false,
+	"open_safe": false,
+	"remote_use": false,
 	"key_search": false,
 	"wire_riddle": false,
 	"control_room": false,
@@ -119,6 +120,7 @@ func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
 	
 	minigame_instance.riddle_completed.connect(func():
 		complete_riddle(riddle_id)
+		current_score += 500
 		_close_minigame(minigame_instance)
 	)
 	

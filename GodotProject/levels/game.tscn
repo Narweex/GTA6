@@ -2489,6 +2489,7 @@ environment = SubResource("Environment_x5p1p")
 layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
+offset_bottom = 2.0
 grow_horizontal = 2
 mouse_filter = 2
 script = ExtResource("1_m637p")
@@ -2546,7 +2547,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="Label" type="Label" parent="HUDLayer/HUD" unique_id=2735149]
+[node name="FlashlightHint" type="Label" parent="HUDLayer/HUD" unique_id=2735149]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 40.0
@@ -2554,6 +2555,15 @@ offset_right = 227.0
 offset_bottom = 63.0
 theme_override_fonts/font = ExtResource("185_vdifd")
 text = "Press T to toggle flashlight"
+
+[node name="CurrentScore" type="Label" parent="HUDLayer/HUD" unique_id=1660731258]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 72.0
+offset_right = 292.0
+offset_bottom = 95.0
+theme_override_fonts/font = ExtResource("185_vdifd")
+horizontal_alignment = 2
 
 [node name="InteractionText" type="Control" parent="HUDLayer" unique_id=1559098688 groups=["interaction_ui"]]
 layout_mode = 3

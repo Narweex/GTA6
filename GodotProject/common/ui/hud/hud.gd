@@ -2,7 +2,7 @@ extends Control
 
 @export_category("Tutorial Settings")
 @export_file("*.tscn") var tutorial_scene_path: String = "res://levels/tutorial/TutorialScene.tscn"
-
+@onready var current_score: Label = $CurrentScore
 @export_category("Scene Nodes")
 @onready var game_timer: Timer = $GameTimer
 @onready var clock_label: Label = $MarginContainer/VBoxContainer/TimeLabel
@@ -13,25 +13,23 @@ var last_tracked_second: int = -1
 func _ready() -> void:
 	get_tree().paused = true
 	
-	# 2. Spawn and overlay the 2D tutorial screen over the player viewport
 	var tutorial_resource = load(tutorial_scene_path)
 	if tutorial_resource:
 		var tutorial_instance = tutorial_resource.instantiate()
 		
-		# Connect the tutorial's close event directly to our countdown activation function
 		tutorial_instance.tutorial_closed.connect(_start_gameplay_countdown)
 		
 		get_tree().root.add_child(tutorial_instance)
 	else:
-		# Fallback safety: if the tutorial asset file goes missing, don't softlock the game
 		get_tree().paused = false
 		game_timer.start()
 
 func _process(_delta: float) -> void:
-	# Get the remaining time from the GameTimer node
+	# keep checking the current score
+	if current_score:
+		current_score.text = "CURRENT SCORE: " + str(Progression.current_score)
 	var time_left: float = game_timer.time_left
 	
-	# Split into minutes and seconds to display digits correctly
 	var minutes: int = int(time_left) / 60
 	var seconds: int = int(time_left) % 60
 	var current_second: int = int(time_left)
