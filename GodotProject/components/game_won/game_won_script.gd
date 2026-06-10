@@ -1,11 +1,14 @@
 extends Control
-
+@onready var high_score_node: Label = $VBoxContainer/HighScoreLabel
 @onready var main_theme: AudioStreamPlayer = $MainTheme
 @export_file("*.tscn") var game_scene_path: String = "res://levels/game.tscn"
 @export_file("*.tscn") var main_menu_scene_path: String = "res://components/main_menu/main_menu.tscn"
 
 func _ready():
 	main_theme.play()
+	if high_score_node:
+		high_score_node.text = "YOUR SCORE: " + str(Progression.current_score)
+
 	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _on_main_menu_button_pressed() -> void:

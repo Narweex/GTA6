@@ -8,6 +8,53 @@ signal facility_detonated
 var challenge_mode: bool = false
 var tutorial_enabled: bool = true
 
+const SAVE_FILE_PATH = "user://game_save_data.json"
+var high_score: int = 0
+var current_score: int = 0
+
+func _ready() -> void:
+	load_saved_data()
+	
+func calculate_final_score(time_left: float) -> void:
+	
+
+	if current_score > high_score:
+		high_score = current_score
+		save_game_data()
+		
+func save_game_data() -> void:
+	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.WRITE)
+	
+	if file:
+		var data_to_save: Dictionary = {
+			"saved_high_score": high_score
+		}
+		var json_string = JSON.stringify(data_to_save)
+		file.store_string(json_string)
+
+func load_saved_data() -> void:
+	# Safeguard: Check if the file even exists yet (won't exist on first run)
+	if not FileAccess.file_exists(SAVE_FILE_PATH):
+		print("[SYSTEM] No previous save profile found. Starting fresh.")
+		high_score = 0
+		return
+		
+	var file = FileAccess.open(SAVE_FILE_PATH, FileAccess.READ)
+	if file:
+		var json_string = file.get_as_text()
+		
+		var data = JSON.parse_string(json_string)
+		
+		if data and data.has("saved_high_score"):
+			high_score = int(data["saved_high_score"])
+
+
+
+
+
+
+
+
 var riddles = {
 	"cable_hex": true,
 	"open_safe": true,
