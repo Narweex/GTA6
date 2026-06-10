@@ -6,20 +6,23 @@ func _ready() -> void:
 	if has_node("InteractableComponent"):
 		$InteractableComponent.on_interact.connect(_on_interact)
 		
-		# Update the interaction component's prompt right on boot
 		_update_component_prompt()
 
 func _on_interact() -> void:
-	# Check our global progression matrix
 	if _are_all_riddles_clear():
-		print("ACCESS GRANTED. ESCAPING FACILITY...")
+		var game_timer = get_node_or_null("HUDLayer/HUD/GameTimer")
+		var remaining_time: float = 0.0
+	
+		if game_timer and game_timer is Timer:
+			remaining_time = game_timer.time_left
+			game_timer.stop() 
+	
+		Progression.calculate_final_score(remaining_time)
+	
 		get_tree().change_scene_to_file(win_scene_path)
 	else:
-		print("ACCESS DENIED. Secure locks are active.")
-		# Forcefully update text in case they try clicking it while locked
 		_update_component_prompt()
 
-## Helper function to iterate through your Progression dictionary dynamically
 func _are_all_riddles_clear() -> bool:
 	for riddle_status in Progression.riddles.values():
 		# If any riddle is still false, they cannot leave yet

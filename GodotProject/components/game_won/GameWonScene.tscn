@@ -61,6 +61,9 @@ size_flags_vertical = 0
 size_flags_stretch_ratio = 1.91
 focus_neighbor_top = NodePath("../game_won_title")
 
+[node name="HighScoreLabel" type="Label" parent="VBoxContainer" unique_id=1785888687]
+layout_mode = 2
+
 [node name="main_menu_button" type="Button" parent="VBoxContainer" unique_id=1711961579]
 layout_mode = 2
 size_flags_horizontal = 4
@@ -73,5 +76,5 @@ text = "Return to Main Menu"
 [node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1117954555]
 stream = ExtResource("4_pqkug")
 
-[connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_main_menu_button_pressed"]
