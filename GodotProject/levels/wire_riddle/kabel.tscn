@@ -9,11 +9,11 @@ script = ExtResource("1_heod0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1367622090]
 layout_mode = 0
-offset_right = 200.0
-offset_bottom = 50.215
+offset_right = 399.0
+offset_bottom = 41.0
 mouse_filter = 2
 
 [node name="Button" type="Button" parent="." unique_id=2093879743]
 layout_mode = 0
-offset_right = 200.0
-offset_bottom = 53.0
+offset_right = 400.0
+offset_bottom = 40.0

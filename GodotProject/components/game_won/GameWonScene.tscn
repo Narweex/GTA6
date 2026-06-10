@@ -63,6 +63,7 @@ focus_neighbor_top = NodePath("../game_won_title")
 
 [node name="HighScoreLabel" type="Label" parent="VBoxContainer" unique_id=1785888687]
 layout_mode = 2
+horizontal_alignment = 1
 
 [node name="main_menu_button" type="Button" parent="VBoxContainer" unique_id=1711961579]
 layout_mode = 2

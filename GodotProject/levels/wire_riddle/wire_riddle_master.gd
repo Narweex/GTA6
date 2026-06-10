@@ -1,4 +1,4 @@
-extends CanvasLayer # FIX: This now perfectly matches your root CanvasLayer node!
+extends CanvasLayer 
 
 signal riddle_completed
 signal riddle_cancelled
@@ -6,14 +6,14 @@ signal riddle_cancelled
 var kabel_szene = preload("res://levels/wire_riddle/kabel.tscn") 
 var gesuchte_farbe : Color 
 
-# Clean, direct onready paths to your newly organized layout
+
 @onready var panel: Panel = $Panel
 @onready var label: Label = $Panel/Label
 @onready var container: VBoxContainer = $Panel/VBoxContainer
 @onready var time_penalty_label: Label = $TimePenalty
 
 func _ready() -> void:
-	# CanvasLayers are visible by default when instanced
+	
 	visible = true
 	if time_penalty_label:
 		time_penalty_label.visible = false 
@@ -25,7 +25,7 @@ func generiere_raetsel() -> void:
 		push_error("VBoxContainer layout path is missing!")
 		return
 	
-	# Clear out old puzzle items cleanly
+	
 	for n in container.get_children():
 		n.queue_free()
 	
@@ -72,7 +72,7 @@ func show_game_over_and_close() -> void:
 	if time_penalty_label:
 		time_penalty_label.visible = false
 		
-	riddle_cancelled.emit() 
+	#riddle_cancelled.emit() 
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and visible:
