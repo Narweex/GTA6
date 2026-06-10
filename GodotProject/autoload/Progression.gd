@@ -49,13 +49,6 @@ func load_saved_data() -> void:
 		if data and data.has("saved_high_score"):
 			high_score = int(data["saved_high_score"])
 
-
-
-
-
-
-
-
 var riddles = {
 	"cable_hex": false,
 	"open_safe": false,
