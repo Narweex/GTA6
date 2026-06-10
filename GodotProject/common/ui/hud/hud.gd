@@ -16,13 +16,18 @@ func _ready() -> void:
 	var tutorial_resource = load(tutorial_scene_path)
 	if tutorial_resource:
 		var tutorial_instance = tutorial_resource.instantiate()
-		
 		tutorial_instance.tutorial_closed.connect(_start_gameplay_countdown)
-		
 		get_tree().root.add_child(tutorial_instance)
 	else:
-		get_tree().paused = false
-		game_timer.start()
+		_start_gameplay_countdown()
+
+
+func _start_gameplay_countdown() -> void:
+	get_tree().paused = false
+	
+	if Progression.challenge_mode:
+		game_timer.wait_time = game_timer.wait_time * 0.6
+	game_timer.start()
 
 func _process(_delta: float) -> void:
 	# keep checking the current score
@@ -45,12 +50,6 @@ func _process(_delta: float) -> void:
 func play_countdown_tick() -> void:
 	if tick_audio:
 		tick_audio.play()
-
-func _start_gameplay_countdown() -> void:
-	get_tree().paused = false
-	
-	if game_timer:
-		game_timer.start()
 
 func _on_game_timer_timeout() -> void:
 	Progression.facility_detonated.emit()

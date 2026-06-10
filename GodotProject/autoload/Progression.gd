@@ -62,7 +62,6 @@ var riddles = {
 	"remote_use": false,
 	"key_search": false,
 	"wire_riddle": false,
-	"control_room": false,
 	"fifty_fifty_button": false
 }
 
@@ -97,13 +96,13 @@ func get_current_stage_text() -> String:
 	if not riddles["open_safe"]:
 		return "CURRENT OBJECTIVE: Find the safe in the office"
 	if not riddles["remote_use"]:
-		return "CURRENT OBJECTIVE: Use the remote from the safe"
+		return "CURRENT OBJECTIVE: Obtain the remote from the safe"
 	if not riddles["key_search"]:
 		return "CURRENT OBJECTIVE: Find a key in the storage room with radioactive barells"
-	if not riddles["control_room"]:
-		return "CURRENT OBJECTIVE: Search for the control room to defuse the bomb"
+	if not riddles["wire_riddle"]: 
+		return "CURRENT OBJECTIVE: Find a fuse box to fix the wire circuit"
 	if not riddles["fifty_fifty_button"]:
-		return "CURRENT OBJECTIVE: Oh no, what button do I press?"
+		return "CURRENT OBJECTIVE: Find the control room to defuse the bomb"
 	return "All tasks completed! Find the exit (it's marked with exit signs)"
 
 			
