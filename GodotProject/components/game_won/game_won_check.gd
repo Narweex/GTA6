@@ -30,7 +30,6 @@ func _are_all_riddles_clear() -> bool:
 			return false
 	return true
 
-## Updates the interactive HUD prompt depending on the player's readiness
 func _update_component_prompt() -> void:
 	var current_text = get_prompt_text()
 	if $InteractableComponent.has_method("set"):

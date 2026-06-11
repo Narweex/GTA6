@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://gvj4e7ya305t"]
 
 [ext_resource type="Script" uid="uid://cpmepwy35tw0s" path="res://components/game_won/game_won_script.gd" id="1_yo3o1"]
-[ext_resource type="Texture2D" uid="uid://c5jhi0rpw4pbm" path="res://resources/assets/2d assets/Menu_screen.png" id="2_i7kej"]
+[ext_resource type="Texture2D" uid="uid://xk68itljn2j1" path="res://components/game_won/pitbull.png" id="2_ppj0s"]
 [ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="3_ic2iv"]
-[ext_resource type="AudioStream" uid="uid://0jowctxv3an" path="res://common/audio/soundtrack.mp3" id="4_pqkug"]
+[ext_resource type="AudioStream" uid="uid://bsvhyps1nsr3j" path="res://components/game_won/win_song.mp3" id="4_ppj0s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s50wb"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -29,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_i7kej")
+texture = ExtResource("2_ppj0s")
 expand_mode = 1
 stretch_mode = 6
 
@@ -38,12 +38,15 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -42.5
+offset_top = 119.0
+offset_right = 42.5
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="game_won_title" type="Label" parent="VBoxContainer" unique_id=2039936419]
-modulate = Color(0.6216626, 0.4200915, 0.21146363, 1)
+modulate = Color(18.892157, 16.32354, 14.5436735, 1)
 self_modulate = Color(0.933207, 0.933207, 0.9332069, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.6117647, 0.05490196, 0.05490196, 1)
@@ -68,14 +71,15 @@ horizontal_alignment = 1
 [node name="main_menu_button" type="Button" parent="VBoxContainer" unique_id=1711961579]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.24313726, 0.2901961, 0.24313726, 1)
+theme_override_colors/font_color = Color(0.76325345, 0.8170272, 0.76270056, 1)
 theme_override_fonts/font = ExtResource("3_ic2iv")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_s50wb")
 text = "Return to Main Menu"
 
 [node name="MainTheme" type="AudioStreamPlayer" parent="." unique_id=1117954555]
-stream = ExtResource("4_pqkug")
+stream = ExtResource("4_ppj0s")
+volume_db = -20.0
 
 [connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/main_menu_button" to="." method="_on_main_menu_button_pressed"]

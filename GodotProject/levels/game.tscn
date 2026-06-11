@@ -2399,7 +2399,7 @@ transform = Transform3D(-1.3113416e-09, -0.03, 0, 0.03, -1.3113416e-09, 0, 0, 0,
 script = ExtResource("269_wp11w")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Key" index="0" unique_id=407238504]
-transform = Transform3D(3, -4.2632564e-14, 0, 4.2632564e-14, 3, 0, 0, 0, 3, 1.8943138, -4.3599854, 0)
+transform = Transform3D(4, -8.526513e-14, 0, 8.526513e-14, 4, 0, 0, 0, 4, 5.4578285, -4.3599854, 0)
 script = ExtResource("245_fjk2m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Key/StaticBody3D" unique_id=286684483]
@@ -2985,7 +2985,7 @@ alignment = 2
 [node name="BatteryLabel" type="Label" parent="HUDLayer/HUD/VBoxContainer" unique_id=1634364895]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("185_vdifd")
-text = "Battery power"
+text = "Flashlight battery"
 
 [node name="BatteryBar" type="ProgressBar" parent="HUDLayer/HUD/VBoxContainer" unique_id=435838940]
 layout_mode = 2

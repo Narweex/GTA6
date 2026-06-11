@@ -13,22 +13,25 @@ var winning_button_index: int
 func _ready() -> void:
 	result_label.text = ""
 	
-	# Connect our interaction mappings
 	button_left.pressed.connect(_on_button_pressed.bind(0))
 	button_right.pressed.connect(_on_button_pressed.bind(1))
 	
+	container.alignment = BoxContainer.ALIGNMENT_CENTER
+	
 	if Progression.challenge_mode:
+		print("[PUZZLE] Challenge Mode Active: Styling emergency wire array.")
 		winning_button_index = randi() % 2
 		
-		# Standard layout setup
-		button_left.text = "DEFUSE?"
-		button_right.text = "DEFUSE?"
+		button_left.text = "   OVERRIDE A   "
+		button_right.text = "   OVERRIDE B   "
 		button_right.show()
+		
+		_style_as_emergency_button(button_left)
+		_style_as_emergency_button(button_right)
 	else:
+		print("[PUZZLE] Regular Mode Active: Deploying Main Override Switch.")
 		winning_button_index = 0
 		button_right.hide()
-		
-		container.alignment = BoxContainer.ALIGNMENT_CENTER
 		
 		button_left.text = "   DEFUSE   "
 		
@@ -52,14 +55,12 @@ func _on_button_pressed(clicked_button_index: int) -> void:
 	else:
 		Progression.facility_detonated.emit()
 
-## Generates a heavy industrial red button completely through code
 func _style_as_emergency_button(btn: Button) -> void:
 	# Font styling configurations
 	btn.add_theme_color_override("font_color", Color.WHITE)
 	btn.add_theme_color_override("font_hover_color", Color.YELLOW)
 	btn.add_theme_font_size_override("font_size", 22)
 	
-	# Base Style (The Unpressed Red Button)
 	var normal_style = StyleBoxFlat.new()
 	normal_style.bg_color = Color(0.75, 0.05, 0.05) # Deep Warning Red
 	normal_style.border_color = Color(0.4, 0.0, 0.0) # Dark Industrial Rim
@@ -73,12 +74,10 @@ func _style_as_emergency_button(btn: Button) -> void:
 	hover_style.shadow_color = Color(1.0, 0.0, 0.0, 0.3) # Soft volumetric light bloom
 	hover_style.shadow_size = 12
 	
-	# Pressed Style (Flattened Button Effect)
 	var pressed_style = normal_style.duplicate()
 	pressed_style.bg_color = Color(0.5, 0.0, 0.0) # Compressed dark red
 	pressed_style.border_width_bottom = 1 # Drops the bevel to simulate mechanical depth
 	
-	# Commit our newly minted styles to the button architecture overrides
 	btn.add_theme_stylebox_override("normal", normal_style)
 	btn.add_theme_stylebox_override("hover", hover_style)
 	btn.add_theme_stylebox_override("pressed", pressed_style)

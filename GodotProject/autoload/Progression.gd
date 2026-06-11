@@ -22,6 +22,9 @@ func calculate_final_score(time_left: float) -> void:
 	
 	var time_bonus = round(time_left) * 10
 	current_score += int(time_bonus)
+	
+	if challenge_mode:
+		current_score = current_score * 1.5
 
 	if current_score > high_score:
 		high_score = current_score
