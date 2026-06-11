@@ -32,7 +32,7 @@ func _start_gameplay_countdown() -> void:
 	var calculated_lifespan = game_timer.wait_time * 0.75
 	
 	if Progression.challenge_mode:
-		game_timer.wait_time = game_timer.wait_time * 0.6
+		game_timer.wait_time = game_timer.wait_time * 0.8
 		calculated_lifespan = calculated_lifespan * 0.6
 	Progression.max_battery = calculated_lifespan
 	Progression.flashlight_battery = calculated_lifespan

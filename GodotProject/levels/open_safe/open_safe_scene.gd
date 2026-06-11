@@ -17,14 +17,11 @@ var feedback_tween: Tween
 var container_start_x: float
 
 func _ready() -> void:
-	# Store the original position for our screen-shake effect
 	container_start_x = container.position.x
 	
-	# 1. Initialize text layouts
-	feedback_label.text = "ENTER SECURE OVERRIDE SEQUENCE"
+	feedback_label.text = "ENTER THE PASSWORD"
 	feedback_label.add_theme_color_override("font_color", Color(0.4, 0.4, 0.4)) # Slate gray
 	
-	# 2. Setup professional terminal layout overrides
 	_apply_terminal_styling()
 	
 	# 3. Automatically grab focus so the player can type immediately

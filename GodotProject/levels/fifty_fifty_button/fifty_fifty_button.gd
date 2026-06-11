@@ -19,17 +19,15 @@ func _ready() -> void:
 	container.alignment = BoxContainer.ALIGNMENT_CENTER
 	
 	if Progression.challenge_mode:
-		print("[PUZZLE] Challenge Mode Active: Styling emergency wire array.")
 		winning_button_index = randi() % 2
 		
-		button_left.text = "   OVERRIDE A   "
-		button_right.text = "   OVERRIDE B   "
+		button_left.text = "   DEFUSE?   "
+		button_right.text = "    DEFUSE?   "
 		button_right.show()
 		
 		_style_as_emergency_button(button_left)
 		_style_as_emergency_button(button_right)
 	else:
-		print("[PUZZLE] Regular Mode Active: Deploying Main Override Switch.")
 		winning_button_index = 0
 		button_right.hide()
 		
@@ -45,7 +43,7 @@ func _on_button_pressed(clicked_button_index: int) -> void:
 		result_label.text = "LAUNCH CANCELLED! Now get out of the facility!!"
 		result_label.add_theme_color_override("font_color", Color.GREEN)
 	else:
-		result_label.text = "Skill issue. Error cascade initialized. Enjoy."
+		result_label.text = "Skill issue. Enjoy a comical death"
 		result_label.add_theme_color_override("font_color", Color.RED)
 	
 	await get_tree().create_timer(2.0).timeout
@@ -54,6 +52,7 @@ func _on_button_pressed(clicked_button_index: int) -> void:
 		riddle_completed.emit()
 	else:
 		Progression.facility_detonated.emit()
+		riddle_cancelled.emit()
 
 func _style_as_emergency_button(btn: Button) -> void:
 	# Font styling configurations
