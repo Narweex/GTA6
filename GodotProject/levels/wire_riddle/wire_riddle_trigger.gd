@@ -24,4 +24,7 @@ func _on_interact() -> void:
 func get_prompt_text() -> String:
 	if Progression.riddles.get(riddle_id, false) == true:
 		return "Fixed fuse"
+	
+	if Progression.riddles.get("key_search", false) == false:
+		return "Locked. Find the key"
 	return "Press [E] to fix the fuse"

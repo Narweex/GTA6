@@ -22,18 +22,21 @@ func _ready() -> void:
 	$InteractableComponent.on_interact.connect(_toggle_door)
 
 func _toggle_door() -> void:
-	if Progression.riddles.get("wire_riddle",false) == false:
-		print("Gate is locked, go to power box")
+	
+	var wire_solved = Progression.riddles.get("wire_riddle", false)
+	var safe_solved = Progression.riddles.get("open_safe", false)
+	
+	if not (wire_solved and safe_solved):
+		print("locked gate, need remote and fixed wire")
 		return
+		
 	if is_open:
 		return
 		
 	is_open = true
 	
-	# 2. Kollision deaktivieren (sicher aufgeschoben für die Physik-Engine)
 	collision.set_deferred("disabled", true)
 	
-	# Da es nur einmal aufgeht, brauchen wir kein "if is_open else ..." mehr
 	var target_left_x := left_initial_x - distance
 	var target_right_x := right_initial_x + distance
 	
@@ -41,3 +44,14 @@ func _toggle_door() -> void:
 	
 	tween.tween_property(leftside, "position:x", target_left_x, animation_time).set_trans(Tween.TRANS_SINE)
 	tween.tween_property(rightside, "position:x", target_right_x, animation_time).set_trans(Tween.TRANS_SINE)
+func get_prompt_text() -> String:
+	if is_open:
+		return "Door is open"
+		
+	
+	if not Progression.riddles.get("open_safe", false):
+		return "Locked. You need the remote"
+	if not Progression.riddles.get("wire_riddle", false):
+		return "Locked. Unblock the power"
+		
+	return "Press [E] to open"
