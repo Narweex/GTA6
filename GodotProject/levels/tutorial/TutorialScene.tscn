@@ -56,7 +56,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_mdstt")
 theme_override_font_sizes/font_size = 20
-text = "Find and Solve the riddles"
+text = "Find and Solve the riddles &  don't run out of flashlight battery"
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -74,7 +74,7 @@ size_flags_horizontal = 3
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_mdstt")
 theme_override_font_sizes/font_size = 20
-text = "Find the door to escape"
+text = "Find the door to escape. "
 horizontal_alignment = 1
 autowrap_mode = 3
 
