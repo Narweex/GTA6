@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dfyc5jjdb6tv3" path="res://levels/cable_hex/cable_hex_scene.gd" id="1_c3m62"]
 [ext_resource type="Texture2D" uid="uid://cs2ew5kuet2qy" path="res://common/ui/backgrounds/circuit_background.png" id="2_su4t5"]
+[ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="3_be0lu"]
 
 [node name="CableHexScene" type="Control" unique_id=1283024870]
-z_index = 50
+z_index = 60
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,11 +32,13 @@ stretch_mode = 3
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 50.0
-offset_top = 127.0
-offset_right = 50.0
-offset_bottom = 150.0
+offset_left = 17.0
+offset_top = 65.0
+offset_right = 17.0
+offset_bottom = 120.0
 grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_be0lu")
+theme_override_font_sizes/font_size = 19
 text = "REPAIR THE GENERATOR BY CORRECTLY CONNECTING THE WIRES. IF YOU ARE COLOURBLIND, IT'S GOING TO BE TUFF"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -45,7 +48,6 @@ autowrap_mode = 3
 [node name="ActiveLine" type="Line2D" parent="." unique_id=1652100809]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2032693206]
-z_index = 10
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5

@@ -1,11 +1,15 @@
-# interaction_prompt.gd
 extends Control
+
 @onready var label: Label = $InteractionLabel
 
 func _ready() -> void:
-	hide_prompt() #hidden initially
+	hide_prompt() 
 
 func show_prompt(text: String = "Press [E] to Interact") -> void:
+	if Progression.is_minigame_active:
+		hide_prompt()
+		return
+		
 	label.text = text
 	visible = true
 

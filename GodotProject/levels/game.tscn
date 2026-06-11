@@ -253,7 +253,6 @@
 [ext_resource type="Material" uid="uid://ppi2qtrxmaim" path="res://resources/assets/materials/Exid_outer.tres" id="212_lab6y"]
 [ext_resource type="Script" uid="uid://n04oy1cjvca2" path="res://levels/wire_riddle/wire_riddle_trigger.gd" id="214_ldmn0"]
 [ext_resource type="Material" uid="uid://cf2svhnjn4884" path="res://resources/assets/materials/Exit_inner.tres" id="214_lxfha"]
-[ext_resource type="Script" uid="uid://o5ckrb3del3x" path="res://resources/scripts/interaction/interactable_component.gd" id="215_5koig"]
 [ext_resource type="PackedScene" uid="uid://voaqikrtm63l" path="res://components/interactables/kasten.tscn" id="215_5y3ms"]
 [ext_resource type="Texture2D" uid="uid://ccbb4n7js8u3" path="res://resources/assets/textures/Bridge/Bridge_wall_2_Base_color.png" id="216_yeg2t"]
 [ext_resource type="Texture2D" uid="uid://c3w0ukvpjkjtv" path="res://resources/assets/textures/Bridge/Bridge_wall_2_Metallic.png" id="217_rc4og"]
@@ -276,6 +275,7 @@
 [ext_resource type="Texture2D" uid="uid://d7k075mx7kha" path="res://resources/assets/textures/Reactor/Ractor_machine_1_Normal_OpenGL.png" id="230_lxfha"]
 [ext_resource type="Texture2D" uid="uid://by8esdf8kdlnp" path="res://resources/assets/textures/Reactor/Ractor_machine_1_Roughness.png" id="231_fjk2m"]
 [ext_resource type="Texture2D" uid="uid://y1hja3k4pn5l" path="res://resources/assets/textures/Reactor/Reactor_Machine_handle_Base_color.png" id="232_e72x8"]
+[ext_resource type="PackedScene" uid="uid://bcy60aonm74hp" path="res://components/interactables/interactable_component_kasten.tscn" id="232_ndmr1"]
 [ext_resource type="Texture2D" uid="uid://t78xy0yhj8iu" path="res://resources/assets/textures/Reactor/Reactor_Machine_handle_Metallic.png" id="233_yeg2t"]
 [ext_resource type="Texture2D" uid="uid://c431mjy1nxgeq" path="res://resources/assets/textures/Reactor/Reactor_Machine_handle_Normal_OpenGL.png" id="234_rc4og"]
 [ext_resource type="Texture2D" uid="uid://c3iwio76f55ma" path="res://resources/assets/textures/Reactor/Reactor_Machine_handle_Roughness.png" id="235_4n5fo"]
@@ -915,8 +915,8 @@ normal_enabled = true
 normal_scale = 1.35
 normal_texture = ExtResource("163_pks5g")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ldmn0"]
-size = Vector3(0.28076172, 0.73524475, 0.49975586)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_udhy4"]
+points = PackedVector3Array(-0.28281403, -0.48502827, -0.18500017, 0.21718597, -0.48502827, -0.18500017, -0.28281403, -0.48502827, 0.006954327, -0.28281403, 0.3149718, -0.18500017, 0.21718597, -0.48502827, 0.006954327, 0.21718597, 0.3149718, -0.18500017, -0.21904151, -0.28025144, 0.042310253, -0.28281403, 0.3149718, 0.006954327, -0.19383594, -0.28025144, 0.04113099, 0.21718597, 0.3149718, 0.006954327, 0.10872865, 0.075739205, 0.03309858, -0.21904151, -0.20202121, 0.042310253, -0.17102858, 0.075739205, 0.03309858)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4sf74"]
 albedo_texture = ExtResource("216_yeg2t")
@@ -2181,23 +2181,20 @@ surface_material_override/0 = SubResource("StandardMaterial3D_cv8gu")
 [node name="Bridge_breaker_1" parent="Kaunas" index="249" unique_id=1112976400]
 material_override = ExtResource("4_hxd3m")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Bridge_breaker_1" index="0" unique_id=215509697]
-script = ExtResource("214_ldmn0")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Bridge_breaker_1/StaticBody3D" unique_id=701105868]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.804511, 1.3546324, 18.178047)
-shape = SubResource("BoxShape3D_ldmn0")
-
-[node name="InteractableComponent" type="Node" parent="Kaunas/Bridge_breaker_1/StaticBody3D" unique_id=1446921940]
-script = ExtResource("215_5koig")
-metadata/_custom_type_script = "uid://o5ckrb3del3x"
-
-[node name="Node3D" parent="Kaunas/Bridge_breaker_1" index="1" unique_id=2132639943 instance=ExtResource("215_5y3ms")]
+[node name="Node3D" parent="Kaunas/Bridge_breaker_1" index="0" unique_id=2132639943 instance=ExtResource("215_5y3ms")]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -7.82549, 0, 30.44054)
 script = null
 
 [node name="Bridge_breaker_2" parent="Kaunas" index="250" unique_id=1541410183]
 surface_material_override/0 = ExtResource("175_kp8cn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Bridge_breaker_2" index="0" unique_id=952276034]
+script = ExtResource("214_ldmn0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Bridge_breaker_2/StaticBody3D" unique_id=1903730944]
+shape = SubResource("ConvexPolygonShape3D_udhy4")
+
+[node name="InteractableComponent" parent="Kaunas/Bridge_breaker_2/StaticBody3D" unique_id=545760649 instance=ExtResource("232_ndmr1")]
 
 [node name="Point Grün" parent="Kaunas" index="252" unique_id=7010814]
 transform = Transform3D(0, -1, 0, 0, 0, 1, -1, 0, 0, 41.916096, 1.0382601, 24.319597)
@@ -2400,16 +2397,16 @@ material_override = SubResource("StandardMaterial3D_tpkc6")
 surface_material_override/0 = SubResource("StandardMaterial3D_yeg2t")
 
 [node name="Key" parent="Kaunas" index="338" unique_id=268552003]
-transform = Transform3D(-1.3113416e-09, -0.03, 0, 0.03, -1.3113416e-09, 0, 0, 0, 0.03, 61.030487, -1.6950879, 21.234983)
+transform = Transform3D(-1.3113416e-09, -0.03, 0, 0.03, -1.3113416e-09, 0, 0, 0, 0.03, 60.93036, -1.6950879, 21.234983)
 surface_material_override/0 = SubResource("StandardMaterial3D_8gu7t")
 script = ExtResource("269_wp11w")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Key" index="0" unique_id=407238504]
-transform = Transform3D(3, -2.842171e-14, 0, 2.842171e-14, 3, 0, 0, 0, 3, 1.8943138, -4.998291, 0)
+transform = Transform3D(3, -4.2632564e-14, 0, 4.2632564e-14, 3, 0, 0, 0, 3, 1.8943138, -4.3599854, 0)
 script = ExtResource("245_fjk2m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Key/StaticBody3D" unique_id=286684483]
-transform = Transform3D(2, 1.4210855e-14, 0, -1.4210855e-14, 2, 0, 0, 0, 2, -0.66049576, -2.4830322, 0)
+transform = Transform3D(2, 1.4210855e-14, 0, -1.4210855e-14, 2, 0, 0, 0, 2, -0.66049767, -2.5089722, 0)
 shape = SubResource("ConvexPolygonShape3D_jpo5b")
 
 [node name="InteractableComponent" parent="Kaunas/Key/StaticBody3D" unique_id=982559477 instance=ExtResource("169_riv5k")]
@@ -2421,6 +2418,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_yrv25")
 script = ExtResource("187_kv68m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kaunas/Save/StaticBody3D" unique_id=522021857]
+transform = Transform3D(1.6693861, 0, 0.32117096, 0, 1.7000003, 0, -0.32117096, 0, 1.6693861, 0.075363636, 0, 0.029312134)
 shape = SubResource("ConvexPolygonShape3D_ybcoh")
 
 [node name="InteractableComponent" parent="Kaunas/Save/StaticBody3D" unique_id=508249845 instance=ExtResource("169_riv5k")]
@@ -2937,7 +2935,7 @@ label_settings = SubResource("LabelSettings_c4gfx")
 script = ExtResource("190_8irk1")
 
 [node name="GameTimer" type="Timer" parent="HUDLayer/HUD" unique_id=1221119760]
-wait_time = 300.0
+wait_time = 420.0
 one_shot = true
 autostart = true
 
@@ -2992,11 +2990,14 @@ layout_mode = 2
 
 [node name="InteractionText" type="Control" parent="HUDLayer" unique_id=1559098688 groups=["interaction_ui"]]
 layout_mode = 3
-anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
+anchor_top = 0.432
+anchor_right = 0.50200003
 anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -169.936
+offset_right = 19.695984
+offset_bottom = -198.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("187_ufk2c")
@@ -3014,6 +3015,7 @@ offset_right = 75.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("185_vdifd")
 
 [node name="TextureRect" type="TextureRect" parent="HUDLayer" unique_id=1392484280]
 anchors_preset = 8
@@ -3021,14 +3023,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
+offset_left = 163.0
+offset_top = 162.0
+offset_right = 179.0
+offset_bottom = 178.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
 pivot_offset = Vector2(64, 64)
+mouse_filter = 2
 texture = ExtResource("369_jmo0o")
 stretch_mode = 3
 

@@ -7,6 +7,7 @@ signal stage_changed(riddle_id: String)
 signal facility_detonated
 var challenge_mode: bool = false
 var tutorial_enabled: bool = true
+var is_minigame_active: bool = false
 
 var max_battery: float = 100.0
 var flashlight_battery: float = 100.0
@@ -52,10 +53,10 @@ func load_saved_data() -> void:
 			high_score = int(data["saved_high_score"])
 
 var riddles = {
-	"cable_hex": true,
-	"open_safe": true,
-	"remote_use": true,
-	"key_search": true,
+	"cable_hex": false,
+	"open_safe": false,
+	"remote_use": false,
+	"key_search": false,
 	"wire_riddle": false,
 	"fifty_fifty_button": false
 }
@@ -102,7 +103,7 @@ func get_current_stage_text() -> String:
 
 			
 func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
-	# 1. Safely load and instance the UI scene
+	is_minigame_active = true
 	var minigame_resource = load(minigame_scene_path)
 	if not minigame_resource:
 		push_error("Failed to load minigame path: " + minigame_scene_path)
@@ -129,6 +130,7 @@ func launch_minigame(riddle_id: String, minigame_scene_path: String) -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _close_minigame(instance: Node) -> void:
+	is_minigame_active = false
 	instance.queue_free()
 	
 	get_tree().paused = false

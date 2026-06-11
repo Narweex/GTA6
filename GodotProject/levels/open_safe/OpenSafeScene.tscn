@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d2wmsfw4yfttc"]
 
 [ext_resource type="Script" uid="uid://dccc7fays8sul" path="res://levels/open_safe/open_safe_scene.gd" id="1_0jjhh"]
-[ext_resource type="Texture2D" uid="uid://cw8aegniqbkgn" path="res://resources/assets/2d assets/Safe.png" id="2_j5dqs"]
+[ext_resource type="FontFile" uid="uid://cft2d1lfru6j2" path="res://common/ui/fonts/Bungee-Regular.ttf" id="2_0jjhh"]
 
 [node name="OpenSafe" type="Control" unique_id=1223323298]
 layout_mode = 3
@@ -12,27 +12,30 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0jjhh")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=14509402]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1000692485]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_j5dqs")
+color = Color(0, 0, 0, 0.7764706)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1482134198]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 817.0
-offset_top = 152.0
-offset_right = 817.0
-offset_bottom = 152.0
+offset_left = 315.0
+offset_top = -2.0
+offset_right = -300.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
 [node name="RiddleLabel" type="Label" parent="VBoxContainer" unique_id=1313237281]
 layout_mode = 2
-text = "Input the code to open the safe"
+theme_override_fonts/font = ExtResource("2_0jjhh")
+text = "Input the correct code to unlock the safe. The code is on the board on your right"
+horizontal_alignment = 1
 
 [node name="CodeInput" type="LineEdit" parent="VBoxContainer" unique_id=351646109]
 layout_mode = 2
