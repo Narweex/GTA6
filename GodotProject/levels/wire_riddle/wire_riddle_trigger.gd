@@ -9,13 +9,11 @@ func _ready() -> void:
 	
 
 func _on_interact() -> void:
-	# --- KORREKTUR HIER ---
-	# Wenn key_search FALSE ist (also der Schlüssel noch nicht gefunden wurde), 
-	# dann blockieren wir den Zugriff!
+	
 	if Progression.riddles.get("key_search", false) == false:
-		print("Du musst erst den Schlüssel finden!")
+		print("You need a key")
 		return
-	# ----------------------
+	
 	
 	if Progression.riddles.get(riddle_id, false) == true:
 		print("The fuse is already fixed")
