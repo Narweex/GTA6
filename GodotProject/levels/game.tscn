@@ -2234,6 +2234,7 @@ shape = SubResource("ConvexPolygonShape3D_cjqg5")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Kaunas/Bridge_breaker_2" index="1" unique_id=548698948]
 stream = ExtResource("236_4dwd4")
 volume_db = -10.0
+autoplay = true
 
 [node name="Point Grün" parent="Kaunas" index="255" unique_id=1026382476]
 transform = Transform3D(0, -1, 0, 0, 0, 1, -1, 0, 0, 41.916096, 1.0382601, 24.319597)
@@ -3105,6 +3106,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.134352, 3.1925135, -2.4924
 [node name="Buzz" type="AudioStreamPlayer3D" parent="." unique_id=1455591924]
 transform = Transform3D(0.73260725, -0.21546029, 0.6456497, 0, 0.94857585, 0.31655005, -0.6806516, -0.23190685, 0.69493353, 19.323233, 6.2264376, -12.882196)
 stream = ExtResource("236_4dwd4")
+autoplay = true
+parameters/looping = true
 
 [connection signal="timeout" from="HUDLayer/HUD/GameTimer" to="HUDLayer/HUD" method="_on_game_timer_timeout"]
 
