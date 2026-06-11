@@ -8,6 +8,8 @@ signal facility_detonated
 var challenge_mode: bool = false
 var tutorial_enabled: bool = true
 
+var max_battery: float = 100.0
+var flashlight_battery: float = 100.0
 const SAVE_FILE_PATH = "user://game_save_data.json"
 var high_score: int = 0
 var current_score: int = 0
