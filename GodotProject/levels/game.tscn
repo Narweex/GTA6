@@ -61,6 +61,7 @@
 [ext_resource type="Texture2D" uid="uid://blks6tr7gt3d6" path="res://resources/assets/textures/Office/Office_walls_Roughness.png" id="15_wj41c"]
 [ext_resource type="Texture2D" uid="uid://dgno12q4d3pn1" path="res://resources/assets/textures/Hallway/M_Hallway_pipes_Metallic.png" id="16_2gjly"]
 [ext_resource type="Texture2D" uid="uid://dy0kymwxtgrjs" path="res://resources/assets/textures/Office/Table_shelve_big_Metallic.png" id="16_edr7y"]
+[ext_resource type="Texture2D" uid="uid://cs2jd66savliu" path="res://resources/assets/geometry/Blender/Kaunas_Screenshot 2026-06-11 113434.png" id="16_ndmr1"]
 [ext_resource type="Texture2D" uid="uid://wnjekcgw0dpt" path="res://resources/assets/textures/Office/M_Office_window_frame_Base_color.png" id="16_vyqle"]
 [ext_resource type="Texture2D" uid="uid://c66k728p1a76f" path="res://resources/assets/textures/Office/Table_shelve_big_Normal.png" id="17_kq12w"]
 [ext_resource type="Texture2D" uid="uid://hnmb751v8sd2" path="res://resources/assets/textures/Office/M_Office_window_frame_Metallic.png" id="17_xoeau"]
@@ -375,7 +376,7 @@
 [ext_resource type="Texture2D" uid="uid://dnh7rtoc4hu8w" path="res://resources/assets/textures/Control_room/Red_button_Base_color.png" id="311_5n3kx"]
 [ext_resource type="Texture2D" uid="uid://bgc0ssmewef4v" path="res://resources/assets/textures/Control_room/Red_button_Metallic.png" id="312_degmy"]
 [ext_resource type="Texture2D" uid="uid://chv7lhcciqy4g" path="res://resources/assets/textures/Control_room/Red_button_Roughness.png" id="313_da8kp"]
-[ext_resource type="Script" path="res://levels/control_room_light.gd" id="323_ldmn0"]
+[ext_resource type="Script" uid="uid://bts5tefgt46xn" path="res://levels/control_room_light.gd" id="323_ldmn0"]
 [ext_resource type="Texture2D" uid="uid://chvmusxkgyla1" path="res://resources/assets/textures/Reactor/Reactor_floor_details_Base_color.png" id="324_e1p1m"]
 [ext_resource type="Texture2D" uid="uid://db1n02no6rmnb" path="res://resources/assets/textures/Reactor/Reactor_floor_details_Roughness.png" id="325_ssuej"]
 [ext_resource type="Texture2D" uid="uid://bxt2nyr440lf6" path="res://resources/assets/textures/Reactor/Reactor_wall_details_Base_color.png" id="329_bdhb6"]
@@ -419,6 +420,12 @@ albedo_texture = ExtResource("13_ndqgr")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g51sf"]
 albedo_texture = ExtResource("14_o8w11")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4dwd4"]
+albedo_texture = ExtResource("16_ndmr1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n4ht7"]
+metallic = 0.58
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf7a7"]
 albedo_texture = ExtResource("5_o3erk")
@@ -1369,10 +1376,10 @@ fog_light_color = Color(0.25739715, 0.44756263, 0.54129857, 1)
 fog_light_energy = 8.08
 fog_sky_affect = 0.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 1.0
+volumetric_fog_density = 0.7629
 volumetric_fog_albedo = Color(0.7241164, 0.9999998, 0.95228094, 1)
 volumetric_fog_anisotropy = 0.38
-volumetric_fog_length = 229.02
+volumetric_fog_length = 643.96
 volumetric_fog_ambient_inject = 0.3
 volumetric_fog_sky_affect = 0.163
 
@@ -1390,50 +1397,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.113211, 1.271434, 4.031799
 [node name="Kaunas" parent="." unique_id=786600455 instance=ExtResource("2_feb5d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.158005, 0, -16.815361)
 
-[node name="Sign_stairs" parent="Kaunas" index="0" unique_id=1977308603]
+[node name="Sign_stairs" parent="Kaunas" index="0" unique_id=624128972]
 surface_material_override/0 = SubResource("StandardMaterial3D_1tsjh")
 
-[node name="Sign_stairs_picture" parent="Kaunas" index="1" unique_id=2062478686]
+[node name="Sign_stairs_picture" parent="Kaunas" index="1" unique_id=1612008252]
 surface_material_override/0 = SubResource("StandardMaterial3D_l6dc1")
 
-[node name="Point_003" parent="Kaunas" index="2" unique_id=289518184]
+[node name="Point_003" parent="Kaunas" index="2" unique_id=386940046]
 light_energy = 3.0
 
-[node name="Point_002" parent="Kaunas" index="3" unique_id=1565722384]
+[node name="Point_002" parent="Kaunas" index="3" unique_id=1474534685]
 light_energy = 3.0
 
-[node name="Sign_stairs_glass" parent="Kaunas" index="4" unique_id=932163455]
+[node name="Sign_stairs_glass" parent="Kaunas" index="4" unique_id=443486601]
 surface_material_override/0 = SubResource("StandardMaterial3D_7qfon")
 
-[node name="Plane_009" parent="Kaunas" index="5" unique_id=114536626]
+[node name="Plane_009" parent="Kaunas" index="5" unique_id=1988949092]
 material_override = SubResource("StandardMaterial3D_23ukm")
 
-[node name="Plane_008" parent="Kaunas" index="6" unique_id=1650747659]
+[node name="Plane_008" parent="Kaunas" index="6" unique_id=1707410402]
 material_override = SubResource("StandardMaterial3D_xk5dl")
 
-[node name="Plane_006" parent="Kaunas" index="7" unique_id=299345773]
+[node name="Plane_006" parent="Kaunas" index="7" unique_id=1305003648]
 material_override = SubResource("StandardMaterial3D_xeqon")
 
-[node name="Plane_005" parent="Kaunas" index="8" unique_id=834463948]
+[node name="Plane_005" parent="Kaunas" index="8" unique_id=1736587843]
 material_override = SubResource("StandardMaterial3D_e012d")
 
-[node name="Plane_004" parent="Kaunas" index="9" unique_id=617209451]
+[node name="Plane_004" parent="Kaunas" index="9" unique_id=1159787724]
 material_override = SubResource("StandardMaterial3D_8ssme")
 
-[node name="Plane_003" parent="Kaunas" index="10" unique_id=2031648566]
+[node name="Plane_003" parent="Kaunas" index="10" unique_id=507210383]
 material_override = SubResource("StandardMaterial3D_5x6pk")
 
-[node name="Plane_002" parent="Kaunas" index="11" unique_id=468393777]
+[node name="Plane_002" parent="Kaunas" index="11" unique_id=1839774346]
 material_override = SubResource("StandardMaterial3D_g51sf")
 
-[node name="Hallway_breaker_1_001" parent="Kaunas" index="12" unique_id=2054436004]
+[node name="Hallway_breaker_1_001" parent="Kaunas" index="12" unique_id=1166230224]
 material_override = ExtResource("4_hxd3m")
 
-[node name="Point" parent="Kaunas" index="13" unique_id=2052391235]
+[node name="Point" parent="Kaunas" index="13" unique_id=1468117576]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 18.255026, 5.512101, 3.3264837)
 light_energy = 1.803
 
-[node name="Alarm" parent="Kaunas" index="14" unique_id=1298826568]
+[node name="Plane_010" parent="Kaunas" index="16" unique_id=186390765]
+material_override = SubResource("StandardMaterial3D_4dwd4")
+surface_material_override/0 = SubResource("StandardMaterial3D_n4ht7")
+
+[node name="Alarm" parent="Kaunas" index="17" unique_id=619203322]
 surface_material_override/0 = ExtResource("4_y4uvs")
 
 [node name="Marker3D" type="Marker3D" parent="Kaunas/Alarm" index="0" unique_id=1169873265]
@@ -1451,7 +1462,7 @@ spot_angle = 108.08
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099)
 remote_path = NodePath("../SpotLight3D")
 
-[node name="Alarm_001" parent="Kaunas" index="15" unique_id=1820095959]
+[node name="Alarm_001" parent="Kaunas" index="18" unique_id=509047846]
 material_override = ExtResource("4_y4uvs")
 
 [node name="Marker3D" type="Marker3D" parent="Kaunas/Alarm_001" index="0" unique_id=960278861]
@@ -1468,7 +1479,7 @@ spot_angle = 108.08
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099)
 remote_path = NodePath("../SpotLight3D")
 
-[node name="Alarm_002" parent="Kaunas" index="16" unique_id=691243657]
+[node name="Alarm_002" parent="Kaunas" index="19" unique_id=738967367]
 material_override = ExtResource("4_y4uvs")
 
 [node name="Marker3D" type="Marker3D" parent="Kaunas/Alarm_002" index="0" unique_id=2030614311]
@@ -1485,7 +1496,7 @@ spot_angle = 108.08
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099)
 remote_path = NodePath("../SpotLight3D")
 
-[node name="Alarm_003" parent="Kaunas" index="17" unique_id=827041574]
+[node name="Alarm_003" parent="Kaunas" index="20" unique_id=2025390351]
 material_override = ExtResource("4_y4uvs")
 
 [node name="Marker3D" type="Marker3D" parent="Kaunas/Alarm_003" index="0" unique_id=1419780985]
@@ -1502,69 +1513,69 @@ spot_angle = 108.08
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.099)
 remote_path = NodePath("../SpotLight3D")
 
-[node name="Hallway_lamp" parent="Kaunas" index="18" unique_id=1134498778]
+[node name="Hallway_lamp" parent="Kaunas" index="21" unique_id=349788149]
 surface_material_override/0 = SubResource("StandardMaterial3D_yf7a7")
 
-[node name="Hallway_breaker_1" parent="Kaunas" index="19" unique_id=2015705801]
+[node name="Hallway_breaker_1" parent="Kaunas" index="22" unique_id=815939933]
 material_override = ExtResource("4_hxd3m")
 
-[node name="Hallway_breaker_2" parent="Kaunas" index="20" unique_id=1817099833]
+[node name="Hallway_breaker_2" parent="Kaunas" index="23" unique_id=1795344484]
 material_override = ExtResource("5_lmtqe")
 
-[node name="Hallway_floor" parent="Kaunas" index="21" unique_id=761411560]
+[node name="Hallway_floor" parent="Kaunas" index="24" unique_id=1307255648]
 mesh = SubResource("ArrayMesh_bva1w")
 surface_material_override/0 = SubResource("StandardMaterial3D_lnyny")
 
-[node name="Hallway_warning_sign" parent="Kaunas" index="22" unique_id=2080532226]
+[node name="Hallway_warning_sign" parent="Kaunas" index="25" unique_id=1560492180]
 surface_material_override/0 = SubResource("StandardMaterial3D_ldpbc")
 
-[node name="Hallway_wall" parent="Kaunas" index="23" unique_id=1234072070]
+[node name="Hallway_wall" parent="Kaunas" index="26" unique_id=97664208]
 surface_material_override/0 = SubResource("StandardMaterial3D_px3hy")
 
-[node name="Hallway_pipes" parent="Kaunas" index="24" unique_id=1754200544]
+[node name="Hallway_pipes" parent="Kaunas" index="27" unique_id=1790097843]
 surface_material_override/0 = SubResource("StandardMaterial3D_0wxyg")
 
-[node name="Hallway_bridge" parent="Kaunas" index="25" unique_id=2022672662]
+[node name="Hallway_bridge" parent="Kaunas" index="28" unique_id=2141410896]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.452759, 3.2181904, 19.195923)
 surface_material_override/0 = SubResource("StandardMaterial3D_h8uy7")
 
-[node name="Hallway_bridge_lamp" parent="Kaunas" index="26" unique_id=1562046555]
+[node name="Hallway_bridge_lamp" parent="Kaunas" index="29" unique_id=2098715967]
 material_override = ExtResource("27_s4fun")
 
-[node name="Hallway_bridge_lamp_001" parent="Kaunas" index="27" unique_id=1740939875]
+[node name="Hallway_bridge_lamp_001" parent="Kaunas" index="30" unique_id=1119521715]
 material_override = ExtResource("27_s4fun")
 
-[node name="Hallway_bridge_lamp_002" parent="Kaunas" index="28" unique_id=1364720789]
+[node name="Hallway_bridge_lamp_002" parent="Kaunas" index="31" unique_id=341874360]
 material_override = ExtResource("27_s4fun")
 
-[node name="Hallway_door" parent="Kaunas" index="29" unique_id=342472307]
+[node name="Hallway_door" parent="Kaunas" index="32" unique_id=1947063118]
 material_override = ExtResource("19_lnyny")
 
-[node name="Hallway_door_001" parent="Kaunas" index="30" unique_id=799818425]
+[node name="Hallway_door_001" parent="Kaunas" index="33" unique_id=503960878]
 material_override = ExtResource("19_lnyny")
 
-[node name="Hallway_door_002" parent="Kaunas" index="31" unique_id=1353959222]
+[node name="Hallway_door_002" parent="Kaunas" index="34" unique_id=1918424480]
 material_override = ExtResource("19_lnyny")
 
-[node name="Hallway_door_003" parent="Kaunas" index="32" unique_id=1496419702]
+[node name="Hallway_door_003" parent="Kaunas" index="35" unique_id=26176645]
 surface_material_override/0 = ExtResource("19_lnyny")
 
-[node name="Hallway_door_004" parent="Kaunas" index="33" unique_id=638734364]
+[node name="Hallway_door_004" parent="Kaunas" index="36" unique_id=665564086]
 material_override = ExtResource("19_lnyny")
 
-[node name="Hallway_door_frame" parent="Kaunas" index="34" unique_id=382849338]
+[node name="Hallway_door_frame" parent="Kaunas" index="37" unique_id=645617035]
 surface_material_override/0 = SubResource("StandardMaterial3D_8f8qe")
 
-[node name="Hallway_door_locked" parent="Kaunas" index="35" unique_id=905389325]
+[node name="Hallway_door_locked" parent="Kaunas" index="38" unique_id=443207362]
 surface_material_override/0 = ExtResource("24_px3hy")
 
-[node name="Hallway_door_locked_001" parent="Kaunas" index="36" unique_id=277613003]
+[node name="Hallway_door_locked_001" parent="Kaunas" index="39" unique_id=325784138]
 material_override = ExtResource("24_px3hy")
 
-[node name="Hallway_door_locked_002" parent="Kaunas" index="37" unique_id=985747893]
+[node name="Hallway_door_locked_002" parent="Kaunas" index="40" unique_id=268708424]
 material_override = ExtResource("24_px3hy")
 
-[node name="Hallway_door_locked_004" parent="Kaunas" index="39" unique_id=2017588375]
+[node name="Hallway_door_locked_004" parent="Kaunas" index="42" unique_id=361875642]
 material_override = ExtResource("24_px3hy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Hallway_door_locked_004" index="0" unique_id=1377884438]
@@ -1575,272 +1586,272 @@ shape = SubResource("ConvexPolygonShape3D_c4gfx")
 
 [node name="InteractableComponent" parent="Kaunas/Hallway_door_locked_004/StaticBody3D" unique_id=2066935556 instance=ExtResource("169_riv5k")]
 
-[node name="Hallway_door_locked_008" parent="Kaunas" index="40" unique_id=1203043113]
+[node name="Hallway_door_locked_008" parent="Kaunas" index="43" unique_id=1418652220]
 material_override = ExtResource("24_px3hy")
 
-[node name="Hallway_door_locked_005" parent="Kaunas" index="41" unique_id=533473581]
+[node name="Hallway_door_locked_005" parent="Kaunas" index="44" unique_id=334207365]
 material_override = ExtResource("24_px3hy")
 
-[node name="Hallway_door_locked_006" parent="Kaunas" index="42" unique_id=1230648815]
+[node name="Hallway_door_locked_006" parent="Kaunas" index="45" unique_id=2053372472]
 material_override = ExtResource("24_px3hy")
 
-[node name="Hallway_door_locked_007" parent="Kaunas" index="43" unique_id=2024468256]
+[node name="Hallway_door_locked_007" parent="Kaunas" index="46" unique_id=689875755]
 material_override = ExtResource("24_px3hy")
 
-[node name="Hallway_door_locked_009" parent="Kaunas" index="44" unique_id=1689644214]
+[node name="Hallway_door_locked_009" parent="Kaunas" index="47" unique_id=358863958]
 material_override = ExtResource("24_px3hy")
 
-[node name="Hallway_door_locked_010" parent="Kaunas" index="45" unique_id=1195180301]
+[node name="Hallway_door_locked_010" parent="Kaunas" index="48" unique_id=35753390]
 material_override = ExtResource("24_px3hy")
 
-[node name="Hallway_door_locked_017" parent="Kaunas" index="52" unique_id=1663625693]
+[node name="Hallway_door_locked_017" parent="Kaunas" index="55" unique_id=689787841]
 material_override = ExtResource("24_px3hy")
 
-[node name="Plane" parent="Kaunas" index="53" unique_id=762521883]
+[node name="Plane" parent="Kaunas" index="56" unique_id=235129538]
 material_override = SubResource("StandardMaterial3D_h1ruc")
 
-[node name="Office_light" parent="Kaunas" index="55" unique_id=1366114341]
+[node name="Office_light" parent="Kaunas" index="58" unique_id=1921022561]
 light_color = Color(0.9104373, 0.75037277, 0.45091552, 1)
 light_energy = 11.839
 spot_range = 2.271
 
-[node name="Office_ceiling" parent="Kaunas" index="56" unique_id=1209180421]
+[node name="Office_ceiling" parent="Kaunas" index="59" unique_id=592583874]
 surface_material_override/0 = SubResource("StandardMaterial3D_5628o")
 
-[node name="Office_floor" parent="Kaunas" index="57" unique_id=1603809203]
+[node name="Office_floor" parent="Kaunas" index="60" unique_id=1686449043]
 surface_material_override/0 = SubResource("StandardMaterial3D_fuuk6")
 
-[node name="Office_walls" parent="Kaunas" index="58" unique_id=88615195]
+[node name="Office_walls" parent="Kaunas" index="61" unique_id=1467305970]
 surface_material_override/0 = SubResource("StandardMaterial3D_cwgap")
 
-[node name="Office_window_glass" parent="Kaunas" index="59" unique_id=1895008126]
+[node name="Office_window_glass" parent="Kaunas" index="62" unique_id=392397478]
 surface_material_override/0 = SubResource("StandardMaterial3D_x5p1p")
 
-[node name="Office_window_frame" parent="Kaunas" index="60" unique_id=1825945748]
+[node name="Office_window_frame" parent="Kaunas" index="63" unique_id=397361250]
 surface_material_override/0 = SubResource("StandardMaterial3D_3xib3")
 
-[node name="Closet" parent="Kaunas" index="61" unique_id=825389319]
+[node name="Closet" parent="Kaunas" index="64" unique_id=110515098]
 surface_material_override/0 = SubResource("StandardMaterial3D_36jdj")
 
-[node name="Cabinet_small" parent="Kaunas" index="62" unique_id=1604717675]
+[node name="Cabinet_small" parent="Kaunas" index="65" unique_id=1545927056]
 surface_material_override/0 = SubResource("StandardMaterial3D_i2p71")
 
-[node name="Cabinet_big" parent="Kaunas" index="63" unique_id=634594963]
+[node name="Cabinet_big" parent="Kaunas" index="66" unique_id=1059105077]
 surface_material_override/0 = SubResource("StandardMaterial3D_hve3p")
 
-[node name="Table_shelve_big" parent="Kaunas" index="64" unique_id=1480985754]
+[node name="Table_shelve_big" parent="Kaunas" index="67" unique_id=1437403494]
 surface_material_override/0 = SubResource("StandardMaterial3D_mljfx")
 
-[node name="Table_shelve_small" parent="Kaunas" index="65" unique_id=221355922]
+[node name="Table_shelve_small" parent="Kaunas" index="68" unique_id=1714287711]
 surface_material_override/0 = SubResource("StandardMaterial3D_svdf4")
 
-[node name="Table" parent="Kaunas" index="66" unique_id=712420946]
+[node name="Table" parent="Kaunas" index="69" unique_id=1265625233]
 surface_material_override/0 = SubResource("StandardMaterial3D_qpefm")
 
-[node name="Pinboard_big" parent="Kaunas" index="67" unique_id=1674980585]
+[node name="Pinboard_big" parent="Kaunas" index="70" unique_id=1857861300]
 surface_material_override/0 = SubResource("StandardMaterial3D_baljx")
 
-[node name="Pinboard_small" parent="Kaunas" index="68" unique_id=1587870901]
+[node name="Pinboard_small" parent="Kaunas" index="71" unique_id=1473950633]
 surface_material_override/0 = SubResource("StandardMaterial3D_t2ssd")
 
-[node name="Office_lamp" parent="Kaunas" index="69" unique_id=1189026008]
+[node name="Office_lamp" parent="Kaunas" index="72" unique_id=320154083]
 surface_material_override/0 = SubResource("StandardMaterial3D_vyqle")
 
-[node name="Closet_001" parent="Kaunas" index="70" unique_id=255540021]
+[node name="Closet_001" parent="Kaunas" index="73" unique_id=669175843]
 surface_material_override/0 = SubResource("StandardMaterial3D_7noa1")
 
-[node name="Chair_001" parent="Kaunas" index="71" unique_id=47751185]
+[node name="Chair_001" parent="Kaunas" index="74" unique_id=93275977]
 material_override = ExtResource("36_vuohh")
 
-[node name="Chair_back_001" parent="Kaunas" index="72" unique_id=198082173]
+[node name="Chair_back_001" parent="Kaunas" index="75" unique_id=1357753078]
 surface_material_override/0 = ExtResource("57_xoeau")
 
-[node name="Chair_pillow_001" parent="Kaunas" index="73" unique_id=52872831]
+[node name="Chair_pillow_001" parent="Kaunas" index="76" unique_id=1569585206]
 material_override = ExtResource("37_3gvs5")
 
-[node name="Chair_002" parent="Kaunas" index="74" unique_id=1679939283]
+[node name="Chair_002" parent="Kaunas" index="77" unique_id=1359712959]
 material_override = ExtResource("36_vuohh")
 
-[node name="Chair_back_002" parent="Kaunas" index="75" unique_id=1943000966]
+[node name="Chair_back_002" parent="Kaunas" index="78" unique_id=1818277380]
 material_override = ExtResource("57_xoeau")
 
-[node name="Chair_pillow_002" parent="Kaunas" index="76" unique_id=14559071]
+[node name="Chair_pillow_002" parent="Kaunas" index="79" unique_id=379547014]
 material_override = ExtResource("37_3gvs5")
 
-[node name="Chair_003" parent="Kaunas" index="77" unique_id=416137327]
+[node name="Chair_003" parent="Kaunas" index="80" unique_id=198606768]
 material_override = ExtResource("36_vuohh")
 
-[node name="Chair_back_003" parent="Kaunas" index="78" unique_id=2030229751]
+[node name="Chair_back_003" parent="Kaunas" index="81" unique_id=423877266]
 material_override = ExtResource("57_xoeau")
 
-[node name="Chair_pillow_003" parent="Kaunas" index="79" unique_id=2015459717]
+[node name="Chair_pillow_003" parent="Kaunas" index="82" unique_id=501836909]
 material_override = ExtResource("37_3gvs5")
 
-[node name="Chair_004" parent="Kaunas" index="81" unique_id=1181459668]
+[node name="Chair_004" parent="Kaunas" index="84" unique_id=1765477717]
 material_override = ExtResource("36_vuohh")
 
-[node name="Chair_back_004" parent="Kaunas" index="82" unique_id=135925668]
+[node name="Chair_back_004" parent="Kaunas" index="85" unique_id=771165537]
 material_override = ExtResource("57_xoeau")
 
-[node name="Chair_pillow_004" parent="Kaunas" index="83" unique_id=1792789708]
+[node name="Chair_pillow_004" parent="Kaunas" index="86" unique_id=1231281075]
 material_override = ExtResource("37_3gvs5")
 
-[node name="Office_supportbeams" parent="Kaunas" index="84" unique_id=468432342]
+[node name="Office_supportbeams" parent="Kaunas" index="87" unique_id=2103804385]
 surface_material_override/0 = SubResource("StandardMaterial3D_r3ggl")
 
-[node name="Folder_big" parent="Kaunas" index="85" unique_id=842951983]
+[node name="Folder_big" parent="Kaunas" index="88" unique_id=1237803157]
 surface_material_override/0 = SubResource("StandardMaterial3D_4v2jo")
 
-[node name="Folder_small" parent="Kaunas" index="86" unique_id=1579393399]
+[node name="Folder_small" parent="Kaunas" index="89" unique_id=1958954587]
 surface_material_override/0 = SubResource("StandardMaterial3D_l1i01")
 
-[node name="Mouse" parent="Kaunas" index="87" unique_id=1724133211]
+[node name="Mouse" parent="Kaunas" index="90" unique_id=964543209]
 material_override = ExtResource("98_de524")
 
-[node name="Document_Storage" parent="Kaunas" index="88" unique_id=1770708467]
+[node name="Document_Storage" parent="Kaunas" index="91" unique_id=419873245]
 surface_material_override/0 = ExtResource("98_nc06o")
 
-[node name="Document_Storage_Shelves" parent="Kaunas" index="89" unique_id=518029467]
+[node name="Document_Storage_Shelves" parent="Kaunas" index="92" unique_id=1358995391]
 transform = Transform3D(0.14831018, 0, 0.9889409, 0, 1, 0, -0.9889409, 0, 0.14831018, 3.5684934, 3.1406677, 14.931621)
 surface_material_override/0 = ExtResource("99_qnd83")
 
-[node name="Monitor_002" parent="Kaunas" index="90" unique_id=1769773164]
+[node name="Monitor_002" parent="Kaunas" index="93" unique_id=1562426183]
 material_override = ExtResource("101_0i3gv")
 
-[node name="Monitor_003" parent="Kaunas" index="92" unique_id=894414680]
+[node name="Monitor_003" parent="Kaunas" index="95" unique_id=1390367076]
 material_override = ExtResource("101_0i3gv")
 
-[node name="Monitor_007" parent="Kaunas" index="94" unique_id=1959643162]
+[node name="Monitor_007" parent="Kaunas" index="97" unique_id=1635512957]
 material_override = ExtResource("101_0i3gv")
 
-[node name="Monitor_009" parent="Kaunas" index="96" unique_id=886717185]
+[node name="Monitor_009" parent="Kaunas" index="99" unique_id=1743494599]
 surface_material_override/0 = ExtResource("101_0i3gv")
 
-[node name="Mouse_001" parent="Kaunas" index="98" unique_id=1898998831]
+[node name="Mouse_001" parent="Kaunas" index="101" unique_id=590415678]
 surface_material_override/0 = ExtResource("98_de524")
 
-[node name="Mouse_002" parent="Kaunas" index="99" unique_id=524254804]
+[node name="Mouse_002" parent="Kaunas" index="102" unique_id=1668322395]
 material_override = ExtResource("98_de524")
 
-[node name="Mouse_003" parent="Kaunas" index="100" unique_id=1727959731]
+[node name="Mouse_003" parent="Kaunas" index="103" unique_id=126681309]
 material_override = ExtResource("98_de524")
 
-[node name="Computer_001" parent="Kaunas" index="101" unique_id=125790394]
+[node name="Computer_001" parent="Kaunas" index="104" unique_id=715145123]
 material_override = ExtResource("58_mc3al")
 
-[node name="Computer_002" parent="Kaunas" index="102" unique_id=1503438873]
+[node name="Computer_002" parent="Kaunas" index="105" unique_id=584020090]
 material_override = ExtResource("58_mc3al")
 
-[node name="Computer_003" parent="Kaunas" index="103" unique_id=381074601]
+[node name="Computer_003" parent="Kaunas" index="106" unique_id=1914633273]
 surface_material_override/0 = ExtResource("58_mc3al")
 
-[node name="Document_Storage_001" parent="Kaunas" index="104" unique_id=240840094]
+[node name="Document_Storage_001" parent="Kaunas" index="107" unique_id=1448747529]
 material_override = ExtResource("98_nc06o")
 
-[node name="Document_Storage_Shelves_001" parent="Kaunas" index="105" unique_id=1218118351]
+[node name="Document_Storage_Shelves_001" parent="Kaunas" index="108" unique_id=487057627]
 material_override = ExtResource("99_qnd83")
 
-[node name="Document_Storage_002" parent="Kaunas" index="106" unique_id=1256632039]
+[node name="Document_Storage_002" parent="Kaunas" index="109" unique_id=82179075]
 material_override = ExtResource("98_nc06o")
 
-[node name="Document_Storage_Shelves_002" parent="Kaunas" index="107" unique_id=862583754]
+[node name="Document_Storage_Shelves_002" parent="Kaunas" index="110" unique_id=1844174057]
 material_override = ExtResource("99_qnd83")
 
-[node name="Folder_big_001" parent="Kaunas" index="108" unique_id=1178074894]
+[node name="Folder_big_001" parent="Kaunas" index="111" unique_id=994518936]
 material_override = ExtResource("59_mc3al")
 
-[node name="Folder_big_002" parent="Kaunas" index="109" unique_id=332227063]
+[node name="Folder_big_002" parent="Kaunas" index="112" unique_id=364231870]
 material_override = ExtResource("59_mc3al")
 
-[node name="Folder_small_001" parent="Kaunas" index="110" unique_id=1969497024]
+[node name="Folder_small_001" parent="Kaunas" index="113" unique_id=1678170177]
 material_override = ExtResource("60_bqa6y")
 
-[node name="Folder_big_003" parent="Kaunas" index="111" unique_id=186001760]
+[node name="Folder_big_003" parent="Kaunas" index="114" unique_id=468762648]
 material_override = ExtResource("59_mc3al")
 
-[node name="Folder_small_002" parent="Kaunas" index="112" unique_id=854873242]
+[node name="Folder_small_002" parent="Kaunas" index="115" unique_id=1418139782]
 material_override = ExtResource("60_bqa6y")
 
-[node name="Folder_big_004" parent="Kaunas" index="113" unique_id=690541516]
+[node name="Folder_big_004" parent="Kaunas" index="116" unique_id=1595069147]
 material_override = ExtResource("59_mc3al")
 
-[node name="Folder_big_005" parent="Kaunas" index="114" unique_id=1709911926]
+[node name="Folder_big_005" parent="Kaunas" index="117" unique_id=1747197514]
 material_override = ExtResource("59_mc3al")
 
-[node name="Picture_frame" parent="Kaunas" index="115" unique_id=1361365957]
+[node name="Picture_frame" parent="Kaunas" index="118" unique_id=849374497]
 surface_material_override/0 = ExtResource("70_wj41c")
 
-[node name="Picture_frame_glass" parent="Kaunas" index="116" unique_id=1021597600]
+[node name="Picture_frame_glass" parent="Kaunas" index="119" unique_id=149369575]
 surface_material_override/0 = ExtResource("71_t2ssd")
 
-[node name="Picture_frame_picture" parent="Kaunas" index="117" unique_id=315196412]
+[node name="Picture_frame_picture" parent="Kaunas" index="120" unique_id=1355209625]
 surface_material_override/0 = SubResource("StandardMaterial3D_66xay")
 
-[node name="Computer_004" parent="Kaunas" index="118" unique_id=1320857675]
+[node name="Computer_004" parent="Kaunas" index="121" unique_id=264469502]
 material_override = ExtResource("58_mc3al")
 
-[node name="Picture_frame_001" parent="Kaunas" index="119" unique_id=2124612370]
+[node name="Picture_frame_001" parent="Kaunas" index="122" unique_id=325511609]
 material_override = ExtResource("70_wj41c")
 
-[node name="Picture_frame_glass_001" parent="Kaunas" index="120" unique_id=1633864425]
+[node name="Picture_frame_glass_001" parent="Kaunas" index="123" unique_id=2111620315]
 material_override = ExtResource("71_t2ssd")
 
-[node name="Picture_frame_picture_001" parent="Kaunas" index="121" unique_id=419538254]
+[node name="Picture_frame_picture_001" parent="Kaunas" index="124" unique_id=632885639]
 surface_material_override/0 = SubResource("StandardMaterial3D_lh772")
 
-[node name="Poster" parent="Kaunas" index="122" unique_id=1069960619]
+[node name="Poster" parent="Kaunas" index="125" unique_id=1445342214]
 surface_material_override/0 = SubResource("StandardMaterial3D_kp8cn")
 
-[node name="Monitor_001" parent="Kaunas" index="123" unique_id=449780471]
+[node name="Monitor_001" parent="Kaunas" index="126" unique_id=803808411]
 material_override = ExtResource("101_0i3gv")
 
-[node name="Picture_frame_002" parent="Kaunas" index="125" unique_id=2093114177]
+[node name="Picture_frame_002" parent="Kaunas" index="128" unique_id=1611760863]
 material_override = ExtResource("70_wj41c")
 
-[node name="Picture_frame_glass_002" parent="Kaunas" index="126" unique_id=874438318]
+[node name="Picture_frame_glass_002" parent="Kaunas" index="129" unique_id=1822094941]
 material_override = ExtResource("71_t2ssd")
 surface_material_override/0 = ExtResource("71_t2ssd")
 
-[node name="Entrance_floor" parent="Kaunas" index="128" unique_id=929754836]
+[node name="Entrance_floor" parent="Kaunas" index="131" unique_id=1769192120]
 surface_material_override/0 = SubResource("StandardMaterial3D_vf1qt")
 
-[node name="Entrance_ceiling" parent="Kaunas" index="129" unique_id=2122028832]
+[node name="Entrance_ceiling" parent="Kaunas" index="132" unique_id=183193449]
 surface_material_override/0 = SubResource("StandardMaterial3D_j4tta")
 
-[node name="Entrance_walls" parent="Kaunas" index="130" unique_id=1310827558]
+[node name="Entrance_walls" parent="Kaunas" index="133" unique_id=1774586656]
 surface_material_override/0 = SubResource("StandardMaterial3D_ell1s")
 
-[node name="Entrance_window_frame" parent="Kaunas" index="131" unique_id=647081404]
+[node name="Entrance_window_frame" parent="Kaunas" index="134" unique_id=230858518]
 surface_material_override/0 = SubResource("StandardMaterial3D_vbt48")
 
-[node name="Entrance_window_glass" parent="Kaunas" index="132" unique_id=1368932010]
+[node name="Entrance_window_glass" parent="Kaunas" index="135" unique_id=1620530985]
 surface_material_override/0 = SubResource("StandardMaterial3D_hsv4y")
 
-[node name="Entrance_stairs" parent="Kaunas" index="133" unique_id=1806865838]
+[node name="Entrance_stairs" parent="Kaunas" index="136" unique_id=1049972065]
 surface_material_override/0 = SubResource("StandardMaterial3D_w0nw1")
 
-[node name="Entrance_supportbeams" parent="Kaunas" index="134" unique_id=713398192]
+[node name="Entrance_supportbeams" parent="Kaunas" index="137" unique_id=2122540187]
 surface_material_override/0 = SubResource("StandardMaterial3D_w6gsc")
 
-[node name="Entrance_door" parent="Kaunas" index="135" unique_id=967299164]
+[node name="Entrance_door" parent="Kaunas" index="138" unique_id=574793478]
 surface_material_override/0 = SubResource("StandardMaterial3D_y4uvs")
 
-[node name="Pallet" parent="Kaunas" index="136" unique_id=1585910729]
+[node name="Pallet" parent="Kaunas" index="139" unique_id=842253458]
 material_override = ExtResource("78_vqo61")
 
-[node name="Pallet_001" parent="Kaunas" index="137" unique_id=415045390]
+[node name="Pallet_001" parent="Kaunas" index="140" unique_id=611300426]
 material_override = ExtResource("78_vqo61")
 
-[node name="Pallet_002" parent="Kaunas" index="138" unique_id=1249083621]
+[node name="Pallet_002" parent="Kaunas" index="141" unique_id=41271683]
 material_override = ExtResource("78_vqo61")
 
-[node name="Pallet_003" parent="Kaunas" index="139" unique_id=272901295]
+[node name="Pallet_003" parent="Kaunas" index="142" unique_id=840962168]
 surface_material_override/0 = ExtResource("78_vqo61")
 
-[node name="RadioactiveWaste" parent="Kaunas" index="140" unique_id=909733222]
+[node name="RadioactiveWaste" parent="Kaunas" index="143" unique_id=1671943965]
 surface_material_override/0 = ExtResource("88_i3uta")
 
-[node name="Generator_1" parent="Kaunas" index="141" unique_id=322202395]
+[node name="Generator_1" parent="Kaunas" index="144" unique_id=1661537808]
 surface_material_override/0 = SubResource("StandardMaterial3D_qhxlk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Generator_1" index="0" unique_id=815474112]
@@ -1857,337 +1868,338 @@ volume_db = -15.0
 max_distance = 30.0
 parameters/looping = true
 
-[node name="Generator_2" parent="Kaunas" index="142" unique_id=674687145]
+[node name="Generator_2" parent="Kaunas" index="145" unique_id=587530733]
 surface_material_override/0 = SubResource("StandardMaterial3D_qw2kp")
 
-[node name="Bag" parent="Kaunas" index="143" unique_id=1105496153]
+[node name="Bag" parent="Kaunas" index="146" unique_id=1924690960]
 material_override = ExtResource("98_tssr6")
 
-[node name="Bag_001" parent="Kaunas" index="144" unique_id=1615650030]
+[node name="Bag_001" parent="Kaunas" index="147" unique_id=1389843064]
 material_override = ExtResource("98_tssr6")
 
-[node name="Bag_002" parent="Kaunas" index="145" unique_id=1235733119]
+[node name="Bag_002" parent="Kaunas" index="148" unique_id=1914132085]
 material_override = ExtResource("98_tssr6")
 
-[node name="Bag_003" parent="Kaunas" index="146" unique_id=1877561387]
+[node name="Bag_003" parent="Kaunas" index="149" unique_id=869017150]
 surface_material_override/0 = ExtResource("98_tssr6")
 
-[node name="Entrance_breaker_1" parent="Kaunas" index="147" unique_id=250065833]
+[node name="Entrance_breaker_1" parent="Kaunas" index="150" unique_id=735407802]
 surface_material_override/0 = ExtResource("4_hxd3m")
 
-[node name="Entrance_breaker_2" parent="Kaunas" index="148" unique_id=1486000853]
+[node name="Entrance_breaker_2" parent="Kaunas" index="151" unique_id=567020213]
 surface_material_override/0 = ExtResource("5_lmtqe")
 
-[node name="Entrance_lamp_001" parent="Kaunas" index="149" unique_id=2134945849]
+[node name="Entrance_lamp_001" parent="Kaunas" index="152" unique_id=1125842916]
 material_override = ExtResource("112_hiqci")
 
 [node name="Reflectors" parent="Kaunas/Entrance_lamp_001" index="0" unique_id=904596548 instance=ExtResource("151_ybcoh")]
 transform = Transform3D(-0.24024004, 0.09380556, 0.96617043, 0, 0.99531984, -0.09663568, -0.9707135, -0.02321576, -0.23911569, 5.2245913, 2.1472309, 21.104548)
 
-[node name="Entrance_Pipe_1" parent="Kaunas" index="150" unique_id=1266025550]
+[node name="Entrance_Pipe_1" parent="Kaunas" index="153" unique_id=302173237]
 surface_material_override/0 = SubResource("StandardMaterial3D_5ru8x")
 
-[node name="Entrance_Pipe_2" parent="Kaunas" index="151" unique_id=1683259138]
+[node name="Entrance_Pipe_2" parent="Kaunas" index="154" unique_id=590740544]
 surface_material_override/0 = SubResource("StandardMaterial3D_mcyeq")
 
-[node name="Entrance" parent="Kaunas/Entrance" parent_id_path=PackedInt32Array(786600455, 1882919741) index="0" unique_id=1862689348]
+[node name="Entrance" parent="Kaunas/Entrance" parent_id_path=PackedInt32Array(786600455, 1271162428) index="0" unique_id=150110195]
 material_override = ExtResource("113_s2n2m")
 
-[node name="Entrance_001" parent="Kaunas/Entrance_001" parent_id_path=PackedInt32Array(786600455, 422408351) index="0" unique_id=56127252]
+[node name="Entrance_001" parent="Kaunas/Entrance_001" parent_id_path=PackedInt32Array(786600455, 162402411) index="0" unique_id=1635720643]
 surface_material_override/0 = ExtResource("113_s2n2m")
 
-[node name="Entrance_Pipe_3" parent="Kaunas" index="154" unique_id=723791211]
+[node name="Entrance_Pipe_3" parent="Kaunas" index="157" unique_id=258925814]
 surface_material_override/0 = SubResource("StandardMaterial3D_g8r2m")
 
-[node name="Entrance_Pipe_Box" parent="Kaunas" index="155" unique_id=796005005]
+[node name="Entrance_Pipe_Box" parent="Kaunas" index="158" unique_id=149506680]
 surface_material_override/0 = SubResource("StandardMaterial3D_74iwm")
 
-[node name="RadioactiveWaste_001" parent="Kaunas" index="156" unique_id=664055845]
+[node name="RadioactiveWaste_001" parent="Kaunas" index="159" unique_id=988466243]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_002" parent="Kaunas" index="157" unique_id=1758262373]
+[node name="RadioactiveWaste_002" parent="Kaunas" index="160" unique_id=522765379]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_003" parent="Kaunas" index="158" unique_id=1768206326]
+[node name="RadioactiveWaste_003" parent="Kaunas" index="161" unique_id=664863690]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_004" parent="Kaunas" index="159" unique_id=626010788]
+[node name="RadioactiveWaste_004" parent="Kaunas" index="162" unique_id=1051602704]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_005" parent="Kaunas" index="160" unique_id=1403981521]
+[node name="RadioactiveWaste_005" parent="Kaunas" index="163" unique_id=1632817573]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_006" parent="Kaunas" index="161" unique_id=710878829]
+[node name="RadioactiveWaste_006" parent="Kaunas" index="164" unique_id=983055569]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_007" parent="Kaunas" index="162" unique_id=325648635]
+[node name="RadioactiveWaste_007" parent="Kaunas" index="165" unique_id=306384021]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_008" parent="Kaunas" index="163" unique_id=1612290111]
+[node name="RadioactiveWaste_008" parent="Kaunas" index="166" unique_id=2054608107]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_009" parent="Kaunas" index="164" unique_id=110554286]
+[node name="RadioactiveWaste_009" parent="Kaunas" index="167" unique_id=280437653]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_010" parent="Kaunas" index="165" unique_id=1902867309]
+[node name="RadioactiveWaste_010" parent="Kaunas" index="168" unique_id=364875019]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_011" parent="Kaunas" index="166" unique_id=886276931]
+[node name="RadioactiveWaste_011" parent="Kaunas" index="169" unique_id=1464051877]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_012" parent="Kaunas" index="167" unique_id=1327509175]
+[node name="RadioactiveWaste_012" parent="Kaunas" index="170" unique_id=705129929]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_013" parent="Kaunas" index="168" unique_id=1886140674]
+[node name="RadioactiveWaste_013" parent="Kaunas" index="171" unique_id=556041228]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_014" parent="Kaunas" index="169" unique_id=1630388332]
+[node name="RadioactiveWaste_014" parent="Kaunas" index="172" unique_id=1585900909]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_015" parent="Kaunas" index="170" unique_id=590994933]
+[node name="RadioactiveWaste_015" parent="Kaunas" index="173" unique_id=1826864361]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_016" parent="Kaunas" index="171" unique_id=197839208]
+[node name="RadioactiveWaste_016" parent="Kaunas" index="174" unique_id=1714105766]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_017" parent="Kaunas" index="172" unique_id=2029244323]
+[node name="RadioactiveWaste_017" parent="Kaunas" index="175" unique_id=532571158]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_018" parent="Kaunas" index="173" unique_id=1372406422]
+[node name="RadioactiveWaste_018" parent="Kaunas" index="176" unique_id=1879769806]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_019" parent="Kaunas" index="174" unique_id=1562197580]
+[node name="RadioactiveWaste_019" parent="Kaunas" index="177" unique_id=1307015386]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_020" parent="Kaunas" index="175" unique_id=976222228]
+[node name="RadioactiveWaste_020" parent="Kaunas" index="178" unique_id=165374122]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_021" parent="Kaunas" index="176" unique_id=608295343]
+[node name="RadioactiveWaste_021" parent="Kaunas" index="179" unique_id=125427253]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_022" parent="Kaunas" index="177" unique_id=57312428]
+[node name="RadioactiveWaste_022" parent="Kaunas" index="180" unique_id=66891731]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_024" parent="Kaunas" index="179" unique_id=1284894388]
+[node name="RadioactiveWaste_024" parent="Kaunas" index="182" unique_id=2095812562]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_025" parent="Kaunas" index="180" unique_id=1679812389]
+[node name="RadioactiveWaste_025" parent="Kaunas" index="183" unique_id=1216428203]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_026" parent="Kaunas" index="181" unique_id=1054060158]
+[node name="RadioactiveWaste_026" parent="Kaunas" index="184" unique_id=1752076937]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_027" parent="Kaunas" index="182" unique_id=695099116]
+[node name="RadioactiveWaste_027" parent="Kaunas" index="185" unique_id=1921839927]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_028" parent="Kaunas" index="183" unique_id=121577477]
+[node name="RadioactiveWaste_028" parent="Kaunas" index="186" unique_id=1787913723]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_029" parent="Kaunas" index="184" unique_id=1068006385]
+[node name="RadioactiveWaste_029" parent="Kaunas" index="187" unique_id=286612878]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_030" parent="Kaunas" index="185" unique_id=1055027296]
+[node name="RadioactiveWaste_030" parent="Kaunas" index="188" unique_id=215764873]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_031" parent="Kaunas" index="186" unique_id=1301324276]
+[node name="RadioactiveWaste_031" parent="Kaunas" index="189" unique_id=102246543]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_032" parent="Kaunas" index="187" unique_id=326639443]
+[node name="RadioactiveWaste_032" parent="Kaunas" index="190" unique_id=1830242267]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_033" parent="Kaunas" index="188" unique_id=127638140]
+[node name="RadioactiveWaste_033" parent="Kaunas" index="191" unique_id=1782512983]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_034" parent="Kaunas" index="189" unique_id=1964496538]
+[node name="RadioactiveWaste_034" parent="Kaunas" index="192" unique_id=248873770]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_035" parent="Kaunas" index="190" unique_id=1109215252]
+[node name="RadioactiveWaste_035" parent="Kaunas" index="193" unique_id=1978754379]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_036" parent="Kaunas" index="191" unique_id=721258325]
+[node name="RadioactiveWaste_036" parent="Kaunas" index="194" unique_id=1042967282]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_037" parent="Kaunas" index="192" unique_id=1952915779]
+[node name="RadioactiveWaste_037" parent="Kaunas" index="195" unique_id=2030720878]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_038" parent="Kaunas" index="193" unique_id=929101602]
+[node name="RadioactiveWaste_038" parent="Kaunas" index="196" unique_id=1712416581]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_039" parent="Kaunas" index="194" unique_id=256515549]
+[node name="RadioactiveWaste_039" parent="Kaunas" index="197" unique_id=287731929]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_040" parent="Kaunas" index="195" unique_id=1921859910]
+[node name="RadioactiveWaste_040" parent="Kaunas" index="198" unique_id=1289424487]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_041" parent="Kaunas" index="196" unique_id=225770272]
+[node name="RadioactiveWaste_041" parent="Kaunas" index="199" unique_id=1691692414]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_042" parent="Kaunas" index="197" unique_id=1008928412]
+[node name="RadioactiveWaste_042" parent="Kaunas" index="200" unique_id=1655081465]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_043" parent="Kaunas" index="198" unique_id=1127582365]
+[node name="RadioactiveWaste_043" parent="Kaunas" index="201" unique_id=1641215465]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_044" parent="Kaunas" index="199" unique_id=1360853091]
+[node name="RadioactiveWaste_044" parent="Kaunas" index="202" unique_id=1671210938]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_046" parent="Kaunas" index="200" unique_id=519499137]
+[node name="RadioactiveWaste_046" parent="Kaunas" index="203" unique_id=482041979]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_047" parent="Kaunas" index="201" unique_id=1245230397]
+[node name="RadioactiveWaste_047" parent="Kaunas" index="204" unique_id=1005141934]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_048" parent="Kaunas" index="202" unique_id=554997369]
+[node name="RadioactiveWaste_048" parent="Kaunas" index="205" unique_id=398535211]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_049" parent="Kaunas" index="203" unique_id=715770521]
+[node name="RadioactiveWaste_049" parent="Kaunas" index="206" unique_id=516856514]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_050" parent="Kaunas" index="204" unique_id=1563189648]
+[node name="RadioactiveWaste_050" parent="Kaunas" index="207" unique_id=947993805]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_051" parent="Kaunas" index="205" unique_id=1861204403]
+[node name="RadioactiveWaste_051" parent="Kaunas" index="208" unique_id=944926323]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_052" parent="Kaunas" index="206" unique_id=598678418]
+[node name="RadioactiveWaste_052" parent="Kaunas" index="209" unique_id=1619261524]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_053" parent="Kaunas" index="207" unique_id=1588550149]
+[node name="RadioactiveWaste_053" parent="Kaunas" index="210" unique_id=1521776082]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_054" parent="Kaunas" index="208" unique_id=107880931]
+[node name="RadioactiveWaste_054" parent="Kaunas" index="211" unique_id=8681693]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_055" parent="Kaunas" index="209" unique_id=736122752]
+[node name="RadioactiveWaste_055" parent="Kaunas" index="212" unique_id=68781088]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_056" parent="Kaunas" index="210" unique_id=2098961530]
+[node name="RadioactiveWaste_056" parent="Kaunas" index="213" unique_id=1891112029]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_057" parent="Kaunas" index="211" unique_id=628364977]
+[node name="RadioactiveWaste_057" parent="Kaunas" index="214" unique_id=926920238]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_059" parent="Kaunas" index="212" unique_id=346821714]
+[node name="RadioactiveWaste_059" parent="Kaunas" index="215" unique_id=1689595828]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_060" parent="Kaunas" index="213" unique_id=1691871918]
+[node name="RadioactiveWaste_060" parent="Kaunas" index="216" unique_id=1097618822]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_061" parent="Kaunas" index="214" unique_id=1852656872]
+[node name="RadioactiveWaste_061" parent="Kaunas" index="217" unique_id=1393756205]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_062" parent="Kaunas" index="215" unique_id=485060000]
+[node name="RadioactiveWaste_062" parent="Kaunas" index="218" unique_id=1080772140]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_063" parent="Kaunas" index="216" unique_id=2103913662]
+[node name="RadioactiveWaste_063" parent="Kaunas" index="219" unique_id=647918137]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_045" parent="Kaunas" index="217" unique_id=1942245202]
+[node name="RadioactiveWaste_045" parent="Kaunas" index="220" unique_id=731445126]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_058" parent="Kaunas" index="218" unique_id=1442199906]
+[node name="RadioactiveWaste_058" parent="Kaunas" index="221" unique_id=1650606107]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_064" parent="Kaunas" index="219" unique_id=1594361477]
+[node name="RadioactiveWaste_064" parent="Kaunas" index="222" unique_id=1293023604]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_065" parent="Kaunas" index="220" unique_id=211414000]
+[node name="RadioactiveWaste_065" parent="Kaunas" index="223" unique_id=1065012222]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_066" parent="Kaunas" index="221" unique_id=933107804]
+[node name="RadioactiveWaste_066" parent="Kaunas" index="224" unique_id=49489855]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_067" parent="Kaunas" index="222" unique_id=418059983]
+[node name="RadioactiveWaste_067" parent="Kaunas" index="225" unique_id=1653284899]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_068" parent="Kaunas" index="223" unique_id=1017124208]
+[node name="RadioactiveWaste_068" parent="Kaunas" index="226" unique_id=417281031]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_069" parent="Kaunas" index="224" unique_id=173948760]
+[node name="RadioactiveWaste_069" parent="Kaunas" index="227" unique_id=479657594]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_070" parent="Kaunas" index="225" unique_id=1696487176]
+[node name="RadioactiveWaste_070" parent="Kaunas" index="228" unique_id=1657365193]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_071" parent="Kaunas" index="226" unique_id=814199207]
+[node name="RadioactiveWaste_071" parent="Kaunas" index="229" unique_id=859711284]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_072" parent="Kaunas" index="227" unique_id=247575034]
+[node name="RadioactiveWaste_072" parent="Kaunas" index="230" unique_id=1598229549]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_073" parent="Kaunas" index="228" unique_id=454250781]
+[node name="RadioactiveWaste_073" parent="Kaunas" index="231" unique_id=736996443]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_074" parent="Kaunas" index="229" unique_id=1619043695]
+[node name="RadioactiveWaste_074" parent="Kaunas" index="232" unique_id=237709230]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_075" parent="Kaunas" index="230" unique_id=645938030]
+[node name="RadioactiveWaste_075" parent="Kaunas" index="233" unique_id=381656064]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_076" parent="Kaunas" index="231" unique_id=653990531]
+[node name="RadioactiveWaste_076" parent="Kaunas" index="234" unique_id=904987565]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_077" parent="Kaunas" index="232" unique_id=1383235482]
+[node name="RadioactiveWaste_077" parent="Kaunas" index="235" unique_id=1017728851]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_078" parent="Kaunas" index="233" unique_id=1109492277]
+[node name="RadioactiveWaste_078" parent="Kaunas" index="236" unique_id=749791033]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_079" parent="Kaunas" index="234" unique_id=2071358488]
+[node name="RadioactiveWaste_079" parent="Kaunas" index="237" unique_id=848121693]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_080" parent="Kaunas" index="235" unique_id=744997376]
+[node name="RadioactiveWaste_080" parent="Kaunas" index="238" unique_id=305731105]
 material_override = ExtResource("88_i3uta")
 
-[node name="RadioactiveWaste_081" parent="Kaunas" index="236" unique_id=1901652008]
+[node name="RadioactiveWaste_081" parent="Kaunas" index="239" unique_id=1671065871]
 material_override = ExtResource("88_i3uta")
 
-[node name="Entrance_lamp_002" parent="Kaunas" index="237" unique_id=908039003]
+[node name="Entrance_lamp_002" parent="Kaunas" index="240" unique_id=183115000]
 material_override = ExtResource("112_hiqci")
 
-[node name="Entrance_lamp_003" parent="Kaunas" index="238" unique_id=1297785117]
+[node name="Entrance_lamp_003" parent="Kaunas" index="241" unique_id=845557406]
 material_override = ExtResource("112_hiqci")
 
-[node name="Entrance_lamp_004" parent="Kaunas" index="239" unique_id=921633092]
+[node name="Entrance_lamp_004" parent="Kaunas" index="242" unique_id=673165215]
 material_override = ExtResource("112_hiqci")
 
-[node name="Bridge" parent="Kaunas" index="240" unique_id=930845774]
+[node name="Bridge" parent="Kaunas" index="243" unique_id=652648035]
 surface_material_override/0 = SubResource("StandardMaterial3D_is8ga")
 
-[node name="Bridge_wall" parent="Kaunas" index="241" unique_id=743403908]
+[node name="Bridge_wall" parent="Kaunas" index="244" unique_id=1672797516]
 surface_material_override/0 = SubResource("StandardMaterial3D_fafbu")
 
-[node name="Bridge_ceiling_floor" parent="Kaunas" index="242" unique_id=1690704271]
+[node name="Bridge_ceiling_floor" parent="Kaunas" index="245" unique_id=1289682732]
 surface_material_override/0 = SubResource("StandardMaterial3D_ydvf4")
 
-[node name="Bridge_floor" parent="Kaunas" index="243" unique_id=702463265]
+[node name="Bridge_floor" parent="Kaunas" index="246" unique_id=2062622133]
 surface_material_override/0 = SubResource("StandardMaterial3D_wibbb")
 
-[node name="Bridge_Balkon" parent="Kaunas" index="244" unique_id=1431564984]
+[node name="Bridge_Balkon" parent="Kaunas" index="247" unique_id=1474983858]
 surface_material_override/0 = SubResource("StandardMaterial3D_jf5g2")
 
-[node name="Bridge_ladder" parent="Kaunas" index="245" unique_id=158495121]
+[node name="Bridge_ladder" parent="Kaunas" index="248" unique_id=1784003802]
 surface_material_override/0 = SubResource("StandardMaterial3D_0ri7h")
 
-[node name="Bridge_pipe_1" parent="Kaunas" index="246" unique_id=1797379525]
+[node name="Bridge_pipe_1" parent="Kaunas" index="249" unique_id=393362096]
 surface_material_override/0 = SubResource("StandardMaterial3D_lqlas")
 
-[node name="Bridge_pipe_2" parent="Kaunas" index="247" unique_id=2067623157]
+[node name="Bridge_pipe_2" parent="Kaunas" index="250" unique_id=439502648]
 surface_material_override/0 = SubResource("StandardMaterial3D_swvvi")
 
-[node name="Bridge_wheels" parent="Kaunas" index="248" unique_id=997651030]
+[node name="Bridge_wheels" parent="Kaunas" index="251" unique_id=328397877]
 surface_material_override/0 = SubResource("StandardMaterial3D_cv8gu")
 
-[node name="Bridge_breaker_1" parent="Kaunas" index="249" unique_id=1112976400]
+[node name="Bridge_breaker_1" parent="Kaunas" index="252" unique_id=360228373]
 material_override = ExtResource("4_hxd3m")
 
 [node name="Node3D" parent="Kaunas/Bridge_breaker_1" index="0" unique_id=2132639943 instance=ExtResource("215_5y3ms")]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -7.82549, 0, 30.44054)
 script = null
 
-[node name="Bridge_breaker_2" parent="Kaunas" index="250" unique_id=1541410183]
+[node name="Bridge_breaker_2" parent="Kaunas" index="253" unique_id=553593476]
 surface_material_override/0 = ExtResource("175_kp8cn")
 
+<<<<<<< HEAD
 [node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Bridge_breaker_2" index="0" unique_id=952276034]
 script = ExtResource("214_ldmn0")
 
@@ -2197,169 +2209,172 @@ shape = SubResource("ConvexPolygonShape3D_udhy4")
 [node name="InteractableComponent" parent="Kaunas/Bridge_breaker_2/StaticBody3D" unique_id=545760649 instance=ExtResource("232_ndmr1")]
 
 [node name="Point Grün" parent="Kaunas" index="252" unique_id=7010814]
+=======
+[node name="Point Grün" parent="Kaunas" index="255" unique_id=1088984209]
+>>>>>>> 5bc777de0a0cdf08ad53aa917f976bad42c53fb3
 transform = Transform3D(0, -1, 0, 0, 0, 1, -1, 0, 0, 41.916096, 1.0382601, 24.319597)
 light_energy = 0.1
 
-[node name="Point Grün_001" parent="Kaunas" index="253" unique_id=1621282155]
+[node name="Point Grün_001" parent="Kaunas" index="256" unique_id=1269463823]
 transform = Transform3D(0, -1, 0, 0, 0, 1, -1, 0, 0, 41.643867, 1.0354753, 24.319597)
 light_energy = 0.05
 
-[node name="Point Grün_002" parent="Kaunas" index="254" unique_id=1642489620]
+[node name="Point Grün_002" parent="Kaunas" index="257" unique_id=761051504]
 transform = Transform3D(0, -1, 0, 0, 0, 1, -1, 0, 0, 41.801292, 1.0340829, 24.319597)
 light_energy = 0.05
 
-[node name="Exid" parent="Kaunas" index="255" unique_id=1512255891]
+[node name="Exid" parent="Kaunas" index="258" unique_id=365854325]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign" parent="Kaunas" index="256" unique_id=2076534444]
+[node name="Exid_sign" parent="Kaunas" index="259" unique_id=1987400834]
 surface_material_override/0 = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass" parent="Kaunas" index="257" unique_id=2141892721]
+[node name="Exid_sign_glass" parent="Kaunas" index="260" unique_id=1158846165]
 surface_material_override/0 = ExtResource("214_lxfha")
 
-[node name="Bridge_wall_002" parent="Kaunas" index="258" unique_id=887724351]
+[node name="Bridge_wall_002" parent="Kaunas" index="261" unique_id=744275959]
 surface_material_override/0 = SubResource("StandardMaterial3D_4sf74")
 
-[node name="Cube_119" parent="Kaunas" index="259" unique_id=189573718]
+[node name="Cube_119" parent="Kaunas" index="262" unique_id=367488172]
 surface_material_override/0 = SubResource("StandardMaterial3D_vxctm")
 
-[node name="Storage_breaker_1" parent="Kaunas" index="260" unique_id=623016632]
+[node name="Storage_breaker_1" parent="Kaunas" index="263" unique_id=1800497527]
 material_override = ExtResource("4_hxd3m")
 
-[node name="Storage_breaker_2" parent="Kaunas" index="261" unique_id=1557736860]
+[node name="Storage_breaker_2" parent="Kaunas" index="264" unique_id=1866081138]
 material_override = ExtResource("175_kp8cn")
 
-[node name="Ractor_machine_2" parent="Kaunas" index="262" unique_id=1179325184]
+[node name="Ractor_machine_2" parent="Kaunas" index="265" unique_id=1660358105]
 surface_material_override/0 = SubResource("StandardMaterial3D_s1k0t")
 
-[node name="Ractor_machine_1" parent="Kaunas" index="264" unique_id=1055956413]
+[node name="Ractor_machine_1" parent="Kaunas" index="267" unique_id=1784870366]
 surface_material_override/0 = SubResource("StandardMaterial3D_42dgx")
 
-[node name="Reactor_Machine_handle" parent="Kaunas" index="265" unique_id=91446694]
+[node name="Reactor_Machine_handle" parent="Kaunas" index="268" unique_id=1813325271]
 surface_material_override/0 = SubResource("StandardMaterial3D_nc7um")
 
-[node name="Stairs_stairs" parent="Kaunas" index="266" unique_id=592274041]
+[node name="Stairs_stairs" parent="Kaunas" index="269" unique_id=702638853]
 surface_material_override/0 = SubResource("StandardMaterial3D_7hi4m")
 
-[node name="Stairs_railing" parent="Kaunas" index="267" unique_id=782621650]
+[node name="Stairs_railing" parent="Kaunas" index="270" unique_id=201348028]
 surface_material_override/0 = SubResource("StandardMaterial3D_6eaay")
 
-[node name="Stairs_outer" parent="Kaunas" index="268" unique_id=1329957584]
+[node name="Stairs_outer" parent="Kaunas" index="271" unique_id=2000079239]
 surface_material_override/0 = SubResource("StandardMaterial3D_bbetf")
 
-[node name="Stairs_railing_2" parent="Kaunas" index="269" unique_id=980056322]
+[node name="Stairs_railing_2" parent="Kaunas" index="272" unique_id=1346205729]
 surface_material_override/0 = SubResource("StandardMaterial3D_3v7i0")
 
-[node name="Stairs_beams_long" parent="Kaunas" index="270" unique_id=816844184]
+[node name="Stairs_beams_long" parent="Kaunas" index="273" unique_id=719824979]
 surface_material_override/0 = SubResource("StandardMaterial3D_hmutj")
 
-[node name="Cube_120" parent="Kaunas" index="271" unique_id=338685418]
+[node name="Cube_120" parent="Kaunas" index="274" unique_id=941082566]
 surface_material_override/0 = SubResource("StandardMaterial3D_bk61w")
 
-[node name="Cube_122" parent="Kaunas" index="272" unique_id=536910364]
+[node name="Cube_122" parent="Kaunas" index="275" unique_id=664567525]
 surface_material_override/0 = SubResource("StandardMaterial3D_bdhb6")
 
-[node name="Reactor_building" parent="Kaunas" index="273" unique_id=515108703]
+[node name="Reactor_building" parent="Kaunas" index="276" unique_id=809455080]
 surface_material_override/0 = SubResource("StandardMaterial3D_ti4qi")
 
-[node name="Reactor_upper_platform" parent="Kaunas" index="274" unique_id=1309009121]
+[node name="Reactor_upper_platform" parent="Kaunas" index="277" unique_id=495342410]
 surface_material_override/0 = SubResource("StandardMaterial3D_degmy")
 
-[node name="Cylinder_123" parent="Kaunas" index="275" unique_id=1649576449]
+[node name="Cylinder_123" parent="Kaunas" index="278" unique_id=1566501301]
 surface_material_override/0 = SubResource("StandardMaterial3D_eyw7r")
 
-[node name="Reactor_stairs_control_room" parent="Kaunas" index="276" unique_id=1404431172]
+[node name="Reactor_stairs_control_room" parent="Kaunas" index="279" unique_id=740633716]
 surface_material_override/0 = SubResource("StandardMaterial3D_o45tx")
 
-[node name="Reactor_building_2" parent="Kaunas" index="277" unique_id=440843534]
+[node name="Reactor_building_2" parent="Kaunas" index="280" unique_id=1745299486]
 surface_material_override/0 = SubResource("StandardMaterial3D_rc1pu")
 
-[node name="Cube_002" parent="Kaunas" index="278" unique_id=1864721298]
+[node name="Cube_002" parent="Kaunas" index="281" unique_id=1816091753]
 surface_material_override/0 = SubResource("StandardMaterial3D_18ia1")
 
-[node name="Cube_008" parent="Kaunas" index="279" unique_id=1376054305]
+[node name="Cube_008" parent="Kaunas" index="282" unique_id=756332700]
 surface_material_override/0 = SubResource("StandardMaterial3D_0n454")
 
-[node name="Exid_001" parent="Kaunas" index="280" unique_id=1642818208]
+[node name="Exid_001" parent="Kaunas" index="283" unique_id=219444477]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign_001" parent="Kaunas" index="281" unique_id=540613965]
+[node name="Exid_sign_001" parent="Kaunas" index="284" unique_id=1788455892]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_001" parent="Kaunas" index="282" unique_id=1049799206]
+[node name="Exid_sign_glass_001" parent="Kaunas" index="285" unique_id=180767343]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 34.661133, 4.435447, -6.3268337)
 material_override = ExtResource("214_lxfha")
 
-[node name="Exid_002" parent="Kaunas" index="283" unique_id=392121133]
+[node name="Exid_002" parent="Kaunas" index="286" unique_id=1028850947]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign_002" parent="Kaunas" index="284" unique_id=674256376]
+[node name="Exid_sign_002" parent="Kaunas" index="287" unique_id=1950550065]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_002" parent="Kaunas" index="285" unique_id=1750469962]
+[node name="Exid_sign_glass_002" parent="Kaunas" index="288" unique_id=1612485730]
 material_override = ExtResource("214_lxfha")
 
-[node name="Exid_003" parent="Kaunas" index="286" unique_id=1964174422]
+[node name="Exid_003" parent="Kaunas" index="289" unique_id=114571407]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign_003" parent="Kaunas" index="287" unique_id=218086116]
+[node name="Exid_sign_003" parent="Kaunas" index="290" unique_id=1713530359]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_003" parent="Kaunas" index="288" unique_id=919726180]
+[node name="Exid_sign_glass_003" parent="Kaunas" index="291" unique_id=2116868840]
 material_override = ExtResource("214_lxfha")
 
-[node name="Exid_004" parent="Kaunas" index="289" unique_id=1318653030]
+[node name="Exid_004" parent="Kaunas" index="292" unique_id=426750862]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign_004" parent="Kaunas" index="290" unique_id=375277108]
+[node name="Exid_sign_004" parent="Kaunas" index="293" unique_id=1890498855]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_004" parent="Kaunas" index="291" unique_id=1603832697]
+[node name="Exid_sign_glass_004" parent="Kaunas" index="294" unique_id=605007375]
 material_override = ExtResource("214_lxfha")
 
-[node name="Exid_005" parent="Kaunas" index="292" unique_id=1904455279]
+[node name="Exid_005" parent="Kaunas" index="295" unique_id=1020773023]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign_005" parent="Kaunas" index="293" unique_id=1122314005]
+[node name="Exid_sign_005" parent="Kaunas" index="296" unique_id=2031368135]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_005" parent="Kaunas" index="294" unique_id=1390678085]
+[node name="Exid_sign_glass_005" parent="Kaunas" index="297" unique_id=338846460]
 material_override = ExtResource("214_lxfha")
 
-[node name="Exid_006" parent="Kaunas" index="295" unique_id=215861210]
+[node name="Exid_006" parent="Kaunas" index="298" unique_id=971869279]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign_006" parent="Kaunas" index="296" unique_id=1577118248]
+[node name="Exid_sign_006" parent="Kaunas" index="299" unique_id=1484146563]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_006" parent="Kaunas" index="297" unique_id=729137594]
+[node name="Exid_sign_glass_006" parent="Kaunas" index="300" unique_id=1062993336]
 material_override = ExtResource("214_lxfha")
 
-[node name="Exid_007" parent="Kaunas" index="298" unique_id=928141770]
+[node name="Exid_007" parent="Kaunas" index="301" unique_id=170707143]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign_007" parent="Kaunas" index="299" unique_id=650769660]
+[node name="Exid_sign_007" parent="Kaunas" index="302" unique_id=482603091]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_007" parent="Kaunas" index="300" unique_id=493329852]
+[node name="Exid_sign_glass_007" parent="Kaunas" index="303" unique_id=785318740]
 material_override = ExtResource("214_lxfha")
 
-[node name="Exid_sign_008" parent="Kaunas" index="302" unique_id=1448193671]
+[node name="Exid_sign_008" parent="Kaunas" index="305" unique_id=1740965294]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_008" parent="Kaunas" index="303" unique_id=1769791020]
+[node name="Exid_sign_glass_008" parent="Kaunas" index="306" unique_id=498226906]
 material_override = ExtResource("214_lxfha")
 
-[node name="Exid_sign_009" parent="Kaunas" index="305" unique_id=1935365734]
+[node name="Exid_sign_009" parent="Kaunas" index="308" unique_id=1277516562]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_009" parent="Kaunas" index="306" unique_id=1866724325]
+[node name="Exid_sign_glass_009" parent="Kaunas" index="309" unique_id=1933775566]
 material_override = ExtResource("214_lxfha")
 
-[node name="Plane_001" parent="Kaunas" index="307" unique_id=1395840602]
+[node name="Plane_001" parent="Kaunas" index="310" unique_id=239604867]
 surface_material_override/0 = SubResource("StandardMaterial3D_fjk2m")
 
-[node name="Point_001" parent="Kaunas" index="308" unique_id=1567110809]
+[node name="Point_001" parent="Kaunas" index="311" unique_id=1599096007]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 34.307835, 4.4387426, -6.3157234)
 light_energy = 16.0
 light_indirect_energy = 3.37
@@ -2369,35 +2384,40 @@ shadow_enabled = true
 distance_fade_begin = 3868.44
 distance_fade_length = 4096.0
 
-[node name="Exid_010" parent="Kaunas" index="309" unique_id=300805589]
+[node name="Exid_010" parent="Kaunas" index="312" unique_id=1883704968]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign_010" parent="Kaunas" index="310" unique_id=312829360]
+[node name="Exid_sign_010" parent="Kaunas" index="313" unique_id=1657991940]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_010" parent="Kaunas" index="311" unique_id=230396860]
+[node name="Exid_sign_glass_010" parent="Kaunas" index="314" unique_id=477189305]
 material_override = ExtResource("214_lxfha")
 
-[node name="Exid_011" parent="Kaunas" index="312" unique_id=455983375]
+[node name="Exid_011" parent="Kaunas" index="315" unique_id=272670456]
 surface_material_override/0 = ExtResource("212_62sbg")
 
-[node name="Exid_sign_011" parent="Kaunas" index="313" unique_id=24260159]
+[node name="Exid_sign_011" parent="Kaunas" index="316" unique_id=993443806]
 material_override = ExtResource("212_lab6y")
 
-[node name="Exid_sign_glass_011" parent="Kaunas" index="314" unique_id=772710320]
+[node name="Exid_sign_glass_011" parent="Kaunas" index="317" unique_id=1392507851]
 material_override = ExtResource("214_lxfha")
 
-[node name="Outer" parent="Kaunas" index="325" unique_id=617609042]
+[node name="Outer" parent="Kaunas" index="328" unique_id=878137201]
 material_override = ExtResource("4_hxd3m")
 
-[node name="Fire_extinguisher" parent="Kaunas" index="336" unique_id=1256941594]
+[node name="Fire_extinguisher" parent="Kaunas" index="339" unique_id=107831799]
 material_override = SubResource("StandardMaterial3D_tpkc6")
 
-[node name="Coat_stand" parent="Kaunas" index="337" unique_id=1936079356]
+[node name="Coat_stand" parent="Kaunas" index="340" unique_id=113455581]
 surface_material_override/0 = SubResource("StandardMaterial3D_yeg2t")
 
+<<<<<<< HEAD
 [node name="Key" parent="Kaunas" index="338" unique_id=268552003]
 transform = Transform3D(-1.3113416e-09, -0.03, 0, 0.03, -1.3113416e-09, 0, 0, 0, 0.03, 60.93036, -1.6950879, 21.234983)
+=======
+[node name="Key" parent="Kaunas" index="341" unique_id=692143006]
+transform = Transform3D(-1.3113416e-09, -0.03, 0, 0.03, -1.3113416e-09, 0, 0, 0, 0.03, 61.030487, -1.6950879, 21.234983)
+>>>>>>> 5bc777de0a0cdf08ad53aa917f976bad42c53fb3
 surface_material_override/0 = SubResource("StandardMaterial3D_8gu7t")
 script = ExtResource("269_wp11w")
 
@@ -2411,7 +2431,7 @@ shape = SubResource("ConvexPolygonShape3D_jpo5b")
 
 [node name="InteractableComponent" parent="Kaunas/Key/StaticBody3D" unique_id=982559477 instance=ExtResource("169_riv5k")]
 
-[node name="Save" parent="Kaunas" index="339" unique_id=247151285]
+[node name="Save" parent="Kaunas" index="342" unique_id=1243082745]
 surface_material_override/0 = SubResource("StandardMaterial3D_yrv25")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Kaunas/Save" index="0" unique_id=1441892069]
@@ -2423,11 +2443,11 @@ shape = SubResource("ConvexPolygonShape3D_ybcoh")
 
 [node name="InteractableComponent" parent="Kaunas/Save/StaticBody3D" unique_id=508249845 instance=ExtResource("169_riv5k")]
 
-[node name="Door_remote" parent="Kaunas" index="341" unique_id=1196221483]
+[node name="Door_remote" parent="Kaunas" index="344" unique_id=1725291516]
 material_override = SubResource("StandardMaterial3D_lqb38")
 surface_material_override/0 = SubResource("StandardMaterial3D_1lfes")
 
-[node name="Red_button" parent="Kaunas" index="344" unique_id=1416322165]
+[node name="Red_button" parent="Kaunas" index="347" unique_id=2104411552]
 transform = Transform3D(0.16693814, 0.365828, 0.9155882, 0.25560233, 0.88081527, -0.39853787, -0.9522602, 0.30055752, 0.053535067, 18.331913, 5.347867, 1.1642647)
 surface_material_override/0 = SubResource("StandardMaterial3D_og7s3")
 
@@ -2440,105 +2460,105 @@ shape = SubResource("ConvexPolygonShape3D_ldmn0")
 
 [node name="InteractableComponent" parent="Kaunas/Red_button/StaticBody3D" unique_id=1604190195 instance=ExtResource("169_riv5k")]
 
-[node name="Control_room_wall" parent="Kaunas" index="345" unique_id=1801620878]
+[node name="Control_room_wall" parent="Kaunas" index="348" unique_id=1975626579]
 surface_material_override/0 = SubResource("StandardMaterial3D_wp11w")
 
-[node name="Control_room_desk" parent="Kaunas" index="347" unique_id=1983817196]
+[node name="Control_room_desk" parent="Kaunas" index="350" unique_id=919756531]
 surface_material_override/0 = SubResource("StandardMaterial3D_b6wx3")
 
-[node name="Chair_005" parent="Kaunas" index="348" unique_id=1543628714]
+[node name="Chair_005" parent="Kaunas" index="351" unique_id=1311448389]
 material_override = ExtResource("36_vuohh")
 
-[node name="Chair_back_005" parent="Kaunas" index="349" unique_id=483741315]
+[node name="Chair_back_005" parent="Kaunas" index="352" unique_id=631692826]
 material_override = ExtResource("57_xoeau")
 
-[node name="Chair_pillow_005" parent="Kaunas" index="350" unique_id=1268592119]
+[node name="Chair_pillow_005" parent="Kaunas" index="353" unique_id=419003244]
 material_override = ExtResource("37_3gvs5")
 
-[node name="Chair_006" parent="Kaunas" index="351" unique_id=2027218700]
+[node name="Chair_006" parent="Kaunas" index="354" unique_id=1656890553]
 material_override = ExtResource("36_vuohh")
 
-[node name="Chair_back_006" parent="Kaunas" index="352" unique_id=1886971018]
+[node name="Chair_back_006" parent="Kaunas" index="355" unique_id=1806487834]
 material_override = ExtResource("57_xoeau")
 
-[node name="Chair_pillow_006" parent="Kaunas" index="353" unique_id=1170446299]
+[node name="Chair_pillow_006" parent="Kaunas" index="356" unique_id=1388442421]
 material_override = ExtResource("37_3gvs5")
 
-[node name="Chair_007" parent="Kaunas" index="354" unique_id=1723847049]
+[node name="Chair_007" parent="Kaunas" index="357" unique_id=777535061]
 material_override = ExtResource("36_vuohh")
 
-[node name="Chair_back_007" parent="Kaunas" index="355" unique_id=1393820219]
+[node name="Chair_back_007" parent="Kaunas" index="358" unique_id=1361734221]
 material_override = ExtResource("57_xoeau")
 
-[node name="Chair_pillow_007" parent="Kaunas" index="356" unique_id=1344575211]
+[node name="Chair_pillow_007" parent="Kaunas" index="359" unique_id=1424104142]
 material_override = ExtResource("37_3gvs5")
 
-[node name="Table_shelve_small_001" parent="Kaunas" index="357" unique_id=800374930]
+[node name="Table_shelve_small_001" parent="Kaunas" index="360" unique_id=609281916]
 surface_material_override/0 = SubResource("StandardMaterial3D_ovmd4")
 
-[node name="Cylinder_003" parent="Kaunas" index="358" unique_id=172039437]
+[node name="Cylinder_003" parent="Kaunas" index="361" unique_id=1663418447]
 surface_material_override/0 = SubResource("StandardMaterial3D_sdavo")
 
-[node name="Air_con" parent="Kaunas" index="359" unique_id=827144156]
+[node name="Air_con" parent="Kaunas" index="362" unique_id=480313709]
 surface_material_override/0 = SubResource("StandardMaterial3D_fef0q")
 
-[node name="Bridge_breaker_1_001" parent="Kaunas" index="360" unique_id=1186313095]
+[node name="Bridge_breaker_1_001" parent="Kaunas" index="363" unique_id=1605949133]
 material_override = ExtResource("4_hxd3m")
 
-[node name="Control_room_2" parent="Kaunas" index="361" unique_id=426057912]
+[node name="Control_room_2" parent="Kaunas" index="364" unique_id=1390829960]
 surface_material_override/0 = SubResource("StandardMaterial3D_41gen")
 
-[node name="Entrance_breaker_2_001" parent="Kaunas" index="362" unique_id=1926391076]
+[node name="Entrance_breaker_2_001" parent="Kaunas" index="365" unique_id=348485012]
 material_override = ExtResource("5_lmtqe")
 
-[node name="Entrance_breaker_2_002" parent="Kaunas" index="363" unique_id=1136846907]
+[node name="Entrance_breaker_2_002" parent="Kaunas" index="366" unique_id=1131153070]
 material_override = ExtResource("5_lmtqe")
 
-[node name="Control_room_7" parent="Kaunas" index="364" unique_id=1650146143]
+[node name="Control_room_7" parent="Kaunas" index="367" unique_id=1300984890]
 surface_material_override/0 = SubResource("StandardMaterial3D_qo2ea")
 
-[node name="Control_room_1" parent="Kaunas" index="365" unique_id=343448447]
+[node name="Control_room_1" parent="Kaunas" index="368" unique_id=2105188854]
 surface_material_override/0 = SubResource("StandardMaterial3D_ghn30")
 
-[node name="Control_room_5" parent="Kaunas" index="366" unique_id=1272914628]
+[node name="Control_room_5" parent="Kaunas" index="369" unique_id=1676210867]
 surface_material_override/0 = SubResource("StandardMaterial3D_hfv36")
 
-[node name="Control_room_3" parent="Kaunas" index="367" unique_id=1338780871]
+[node name="Control_room_3" parent="Kaunas" index="370" unique_id=2120336054]
 surface_material_override/0 = SubResource("StandardMaterial3D_k4xyq")
 
-[node name="Control_room_4" parent="Kaunas" index="368" unique_id=785399448]
+[node name="Control_room_4" parent="Kaunas" index="371" unique_id=1194843725]
 surface_material_override/0 = SubResource("StandardMaterial3D_lvwmy")
 
-[node name="Control_room_6" parent="Kaunas" index="369" unique_id=1788960492]
+[node name="Control_room_6" parent="Kaunas" index="372" unique_id=955076707]
 surface_material_override/0 = SubResource("StandardMaterial3D_xiwp4")
 
-[node name="Control_room_6_001" parent="Kaunas" index="370" unique_id=251235275]
+[node name="Control_room_6_001" parent="Kaunas" index="373" unique_id=1552246813]
 surface_material_override/0 = SubResource("StandardMaterial3D_vk40a")
 
-[node name="Control_room_7_001" parent="Kaunas" index="371" unique_id=58475677]
+[node name="Control_room_7_001" parent="Kaunas" index="374" unique_id=1139302739]
 surface_material_override/0 = SubResource("StandardMaterial3D_j6l26")
 
-[node name="Control_room_glass" parent="Kaunas" index="372" unique_id=2008460139]
+[node name="Control_room_glass" parent="Kaunas" index="375" unique_id=1921734607]
 surface_material_override/0 = SubResource("StandardMaterial3D_v8sug")
 
-[node name="GeneratorLight_1" parent="Kaunas" index="373" unique_id=88569715 groups=["facility_lights"]]
+[node name="GeneratorLight_1" parent="Kaunas" index="376" unique_id=1792310509 groups=["facility_lights"]]
 visible = false
 light_energy = 0.1
 shadow_enabled = true
 
-[node name="GeneratorLight_2" parent="Kaunas" index="374" unique_id=826940642 groups=["facility_lights"]]
+[node name="GeneratorLight_2" parent="Kaunas" index="377" unique_id=1604281055 groups=["facility_lights"]]
 visible = false
 light_energy = 0.1
 shadow_enabled = true
 
-[node name="Cylinder" parent="Kaunas" index="376" unique_id=721628213]
+[node name="Cylinder" parent="Kaunas" index="379" unique_id=1868187293]
 surface_material_override/0 = SubResource("StandardMaterial3D_usnbr")
 
-[node name="Cube_005" parent="Kaunas" index="378" unique_id=1760052323]
+[node name="Cube_005" parent="Kaunas" index="381" unique_id=1304498154]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.433826, 7.8602676, 13.881832)
 surface_material_override/0 = SubResource("StandardMaterial3D_k4rtw")
 
-[node name="Control_room_light" parent="Kaunas" index="379" unique_id=1201907518]
+[node name="Control_room_light" parent="Kaunas" index="382" unique_id=524597040]
 light_color = Color(0.7359947, 0.50711906, 0.4649167, 1)
 light_energy = 16.0
 light_size = 0.564
