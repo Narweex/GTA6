@@ -22,7 +22,9 @@ func _ready() -> void:
 	$InteractableComponent.on_interact.connect(_toggle_door)
 
 func _toggle_door() -> void:
-	# 1. Sicherheits-Check: Wenn das Tor schon offen ist, mach gar nichts mehr
+	if Progression.riddles.get("wire_riddle",false) == false:
+		print("Gate is locked, go to power box")
+		return
 	if is_open:
 		return
 		
