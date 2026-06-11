@@ -8,7 +8,7 @@ extends Control
 @onready var game_timer: Timer = $GameTimer
 @onready var clock_label: Label = $MarginContainer/VBoxContainer/TimeLabel
 @onready var tick_audio: AudioStreamPlayer = $TickAudio
-@onready var battery_bar: ProgressBar = $BatteryBar
+@onready var battery_bar: ProgressBar = $VBoxContainer/BatteryBar
 
 var last_tracked_second: int = -1
 
