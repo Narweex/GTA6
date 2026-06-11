@@ -2208,10 +2208,7 @@ shape = SubResource("ConvexPolygonShape3D_udhy4")
 
 [node name="InteractableComponent" parent="Kaunas/Bridge_breaker_2/StaticBody3D" unique_id=545760649 instance=ExtResource("232_ndmr1")]
 
-[node name="Point Grün" parent="Kaunas" index="252" unique_id=7010814]
-=======
 [node name="Point Grün" parent="Kaunas" index="255" unique_id=1088984209]
->>>>>>> 5bc777de0a0cdf08ad53aa917f976bad42c53fb3
 transform = Transform3D(0, -1, 0, 0, 0, 1, -1, 0, 0, 41.916096, 1.0382601, 24.319597)
 light_energy = 0.1
 
@@ -2411,10 +2408,6 @@ material_override = SubResource("StandardMaterial3D_tpkc6")
 [node name="Coat_stand" parent="Kaunas" index="340" unique_id=113455581]
 surface_material_override/0 = SubResource("StandardMaterial3D_yeg2t")
 
-<<<<<<< HEAD
-[node name="Key" parent="Kaunas" index="338" unique_id=268552003]
-transform = Transform3D(-1.3113416e-09, -0.03, 0, 0.03, -1.3113416e-09, 0, 0, 0, 0.03, 60.93036, -1.6950879, 21.234983)
-=======
 [node name="Key" parent="Kaunas" index="341" unique_id=692143006]
 transform = Transform3D(-1.3113416e-09, -0.03, 0, 0.03, -1.3113416e-09, 0, 0, 0, 0.03, 61.030487, -1.6950879, 21.234983)
 >>>>>>> 5bc777de0a0cdf08ad53aa917f976bad42c53fb3
