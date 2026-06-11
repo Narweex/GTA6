@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func _on_interact() -> void:
 	if _are_all_riddles_clear():
-		var game_timer = get_node_or_null("HUDLayer/HUD/GameTimer")
+		var game_timer = get_node_or_null("/root/World/HUDLayer/HUD/GameTimer")
 		var remaining_time: float = 0.0
 	
 		if game_timer and game_timer is Timer:

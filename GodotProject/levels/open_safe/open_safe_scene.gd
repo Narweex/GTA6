@@ -4,9 +4,6 @@ signal riddle_completed
 signal riddle_cancelled
 
 @export_category("Riddle Content")
-## The text riddle shown to the player on the safe console
-@export_multiline var riddle_text: String = "Chained to the gates of muscle and tooth, I guard the facility with an iron grip and a locked jaw. What am I?"
-## The correct answer word (Case-insensitive)
 @export var correct_word: String = "PITBULL"
 
 @onready var container: VBoxContainer = $VBoxContainer
@@ -24,7 +21,6 @@ func _ready() -> void:
 	container_start_x = container.position.x
 	
 	# 1. Initialize text layouts
-	riddle_label.text = riddle_text
 	feedback_label.text = "ENTER SECURE OVERRIDE SEQUENCE"
 	feedback_label.add_theme_color_override("font_color", Color(0.4, 0.4, 0.4)) # Slate gray
 	
